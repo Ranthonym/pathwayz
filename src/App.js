@@ -1,40 +1,44 @@
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [merchants, setMerchants] = useState(false);
+  const [users, setUsers] = useState(false);
   useEffect(() => {
-    getMerchant();
+    getUser();
   }, []);
-  function getMerchant() {
+
+  function getUser() {
     fetch("http://localhost:3001")
       .then((response) => {
         return response.text();
       })
       .then((data) => {
-        setMerchants(data);
+        setUsers(data);
       });
   }
-  function createMerchant() {
-    let name = prompt("Enter merchant name");
-    let email = prompt("Enter merchant email");
-    fetch("http://localhost:3001/merchants", {
+
+  function addUser() {
+    let name = prompt("Enter users name");
+    let email = prompt("Enter users email");
+    let password = prompt("Enter users password");
+
+    fetch("http://localhost:3001/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email }),
+      body: JSON.stringify({ name, email, password }),
     })
       .then((response) => {
         return response.text();
       })
       .then((data) => {
         alert(data);
-        getMerchant();
+        getUser();
       });
   }
-  function deleteMerchant() {
-    let id = prompt("Enter merchant id");
-    fetch(`http://localhost:3001/merchants/${id}`, {
+  function deleteUser() {
+    let id = prompt("Enter users id");
+    fetch(`http://localhost:3001/users/${id}`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -42,16 +46,16 @@ function App() {
       })
       .then((data) => {
         alert(data);
-        getMerchant();
+        getUser();
       });
   }
   return (
     <div>
-      {merchants ? merchants : "There is no merchant data available"}
+      {users ? users : "There is no user data available"}
       <br />
-      <button onClick={createMerchant}>Add merchant</button>
+      <button onClick={addUser}>Add User</button>
       <br />
-      <button onClick={deleteMerchant}>Delete merchant</button>
+      <button onClick={deleteUser}>Delete User</button>
     </div>
   );
 }
