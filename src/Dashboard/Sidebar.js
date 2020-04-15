@@ -9,10 +9,10 @@ return (
   <SideNav/>
   </div>
   <div className="sidebar">
-  <a href="#home"><i className="fa fa-fw fa-home"></i>Dashboard</a>
-  <a href="#services"><i className="fa fa-fw fa-envelope"></i> Messages</a>
-  <a href="#clients"><i className="fa fa-fw fa-user"></i>Resources</a>
-  <a href="#contact"><i className="fa fa-fw fa-search"></i>Explore Careers</a>
+  <a href="#profile"><i className="fa fa-fw fa-home"></i>Dashboard</a>
+  <a href="#messages"><i className="fa fa-fw fa-envelope"></i> Messages</a>
+  <a href="#resources"><i className="fa fa-fw fa-edit"></i>Resources</a>
+  <a href="#search"><i className="fa fa-fw fa-search"></i>Explore Careers</a>
   </div>
 </div>
 ) 
