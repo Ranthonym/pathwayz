@@ -31,6 +31,7 @@ h1 {
 h2 {
   font-size: 1.25em;
   margin: 0 0 15px;
+  text-align: center;
 }
 
 header {
@@ -100,11 +101,13 @@ code {
 }
 
 .question-answer {
-  list-style-type: lower-alpha;
+  list-style-type: none;
+  background-color: lightgrey;
   cursor: pointer;
-  padding: 0.3em;
+  padding: 1em;
   margin-bottom: 0.3em;
   border: 5px solid transparent;
+  text-align: center;
 }
 
 .question-answer span {
@@ -312,4 +315,9 @@ code {
   body {
     overflow: hidden;
   }
+}
+
+#quiz {
+  margin-left: 315px;
+  margin-right: 30px;
 }
