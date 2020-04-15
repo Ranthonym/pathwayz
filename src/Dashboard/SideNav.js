@@ -6,6 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  Button,
   NavLink,
   Dropdown,
   DropdownToggle,
@@ -14,7 +15,7 @@ import {
   Collapse
 } from "shards-react";
 
-export default class mainNav extends React.Component {
+export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
 
@@ -47,7 +48,7 @@ export default class mainNav extends React.Component {
 
   render() {
     return (
-      <Navbar type="dark" theme="warning" expand="md">
+      <Navbar type="dark" theme="info" expand="md">
         <NavbarBrand href="#">PathFinder</NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -55,30 +56,28 @@ export default class mainNav extends React.Component {
 
           <Nav type="dark" navbar className="ml-auto" expand="md">
           <NavItem>
-              <NavLink>
-                Chat with a mentor!
-              </NavLink>
+          <Button theme="light"> 
+          Chat with a mentor!
+          </Button>
               </NavItem>
               <NavItem>
               <NavLink>
                 About
               </NavLink>
               </NavItem>
-              <Nav navbar>
             <Dropdown
+              nav={true}
               open={this.state.dropdownOpen}
-              toggle={this.toggleDropdown}
-            >
+              toggle={this.toggleDropdown}>
               <DropdownToggle nav caret>
-                Dropdown
+              <i className="fa fa-fw fa-user"></i>
               </DropdownToggle>
-              <DropdownMenu>
+              <DropdownMenu right>
                 <DropdownItem>My Dashboard</DropdownItem>
                 <DropdownItem>Career Quiz</DropdownItem>
                 <DropdownItem>Logout</DropdownItem>
               </DropdownMenu>
             </Dropdown>
-          </Nav>
           </Nav>
         </Collapse>
       </Navbar>

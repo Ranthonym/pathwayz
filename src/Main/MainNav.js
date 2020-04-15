@@ -9,12 +9,11 @@ import {
 } from "shards-react";
 
 
-export default function navBar() {
+export default function MainNav() {
 
     return (
-      <Navbar type="dark" theme="warning" expand="md">
+      <Navbar type="dark" theme="info" expand="md">
         <NavbarBrand href="#">PathFinder</NavbarBrand>
-        </Navbar>
 
           <Nav type="dark" navbar className="ml-auto" expand="md">
           <NavItem>
@@ -27,6 +26,12 @@ export default function navBar() {
                 Login
               </NavLink>
               </NavItem>
+              <NavItem>
+              <NavLink>
+                Help
+              </NavLink>
+              </NavItem>
           </Nav>
+          </Navbar>
     );
   }

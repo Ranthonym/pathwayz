@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  Redirect,
+  Route
 } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
-import { render } from "react-dom";
 
 // routes
-import Nav from "./Main/Nav";
-import Navbar from "./Dashboard/Navbar";
+import MainNav from "./Main/MainNav";
+import Sidebar from "./Dashboard/Sidebar";
 
 export default function Application() {
   return(
     <Router>
-      <Switch>
-        <Route path="/" component={Nav} />
-        <Route path="/Dashboard" component={Navbar} />
-      </Switch>
+        <Route exact path="/" component={MainNav} />
+        <Route exact path="/Dashboard" component={Sidebar} />
       </Router>
   );
 }
