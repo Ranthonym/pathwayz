@@ -1,0 +1,35 @@
+.sidebar {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  background-color: #dfe4e6;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #656666;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: black;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
