@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Widget, addResponseMessage } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
-
 import logo from "./logo.svg";
-
 function App() {
   useEffect(
     () => addResponseMessage("Welcome to the chat! How can we help you?"),
@@ -84,6 +82,7 @@ function App() {
       <button onClick={createUser}>Add User</button>
       <br />
       <button onClick={deleteUser}>Delete User</button>
+
     </div>
   );
 }
