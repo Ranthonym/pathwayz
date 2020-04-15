@@ -144,10 +144,11 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   font-size: 1.75em;
-  line-height: 1.75em;
+  line-height: 1.35em;
+  margin-left: 200px;
   animation: slide-in 0.4s ease;
 }
 
@@ -159,7 +160,7 @@ code {
 .results-container a {
   position: relative;
   padding: 15px 30px;
-  margin-top: 30px;
+  margin-top: 50px;
   border: 3px solid #111;
   background: none;
   cursor: pointer;
@@ -320,4 +321,28 @@ code {
 #quiz {
   margin-left: 315px;
   margin-right: 30px;
+}
+
+#results-careers {
+  list-style-type: none;
+  background-color: lightgrey;
+  cursor: pointer;
+  padding: 1em;
+  margin-bottom: 0.3em;
+  border: 5px solid transparent;
+  text-align: center;
+  margin: 40px;
+}
+#results-breakdown {
+  list-style-type: none;
+  background-color: lightgrey;
+  cursor: pointer;
+  padding: 1em;
+  margin-bottom: 0.3em;
+  border: 5px solid transparent;
+  text-align: center;
+  margin: 40px;
+}
+#results-title {
+  margin-top: 20px;
 }
