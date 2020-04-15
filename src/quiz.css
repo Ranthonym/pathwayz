@@ -313,3 +313,7 @@ code {
     overflow: hidden;
   }
 }
+
+#quiz {
+  margin-left: 315px;
+}

@@ -10,7 +10,7 @@ const Quiz = ({
   handleEnterPress,
 }) => {
   return (
-    <div>
+    <div id="quiz">
       <h1> Career Quiz </h1>
       <h1>
         {" "}
