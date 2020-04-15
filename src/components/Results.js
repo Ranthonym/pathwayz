@@ -9,7 +9,7 @@ const Results = ({ restartQuiz }) => {
       blah blah blah
       <div className="results-total">Your Career Options Are </div>
       blah blah blah
-      <a onClick={restartQuiz}>Restart Quiz</a>
+      <a onClick={restartQuiz}>Retake Career Quiz</a>
     </div>
   );
 };

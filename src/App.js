@@ -8,7 +8,6 @@ function App() {
 
   return (
     <div>
-      <button onClick={takeAssessment}> Take Assessment Now </button>
       <QuizApp totalQuestions={5} />
     </div>
   );
