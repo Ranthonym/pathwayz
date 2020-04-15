@@ -32,6 +32,7 @@ function App() {
         title="Chat with a Mentor"
         subtitle="Mentor name goes here"
       />
+    </div>
   );
 }
 export default App;
