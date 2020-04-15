@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import {
-  BrowserRouter as Router,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
@@ -12,18 +9,11 @@ import "shards-ui/dist/css/shards.min.css";
 import MainNav from "./Main/MainNav";
 import Sidebar from "./Dashboard/Sidebar";
 
-export default function Application() {
-  return(
-    <Router>
-        <Route exact path="/" component={MainNav} />
-        <Route exact path="/Dashboard" component={Sidebar} />
-      </Router>
-
 import { Widget, addResponseMessage } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
 import logo from "./logo.svg";
-function App() {
+export default function Application() {
   useEffect(
     () => addResponseMessage("Welcome to the chat! How can we help you?"),
     []
@@ -52,9 +42,14 @@ function App() {
         title="Chat with a Mentor"
         subtitle="Mentor name goes here"
       />
+      <Router>
+        <Route exact path="/" component={MainNav} />
+        <Route exact path="/Dashboard" component={Sidebar} />
+      </Router>
+    </div>
   );
 }
-  
+
 //   const [merchants, setMerchants] = useState(false);
 //   useEffect(() => {
 //     getMerchant();
@@ -109,5 +104,3 @@ function App() {
 //     </div>
 //   );
 // }
-
-
