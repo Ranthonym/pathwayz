@@ -32,11 +32,6 @@ function App() {
         title="Chat with a Mentor"
         subtitle="Mentor name goes here"
       />
-      {users ? users : "There is no user data available"}
-      <br />
-      <button onClick={createUser}>Add User</button>
-      <br />
-      <button onClick={deleteUser}>Delete User</button>
     </div>
   );
 }
