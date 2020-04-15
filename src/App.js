@@ -24,51 +24,6 @@ function App() {
   //   }, 1000);
   // });
 
-  const [users, setUsers] = useState(false);
-  useEffect(() => {
-    getUsers();
-  }, []);
-
-  function getUsers() {
-    fetch("http://localhost:3001")
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        setUsers(data);
-      });
-  }
-  function createUser() {
-    let name = prompt("Enter user name");
-    let email = prompt("Enter user email");
-    fetch("http://localhost:3001/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email }),
-    })
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        alert(data);
-        getUsers();
-      });
-  }
-  function deleteUser() {
-    let id = prompt("Enter users id");
-    fetch(`http://localhost:3001/users/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        alert(data);
-        getUsers();
-      });
-  }
   return (
     <div className="App">
       <Widget
@@ -82,7 +37,6 @@ function App() {
       <button onClick={createUser}>Add User</button>
       <br />
       <button onClick={deleteUser}>Delete User</button>
-
     </div>
   );
 }
