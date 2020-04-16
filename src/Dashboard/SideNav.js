@@ -48,6 +48,7 @@ export default class DashNav extends React.Component {
 
   render() {
     return (
+      <div>
       <Navbar type="dark" theme="info" expand="md">
         <NavbarBrand href="#">PathFinder</NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
@@ -81,6 +82,7 @@ export default class DashNav extends React.Component {
           </Nav>
         </Collapse>
       </Navbar>
+      </div>
     );
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import SideNav from "./SideNav";
+import UserProfile from "./UserProfile";
 
 export default function Sidebar() {
 return (
@@ -14,6 +15,7 @@ return (
   <a href="#resources"><i className="fa fa-fw fa-edit"></i>Resources</a>
   <a href="#search"><i className="fa fa-fw fa-search"></i>Explore Careers</a>
   </div>
+  <UserProfile/>
 </div>
 ) 
 }
