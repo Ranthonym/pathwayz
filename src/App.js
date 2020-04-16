@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
-
+import { Widget, addResponseMessage } from "react-chat-widget";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
+import "react-chat-widget/lib/styles.css";
+import "./App.css";
+import logo from "./logo.svg";
 
 // routes
 import MainNav from "./Main/MainNav";
 import Sidebar from "./Dashboard/Sidebar";
-
-import { Widget, addResponseMessage } from "react-chat-widget";
-
-import "react-chat-widget/lib/styles.css";
-import logo from "./logo.svg";
-import "./App.css";
+import Login from "./containers/Login";
 
 export default function Application() {
   useEffect(
@@ -25,7 +23,7 @@ export default function Application() {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
     // addResponseMessage("response text");
-    //send ajax request to createNewMessage
+    //send ajax request via addUserMessage
   };
 
   // useEffect(() => {
@@ -38,6 +36,7 @@ export default function Application() {
 
   return (
     <div className="App">
+      {/* <MainNav /> */}
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={logo}
@@ -47,6 +46,7 @@ export default function Application() {
       <Router>
         <Route exact path="/" component={MainNav} />
         <Route exact path="/Dashboard" component={Sidebar} />
+        <Route path="/login" component={Login} />
       </Router>
     </div>
   );
