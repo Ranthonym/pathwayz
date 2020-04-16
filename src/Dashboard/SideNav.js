@@ -12,7 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Collapse
+  Collapse,
 } from "shards-react";
 
 export default class DashNav extends React.Component {
@@ -24,7 +24,7 @@ export default class DashNav extends React.Component {
 
     this.state = {
       dropdownOpen: false,
-      collapseOpen: false
+      collapseOpen: false,
     };
   }
 
@@ -32,8 +32,8 @@ export default class DashNav extends React.Component {
     this.setState({
       ...this.state,
       ...{
-        dropdownOpen: !this.state.dropdownOpen
-      }
+        dropdownOpen: !this.state.dropdownOpen,
+      },
     });
   }
 
@@ -41,36 +41,31 @@ export default class DashNav extends React.Component {
     this.setState({
       ...this.state,
       ...{
-        collapseOpen: !this.state.collapseOpen
-      }
+        collapseOpen: !this.state.collapseOpen,
+      },
     });
   }
 
   render() {
     return (
       <Navbar type="dark" theme="info" expand="md">
-        <NavbarBrand href="#">PathFinder</NavbarBrand>
+        <NavbarBrand>PathFinder</NavbarBrand>
         <NavbarToggler onClick={this.toggleNavbar} />
 
         <Collapse open={this.state.collapseOpen} navbar>
-
           <Nav type="dark" navbar className="ml-auto" expand="md">
-          <NavItem>
-          <Button theme="light"> 
-          Chat with a mentor!
-          </Button>
-              </NavItem>
-              <NavItem>
-              <NavLink>
-                About
-              </NavLink>
-              </NavItem>
+            <NavItem>
+              <Button theme="light">Chat with a mentor!</Button>
+            </NavItem>
+            <NavItem>
+              <NavLink>About</NavLink>
+            </NavItem>
             <Dropdown
-              nav={true}
               open={this.state.dropdownOpen}
-              toggle={this.toggleDropdown}>
+              toggle={this.toggleDropdown}
+            >
               <DropdownToggle nav caret>
-              <i className="fa fa-fw fa-user"></i>
+                <i className="fa fa-fw fa-user"></i>
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>My Dashboard</DropdownItem>

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import "react-chat-widget/lib/styles.css";
+import "./App.css";
 import logo from "./logo.svg";
 
 // routes
