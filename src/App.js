@@ -12,6 +12,7 @@ import logo from "./logo.svg";
 import MainNav from "./Main/MainNav";
 import DashNav from "./Dashboard/SideNav";
 import Login from "./containers/Login";
+import careers from "./careers/careers";
 
 export default function Application() {
   useEffect(
@@ -47,6 +48,7 @@ export default function Application() {
         <Route exact path="/" component={MainNav} />
         <Route exact path="/Dashboard" component={DashNav} />
         <Route path="/login" component={Login} />
+        <Route path="/careers" component={careers} />
       </Router>
     </div>
   );
