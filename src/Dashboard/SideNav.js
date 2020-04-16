@@ -33,16 +33,12 @@ export default class DashNav extends React.Component {
   }
 
   startQuiz() {
-    console.log("clicked career quiz");
-    console.log(this.state.quiz);
     this.setState({
       quiz: !this.state.quiz,
     });
   }
 
   toggleDropdown() {
-    console.log("dropdown clicked");
-    console.log(this.state.quiz);
     this.setState({
       dropdownOpen: !this.state.dropdownOpen,
     });
@@ -64,7 +60,6 @@ export default class DashNav extends React.Component {
       quiz = <QuizApp totalQuestions={5} />;
     }
     return (
-
       <div>
         {/* {mode === SHOW && <QuizApp totalQuestions={5} />} */}
         <Navbar type="dark" theme="info" expand="md">
@@ -100,7 +95,6 @@ export default class DashNav extends React.Component {
         </Navbar>
         {quiz}
       </div>
-
     );
   }
 }
