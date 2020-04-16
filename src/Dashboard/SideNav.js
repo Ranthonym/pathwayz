@@ -34,27 +34,23 @@ export default class DashNav extends React.Component {
 
   startQuiz() {
     console.log("clicked career quiz");
+    console.log(this.state.quiz);
     this.setState({
-      ...this.state,
-      ...{ quiz: !this.state.quiz },
+      quiz: !this.state.quiz,
     });
   }
 
   toggleDropdown() {
+    console.log("dropdown clicked");
+    console.log(this.state.quiz);
     this.setState({
-      ...this.state,
-      ...{
-        dropdownOpen: !this.state.dropdownOpen,
-      },
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
 
   toggleNavbar() {
     this.setState({
-      ...this.state,
-      ...{
-        collapseOpen: !this.state.collapseOpen,
-      },
+      collapseOpen: !this.state.collapseOpen,
     });
   }
 
@@ -66,8 +62,6 @@ export default class DashNav extends React.Component {
     let quiz;
     if (isTakingQuiz) {
       quiz = <QuizApp totalQuestions={5} />;
-    } else {
-      quiz = <div>nothing was selected</div>;
     }
     return (
       <div>
