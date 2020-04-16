@@ -1,79 +1,58 @@
-import React, { Fragment, Component } from "react";
-import PropTypes from "prop-types";
-import Quiz from "./Quiz";
-import Results from "./Results";
-import shuffleQuestions from "../helpers/shuffleQuestions";
-import QUESTION_DATA from "../data/quiz-data";
+import React, { Component } from "react";
+import anime from "animejs";
+import Intro from "./Intro";
+import Question from "./Question";
 
 class QuizApp extends Component {
-  state = {
-    ...this.getInitialState(this.props.totalQuestions),
-  };
-
-  static propTypes = {
-    totalQuestions: PropTypes.number.isRequired,
-  };
-
-  getInitialState(totalQuestions) {
-    totalQuestions = Math.min(totalQuestions, QUESTION_DATA.length);
-    const QUESTIONS = shuffleQuestions(QUESTION_DATA).slice(0, totalQuestions);
-
-    return {
-      questions: QUESTIONS,
-      totalQuestions: totalQuestions,
-      step: 1,
+  constructor(props) {
+    super(props);
+    this.state = {
+      showQuestion: false,
     };
+    this._onStartClick = this._onStartClick.bind(this);
   }
 
-  handleAnswerClick = (index) => (e) => {
-    if (e.target.nodeName === "LI") {
-      // Prevent other answers from being clicked after correct answer is clicked
-      e.target.parentNode.style.pointerEvents = "none";
-      setTimeout(this.nextStep, 500);
-    }
-  };
+  renderIntro() {
+    return (
+      <Intro
+        _onStartClick={this._onStartClick}
+        title="Myers-Briggs Personality Test"
+      />
+    );
+  }
 
-  handleEnterPress = (index) => (e) => {
-    if (e.keyCode === 13) {
-      this.handleAnswerClick(index)(e);
-    }
-  };
-
-  nextStep = () => {
-    const { questions, step } = this.state;
-    const restOfQuestions = questions.slice(1);
-
-    this.setState({
-      step: step + 1,
-      questions: restOfQuestions,
-    });
-  };
-
-  restartQuiz = () => {
-    this.setState({
-      ...this.getInitialState(this.props.totalQuestions),
-    });
-  };
+  renderQuestion() {
+    return <Question />;
+  }
 
   render() {
-    const { step, questions, userAnswers, totalQuestions } = this.state;
+    let showQuestion = this.state.showQuestion;
+    if (showQuestion) {
+      return this.renderQuestion();
+    }
+    return this.renderIntro();
+  }
 
-    if (step >= totalQuestions + 1) {
-      return (
-        <Results restartQuiz={this.restartQuiz} userAnswers={userAnswers} />
-      );
-    } else
-      return (
-        <Fragment>
-          <Quiz
-            step={step}
-            questions={questions}
-            totalQuestions={totalQuestions}
-            handleAnswerClick={this.handleAnswerClick}
-            handleEnterPress={this.handleEnterPress}
-          />
-        </Fragment>
-      );
+  _onStartClick() {
+    // this.animateOut();
+    setTimeout(
+      () => this.setState({ showQuestion: !this.state.showQuestion }),
+      1000
+    );
+  }
+
+  animateOut() {
+    setTimeout(
+      () =>
+        anime({
+          targets: ".card",
+          translateX: "150%",
+          elasticity: function (el, i, l) {
+            return 200 + i * 200;
+          },
+        }),
+      200
+    );
   }
 }
 
