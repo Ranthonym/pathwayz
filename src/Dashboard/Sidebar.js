@@ -1,7 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
 
-// import QuizApp from "../components/QuizApp";
 
 export default function Sidebar() {
   return (
