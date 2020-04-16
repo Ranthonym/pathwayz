@@ -70,6 +70,7 @@ export default class DashNav extends React.Component {
       quiz = <div>nothing was selected</div>;
     }
     return (
+
       <div>
         {/* {mode === SHOW && <QuizApp totalQuestions={5} />} */}
         <Navbar type="dark" theme="info" expand="md">
@@ -85,7 +86,6 @@ export default class DashNav extends React.Component {
                 <NavLink>About</NavLink>
               </NavItem>
               <Dropdown
-                nav={true}
                 open={this.state.dropdownOpen}
                 toggle={this.toggleDropdown}
               >
@@ -106,6 +106,7 @@ export default class DashNav extends React.Component {
         </Navbar>
         {quiz}
       </div>
+
     );
   }
 }
