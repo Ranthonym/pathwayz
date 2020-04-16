@@ -13,6 +13,8 @@ import { Widget, addResponseMessage } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
 import logo from "./logo.svg";
+import "./App.css";
+
 export default function Application() {
   useEffect(
     () => addResponseMessage("Welcome to the chat! How can we help you?"),
