@@ -1,14 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
-import SideNav from "./SideNav";
-import QuizApp from "../components/QuizApp";
+
 
 export default function Sidebar() {
   return (
     <div>
-      <div>
-        <SideNav />
-      </div>
       <div className="sidebar">
         <a href="#profile">
           <i className="fa fa-fw fa-home"></i>Dashboard
@@ -22,9 +18,6 @@ export default function Sidebar() {
         <a href="#search">
           <i className="fa fa-fw fa-search"></i>Explore Careers
         </a>
-      </div>
-      <div>
-        <QuizApp />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import logo from "./logo.svg";
 
 // routes
 import MainNav from "./Main/MainNav";
-import Sidebar from "./Dashboard/Sidebar";
+import DashNav from "./Dashboard/SideNav";
 import Login from "./containers/Login";
 
 export default function Application() {
@@ -45,7 +45,7 @@ export default function Application() {
       />
       <Router>
         <Route exact path="/" component={MainNav} />
-        <Route exact path="/Dashboard" component={Sidebar} />
+        <Route exact path="/Dashboard" component={DashNav} />
         <Route path="/login" component={Login} />
       </Router>
     </div>
