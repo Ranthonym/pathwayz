@@ -83,11 +83,11 @@ export default class DashNav extends React.Component {
                     <i className="fa fa-fw fa-user"></i>
                   </DropdownToggle>
                   <DropdownMenu right>
+                    <DropdownItem> My Dashboard</DropdownItem>
                     <DropdownItem onClick={this.startQuiz}>
                       {" "}
                       Career Quiz
                     </DropdownItem>
-                    <DropdownItem> My Dashboard</DropdownItem>
                     <DropdownItem>Logout</DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
