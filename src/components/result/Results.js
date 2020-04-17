@@ -33,6 +33,7 @@ class Results extends Component {
   }
 
   renderBriggsResult() {
+    console.log(this.props.resultBriggs);
     return <Briggs resultBriggs={this.props.resultBriggs} />;
   }
 

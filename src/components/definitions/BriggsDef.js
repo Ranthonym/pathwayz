@@ -11,7 +11,10 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export default ({ title, content, onBackClick }) => {
+export default ({ title, content, onBackClick, top5Careers }) => {
+  const careerList = top5Careers.map((career) => {
+    return <li>{career}</li>;
+  });
   return (
     <Wrapper className="container">
       <CardDef>
@@ -20,6 +23,8 @@ export default ({ title, content, onBackClick }) => {
           <i className="fa fa-times" aria-hidden="true" />
         </div>
         <p className="text-justify">{content}</p>
+        <h3>Your Top 5 Career Options</h3>
+        <ul className="text-justify">{careerList}</ul>
       </CardDef>
     </Wrapper>
   );
