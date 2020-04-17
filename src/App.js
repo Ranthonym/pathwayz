@@ -5,11 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
-// routes
-import MainNav from "./Main/MainNav";
-
 import { Widget, addResponseMessage } from "react-chat-widget";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
@@ -18,7 +14,6 @@ import "./App.css";
 import logo from "./logo.svg";
 
 import "./App.css";
-
 
 // routes
 import MainNav from "./Main/MainNav";
@@ -59,7 +54,6 @@ export default function Application() {
         <Route exact path="/" component={MainNav} />
         <Route exact path="/Dashboard" component={DashNav} />
         <Route path="/login" component={Login} />
-
       </Router>
     </div>
   );
@@ -120,5 +114,3 @@ export default function Application() {
 //   );
 
 // }
-
-
