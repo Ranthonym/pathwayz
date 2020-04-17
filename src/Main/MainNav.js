@@ -1,5 +1,7 @@
 import React from "react";
 
+import Careers from "../Careers/Careers";
+
 import {
   Navbar,
   NavbarBrand,
@@ -12,6 +14,7 @@ import {
 export default function MainNav() {
 
     return (
+      <div>
       <Navbar type="dark" theme="info" expand="md">
         <NavbarBrand href="#">PathFinder</NavbarBrand>
 
@@ -33,5 +36,7 @@ export default function MainNav() {
               </NavItem>
           </Nav>
           </Navbar>
+          <Careers/>
+          </div>
     );
   }

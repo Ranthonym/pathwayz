@@ -1,4 +1,6 @@
 import React from "react";
+import "./UserProfile.css";
+
 import {
   Card,
   CardHeader,
@@ -12,7 +14,7 @@ import {
 export default function UserProfile() {
   return (
     <div>
-    <Card style={{ maxWidth: "300px" }}>
+    <Card className="margin_left_320" style={{ maxWidth: "300px" }}>
       <CardHeader>User Profile</CardHeader>
       <CardImg src="./user.png" />
       <CardBody>
