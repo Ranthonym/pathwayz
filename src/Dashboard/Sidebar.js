@@ -1,5 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
+// import UserProfile from "./UserProfile";
+
 
 
 export default function Sidebar() {
@@ -19,6 +21,8 @@ export default function Sidebar() {
           <i className="fa fa-fw fa-search"></i>Explore Careers
         </a>
       </div>
+  {/* <UserProfile/> */}
     </div>
   );
 }
+
