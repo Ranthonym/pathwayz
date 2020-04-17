@@ -19,6 +19,7 @@ import "./App.css";
 import MainNav from "./Main/MainNav";
 import DashNav from "./Dashboard/SideNav";
 import Login from "./containers/Login";
+import test from "./components/result/test";
 
 export default function Application() {
   useEffect(
@@ -54,6 +55,7 @@ export default function Application() {
         <Route exact path="/" component={MainNav} />
         <Route exact path="/Dashboard" component={DashNav} />
         <Route path="/login" component={Login} />
+        <Route path="/test" component={test} />
       </Router>
     </div>
   );

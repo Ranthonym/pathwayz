@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 export default ({ title, content, onBackClick, top5Careers }) => {
   const careerList = top5Careers.map((career) => {
-    return <li>{career}</li>;
+    return <li>{career.title}</li>;
   });
   return (
     <Wrapper className="container">
