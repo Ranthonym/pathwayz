@@ -16,11 +16,17 @@ export default function UserProfile() {
     <div>
     <Card className="margin_left_320" style={{ maxWidth: "300px" }}>
       <CardHeader>User Profile</CardHeader>
-      <CardImg src="./user.png" />
+      <CardImg className="userImg" src="https://avatars.servers.getgo.com/emails/%7B0%7D/medium.jpg"/>
       <CardBody>
+      <div align="center">
         <CardTitle>Fake User</CardTitle>
+        </div>
+        <div align="center">
         <p>User111@gmail.com</p>
-        <Button theme="info">View Assessment</Button>
+        </div>
+        <div align="center">
+        <Button size="sm" theme="info">View Assessment</Button>
+        </div>
       </CardBody>
       <CardFooter></CardFooter>
     </Card>
