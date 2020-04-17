@@ -6,6 +6,7 @@ import {
   Card,
   CardHeader,
   CardBody,
+  CardFooter
 } from "shards-react";
 
 export default function ProgramsItem(props) {
@@ -33,6 +34,7 @@ export default function ProgramsItem(props) {
             {props.requirements}
           </div>
         </CardBody>
+        <CardFooter></CardFooter>
       </Card>
     );
   }

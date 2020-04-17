@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from "prop-types";
-import ProgramsItem from "./Careers/ProgramsItem"
-export default function ProgramsList(props) {
+import ProgramsItem from "./ProgramsItem"
+
+export default function ProgramsList() {
 
   const programsLists = [
     {
@@ -32,11 +33,11 @@ export default function ProgramsList(props) {
       <li>And one additional 4U or M courses</li>
       <li><strong>No prerequisite below 70%</strong></li></ul>,
       path: "Software Engineer, Embedded Systems Engineer, Platform and Infrastructure Engineer, Software Architecture Engineer, Computer Systems Designer, Software Developer ",
-      school: "York University",
+      school: "Ryerson University",
     }
   ];
 
-const programs = props.programsLists.map(program => {
+const programs = programsLists.map(program => {
   return (
     <ProgramsItem
       key={program.id}

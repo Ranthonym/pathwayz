@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import CareersItem from "./CareersItem";
 
 
-export default function CareersList(props) {
+export default function CareersList() {
 
 const careersLists = [
   {
@@ -24,8 +24,8 @@ const careersLists = [
    }
 ];
 
-console.log('---------', careersLists)
-const careers = props.careersLists.map(career => {
+
+const careers = careersLists.map(career => {
   return (
     <CareersItem
       key={career.id}
