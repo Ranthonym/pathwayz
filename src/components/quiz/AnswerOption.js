@@ -72,7 +72,7 @@ const AnswerOption = props => {
   )
 }
 
-AnswerOption.PropTypes = {
+AnswerOption.propTypes = {
   answerType: PropTypes.string.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,

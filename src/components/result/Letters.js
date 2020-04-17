@@ -151,7 +151,7 @@ class Letters extends Component {
   }
 }
 
-Letters.PropTypes = {
+Letters.propTypes = {
   resultLetters: PropTypes.string.isRequired
 }
 

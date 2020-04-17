@@ -598,7 +598,7 @@ class Briggs extends Component {
   // }
 }
 
-Briggs.PropTypes = {
+Briggs.propTypes = {
   resultBriggs: PropTypes.string.isRequired,
 };
 

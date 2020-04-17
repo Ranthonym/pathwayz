@@ -17,7 +17,7 @@ import "./App.css";
 
 // routes
 import MainNav from "./Main/MainNav";
-import DashNav from "./Dashboard/SideNav";
+import Dashboard from "./Dashboard/Dashboard";
 import Login from "./containers/Login";
 import test from "./components/result/test";
 
@@ -53,7 +53,7 @@ export default function Application() {
       />
       <Router>
         <Route exact path="/" component={MainNav} />
-        <Route exact path="/Dashboard" component={DashNav} />
+        <Route exact path="/Dashboard" component={Dashboard} />
         <Route path="/login" component={Login} />
         <Route path="/test" component={test} />
       </Router>

@@ -155,7 +155,7 @@ class Colors extends Component {
   }
 }
 
-Colors.PropTypes = {
+Colors.propTypes = {
   resultColors: PropTypes.string.isRequired,
   resultBrown: PropTypes.string.isRequired,
   resultGreen: PropTypes.string.isRequired,

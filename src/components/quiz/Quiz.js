@@ -52,7 +52,7 @@ const Quiz = props => {
   )
 }
 
-Quiz.PropTypes = {
+Quiz.propTypes = {
   answer: PropTypes.string.isRequired,
   answerOptions: PropTypes.array.isRequired,
   counter: PropTypes.number.isRequired,

@@ -73,7 +73,7 @@ class Test extends Component {
   }
 }
 
-Test.PropTypes = {
+Test.propTypes = {
   resultBriggs: PropTypes.string.isRequired,
 };
 
