@@ -47,7 +47,7 @@ class Briggs extends Component {
   }
 
   getCareers() {
-    fetch("http://localhost:3001/personalities").then((response) => {
+    fetch("http://localhost:3001/personalities/16").then((response) => {
       return response.text();
     });
   }
