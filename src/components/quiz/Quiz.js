@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Question from './Question'
-import QuestionCount from './QuestionCount'
-import AnswerOption from './AnswerOption'
-import { media } from '../utils/_media-queries'
+import React from "react";
+import propTypes from "prop-types";
+import styled from "styled-components";
+import Question from "./Question";
+import QuestionCount from "./QuestionCount";
+import AnswerOption from "./AnswerOption";
+import { media } from "../utils/_media-queries";
 
 const Wrapper = styled.div`
   margin: 1em 1em;
@@ -24,10 +24,10 @@ const Wrapper = styled.div`
       ${media.laptop`margin-top: 1rem;`};
     }
   }
-`
+`;
 
-const Quiz = props => {
-  const renderAnswerOptions = key => {
+const Quiz = (props) => {
+  const renderAnswerOptions = (key) => {
     return (
       <AnswerOption
         key={key.content}
@@ -37,8 +37,8 @@ const Quiz = props => {
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}
       />
-    )
-  }
+    );
+  };
   return (
     <Wrapper key={props.questionId}>
       <QuestionCount counter={props.questionId} total={props.questionTotal} />
@@ -49,17 +49,17 @@ const Quiz = props => {
         <ul>{props.answerOptions.map(renderAnswerOptions)}</ul>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-Quiz.PropTypes = {
-  answer: PropTypes.string.isRequired,
-  answerOptions: PropTypes.array.isRequired,
-  counter: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  questionId: PropTypes.number.isRequired,
-  questionTotal: PropTypes.number.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired
-}
+Quiz.propTypes = {
+  answer: propTypes.string.isRequired,
+  answerOptions: propTypes.array.isRequired,
+  counter: propTypes.number.isRequired,
+  question: propTypes.string.isRequired,
+  questionId: propTypes.number.isRequired,
+  questionTotal: propTypes.number.isRequired,
+  onAnswerSelected: propTypes.func.isRequired,
+};
 
-export default Quiz
+export default Quiz;

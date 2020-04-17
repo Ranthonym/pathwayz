@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { Wrapper } from "../utils/ResultWrapper";
 import BriggsDef from "../definitions/BriggsDef";
+import CareersList from "../careers/CareersList";
 
-const top5Careers = ["career1", "career2", "career3", "career4", "career5"];
+const Top5Careers = ["career1", "career2", "career3", "career4", "career5"];
 
 class Briggs extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class Briggs extends Component {
         content={`You are a type ISTJ, aka The Inspector.
                 You tend to be practical and logical above all else.
                 You should consider a job in accounting or engineering.`}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
         onBackClick={this.onISTJ_click}
       />
     );
@@ -64,7 +65,7 @@ class Briggs extends Component {
         content={`You are a type ISFJ, aka The Protector.
                   You tend to be sympathetic and organized above all else.
                   You should consider a job in childcare or bookkeeping.`}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
         onBackClick={this.onISFJ_click}
       />
     );
@@ -78,7 +79,7 @@ class Briggs extends Component {
                 You tend to be sensitive and creative above all else.
                 You should consider a job in education or the arts.`}
         onBackClick={this.onINFJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -91,7 +92,7 @@ class Briggs extends Component {
                       You tend to be decisive and insightful above all else.
                       You should consider a job in architecture or engineering.`}
         onBackClick={this.onINTJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -104,7 +105,7 @@ class Briggs extends Component {
                   You tend to be analytical and practical above all else.
                   You should consider a job in computer technology or farming.`}
         onBackClick={this.onISTP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -117,7 +118,7 @@ class Briggs extends Component {
                   You tend to be loyal and adaptable above all else.
                   You should consider a job in teaching or nursing.`}
         onBackClick={this.onISFP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -130,7 +131,7 @@ class Briggs extends Component {
                   You tend to be empathetic and inquisitive above all else.
                   You should consider a job in writing or graphic design.`}
         onBackClick={this.onINFP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -143,7 +144,7 @@ class Briggs extends Component {
                   You tend to be curious and analytical above all else.
                   You should consider a job in architecture or construction.`}
         onBackClick={this.onINTP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -156,7 +157,7 @@ class Briggs extends Component {
                   You tend to be energetic and realistic above all else.
                   You should consider a job in sales or forestry.`}
         onBackClick={this.onESTP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -169,7 +170,7 @@ class Briggs extends Component {
                   You tend to be caring and resourceful above all else.
                   You should consider a job in hospitality or health care.`}
         onBackClick={this.onESFP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -182,7 +183,7 @@ class Briggs extends Component {
                   You tend to be imaginative and insightful above all else.
                   You should consider a job in therapy or acting.`}
         onBackClick={this.onENFP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -195,7 +196,7 @@ class Briggs extends Component {
                   You tend to be enthusiastic and theoretical above all else.
                   You should consider a job in business or sports.`}
         onBackClick={this.onENTP_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -208,7 +209,7 @@ class Briggs extends Component {
                   You tend to be logical and assertive above all else.
                   You should consider a job in leadership or law.`}
         onBackClick={this.onESTJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -221,7 +222,7 @@ class Briggs extends Component {
                   You tend to be sociable and caring above all else.
                   You should consider a job in childcare or healthcare.`}
         onBackClick={this.onESFJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -234,7 +235,7 @@ class Briggs extends Component {
                   You tend to be passionate and imaginative above all else.
                   You should consider a job in teaching or the arts.`}
         onBackClick={this.onENFJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -247,7 +248,7 @@ class Briggs extends Component {
                   You tend to be organized and logical above all else.
                   You should consider a job in law or engineering.`}
         onBackClick={this.onENTJ_click}
-        top5Careers={top5Careers}
+        CareersList={CareersList}
       />
     );
   }
@@ -587,8 +588,8 @@ class Briggs extends Component {
   // }
 }
 
-Briggs.PropTypes = {
-  resultBriggs: PropTypes.string.isRequired,
+Briggs.propTypes = {
+  resultBriggs: propTypes.string.isRequired,
 };
 
 export default Briggs;

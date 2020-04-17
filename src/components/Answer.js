@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import propTypes from "prop-types";
 
 const Answer = ({ answer, handleAnswerClick, handleEnterPress }) => {
   return (
@@ -12,12 +12,12 @@ const Answer = ({ answer, handleAnswerClick, handleEnterPress }) => {
       {answer}
     </li>
   );
-}
+};
 
 Answer.propTypes = {
-  answer: PropTypes.element.isRequired,
-  handleAnswerClick: PropTypes.func.isRequired,
-  handleEnterPress: PropTypes.func.isRequired
+  answer: propTypes.element.isRequired,
+  handleAnswerClick: propTypes.func.isRequired,
+  handleEnterPress: propTypes.func.isRequired,
 };
 
 export default Answer;

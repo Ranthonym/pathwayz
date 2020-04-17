@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const Results = ({ restartQuiz }) => {
   return (
@@ -43,8 +43,8 @@ const Results = ({ restartQuiz }) => {
 };
 
 Results.propTypes = {
-  userAnswers: PropTypes.array.isRequired,
-  restartQuiz: PropTypes.func.isRequired,
+  userAnswers: propTypes.array.isRequired,
+  restartQuiz: propTypes.func.isRequired,
 };
 
 export default Results;

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import QuestionList from "./QuestionList";
 
 const Quiz = ({
@@ -29,11 +29,11 @@ const Quiz = ({
 };
 
 Quiz.propTypes = {
-  step: PropTypes.number.isRequired,
-  questions: PropTypes.array.isRequired,
-  totalQuestions: PropTypes.number.isRequired,
-  handleAnswerClick: PropTypes.func.isRequired,
-  handleEnterPress: PropTypes.func.isRequired,
+  step: propTypes.number.isRequired,
+  questions: propTypes.array.isRequired,
+  totalQuestions: propTypes.number.isRequired,
+  handleAnswerClick: propTypes.func.isRequired,
+  handleEnterPress: propTypes.func.isRequired,
 };
 
 export default Quiz;

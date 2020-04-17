@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { fonts } from '../utils/_var'
+import React from "react";
+import propTypes from "prop-types";
+import styled from "styled-components";
+import { fonts } from "../utils/_var";
 
 const Wrapper = styled.div`
   .row {
@@ -15,9 +15,9 @@ const Wrapper = styled.div`
       }
     }
   }
-`
+`;
 
-const Question = props => {
+const Question = (props) => {
   return (
     <Wrapper>
       <div className="row">
@@ -26,11 +26,11 @@ const Question = props => {
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-Question.PropTypes = {
-  content: PropTypes.string.isRequired
-}
+Question.propTypes = {
+  content: propTypes.string.isRequired,
+};
 
-export default Question
+export default Question;
