@@ -128,10 +128,10 @@ class Question extends Component {
   getBriggsResults() {
     const answerCount = this.state.answersCount;
     const briggsAnswer = answerCount["Briggs"];
-    const answersCountKeysBriggs = Object.keys(briggsAnswer);
-    const answersCountValuesBriggs = answersCountKeysBriggs.map(
-      (key) => briggsAnswer[key]
-    );
+    // const answersCountKeysBriggs = Object.keys(briggsAnswer);
+    // const answersCountValuesBriggs = answersCountKeysBriggs.map(
+    //   (key) => briggsAnswer[key]
+    // );
     let briggsType = "";
     if (briggsAnswer.E >= briggsAnswer.I) {
       briggsType += "E";

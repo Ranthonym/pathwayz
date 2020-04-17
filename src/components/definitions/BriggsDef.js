@@ -10,10 +10,17 @@ const Wrapper = styled.div`
   overflow: scroll;
 `;
 
+
 export default ({ title, content, onBackClick, CareersList }) => {
   // const careers = CareersList.map((career) => {
   //   return <li>{career.title}</li>;
   // });
+
+// export default ({ title, content, onBackClick, top5Careers }) => {
+//   const careerList = top5Careers.map((career) => {
+//     return <li>{career.title}</li>;
+//   });
+
   return (
     <Wrapper className="container">
       <CardDef>
