@@ -25,7 +25,7 @@ const careersLists = [
 ];
 
 console.log('---------', careersLists)
-const careers = careersLists.map(career => {
+const careers = props.careersLists.map(career => {
   return (
     <CareersItem
       key={career.id}
