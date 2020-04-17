@@ -20,6 +20,7 @@ class QuizApp extends Component {
       />
     );
   }
+  //comment
 
   renderQuestion() {
     return <Question />;
