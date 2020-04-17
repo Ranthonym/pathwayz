@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Wrapper } from "../utils/ResultWrapper";
 import BriggsDef from "../definitions/BriggsDef";
 
-const top5Careers = ["career1", "career2", "career3", "career4", "career5"];
+// const top5Careers = ["career1", "career2", "career3", "career4", "career5"];
 
 class Briggs extends Component {
   constructor(props) {
@@ -26,6 +26,8 @@ class Briggs extends Component {
       showENFJ: false,
       showENTJ: false,
     };
+
+    this.getCareers = this.getCareers.bind(this);
     // this.onISTJ_click = this.onISTJ_click.bind(this);
     // this.onISFJ_click = this.onISFJ_click.bind(this);
     // this.onINFJ_click = this.onINFJ_click.bind(this);
@@ -44,6 +46,11 @@ class Briggs extends Component {
     // this.onENTJ_click = this.onENTJ_click.bind(this);
   }
 
+  getCareers() {
+    fetch("http://localhost:3001/personalities").then((response) => {
+      return response.text();
+    });
+  }
   renderISTJ() {
     return (
       <BriggsDef
@@ -51,7 +58,7 @@ class Briggs extends Component {
         content={`You are a type ISTJ, aka The Inspector.
                 You tend to be practical and logical above all else.
                 You should consider a job in accounting or engineering.`}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
         onBackClick={this.onISTJ_click}
       />
     );
@@ -64,7 +71,7 @@ class Briggs extends Component {
         content={`You are a type ISFJ, aka The Protector.
                   You tend to be sympathetic and organized above all else.
                   You should consider a job in childcare or bookkeeping.`}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
         onBackClick={this.onISFJ_click}
       />
     );
@@ -78,7 +85,7 @@ class Briggs extends Component {
                 You tend to be sensitive and creative above all else.
                 You should consider a job in education or the arts.`}
         onBackClick={this.onINFJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -91,7 +98,7 @@ class Briggs extends Component {
                       You tend to be decisive and insightful above all else.
                       You should consider a job in architecture or engineering.`}
         onBackClick={this.onINTJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -104,7 +111,7 @@ class Briggs extends Component {
                   You tend to be analytical and practical above all else.
                   You should consider a job in computer technology or farming.`}
         onBackClick={this.onISTP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -117,7 +124,7 @@ class Briggs extends Component {
                   You tend to be loyal and adaptable above all else.
                   You should consider a job in teaching or nursing.`}
         onBackClick={this.onISFP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -130,7 +137,7 @@ class Briggs extends Component {
                   You tend to be empathetic and inquisitive above all else.
                   You should consider a job in writing or graphic design.`}
         onBackClick={this.onINFP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -143,7 +150,7 @@ class Briggs extends Component {
                   You tend to be curious and analytical above all else.
                   You should consider a job in architecture or construction.`}
         onBackClick={this.onINTP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -156,7 +163,7 @@ class Briggs extends Component {
                   You tend to be energetic and realistic above all else.
                   You should consider a job in sales or forestry.`}
         onBackClick={this.onESTP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -169,7 +176,7 @@ class Briggs extends Component {
                   You tend to be caring and resourceful above all else.
                   You should consider a job in hospitality or health care.`}
         onBackClick={this.onESFP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -182,7 +189,7 @@ class Briggs extends Component {
                   You tend to be imaginative and insightful above all else.
                   You should consider a job in therapy or acting.`}
         onBackClick={this.onENFP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -195,7 +202,7 @@ class Briggs extends Component {
                   You tend to be enthusiastic and theoretical above all else.
                   You should consider a job in business or sports.`}
         onBackClick={this.onENTP_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -208,7 +215,7 @@ class Briggs extends Component {
                   You tend to be logical and assertive above all else.
                   You should consider a job in leadership or law.`}
         onBackClick={this.onESTJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -221,7 +228,7 @@ class Briggs extends Component {
                   You tend to be sociable and caring above all else.
                   You should consider a job in childcare or healthcare.`}
         onBackClick={this.onESFJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -234,7 +241,7 @@ class Briggs extends Component {
                   You tend to be passionate and imaginative above all else.
                   You should consider a job in teaching or the arts.`}
         onBackClick={this.onENFJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
@@ -247,7 +254,7 @@ class Briggs extends Component {
                   You tend to be organized and logical above all else.
                   You should consider a job in law or engineering.`}
         onBackClick={this.onENTJ_click}
-        top5Careers={top5Careers}
+        top5Careers={this.getCareers}
       />
     );
   }
