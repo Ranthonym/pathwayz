@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { fonts, colors } from '../utils/_var'
-import { media } from '../utils/_media-queries'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { fonts, colors } from "../utils/_var";
+import { media } from "../utils/_media-queries";
 
 const Wrapper = styled.div`
   margin: 0.2em;
@@ -23,9 +23,9 @@ const Wrapper = styled.div`
       }
     }
   }
-`
+`;
 
-const QuestionCount = props => {
+const QuestionCount = (props) => {
   return (
     <Wrapper>
       <div className="row">
@@ -36,12 +36,12 @@ const QuestionCount = props => {
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-QuestionCount.PropTypes = {
+QuestionCount.propTypes = {
   counter: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired
-}
+  total: PropTypes.number.isRequired,
+};
 
-export default QuestionCount
+export default QuestionCount;

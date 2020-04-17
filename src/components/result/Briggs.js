@@ -386,6 +386,9 @@ class Briggs extends Component {
               case "ENTJ":
                 let showENTJ = this.state.showENTJ;
                 this.setState({ showENTJ: !showENTJ });
+                break;
+              default:
+                break;
             }
           })()}
         </p>
@@ -598,7 +601,7 @@ class Briggs extends Component {
   // }
 }
 
-Briggs.PropTypes = {
+Briggs.propTypes = {
   resultBriggs: PropTypes.string.isRequired,
 };
 

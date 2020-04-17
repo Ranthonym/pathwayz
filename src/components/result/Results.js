@@ -40,7 +40,7 @@ class Results extends Component {
   render() {
     // let showColorsResult = this.state.showColorsResult
     // let showLettersResult = this.state.showLettersResult
-    let showBriggsResult = this.state.showBriggsResult;
+    // let showBriggsResult = this.state.showBriggsResult;
     return this.renderBriggsResult();
     // if (showColorsResult) {
     //   return this.renderResultColors();
