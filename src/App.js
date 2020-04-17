@@ -47,6 +47,7 @@ export default function Application() {
       <Router>
         <Route exact path="/" component={MainNav} />
         <Route exact path="/Dashboard" component={Sidebar} />
+        <Route exact path="/Careers" component={Sidebar} />
       </Router>
     </div>
   );

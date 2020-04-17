@@ -1,7 +1,7 @@
 import React from "react";
 
-import Careers from "../Careers/Careers";
-import Programs from "../Careers/Programs";
+import CareersList from "../Careers/CareersList";
+import Programs from "../Careers/ProgramsItem";
 
 import {
   Navbar,
@@ -37,7 +37,7 @@ export default function MainNav() {
               </NavItem>
           </Nav>
           </Navbar>
-          <Careers/>
+          <CareersList/>
           <Programs/>
           </div>
     );
