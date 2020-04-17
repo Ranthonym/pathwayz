@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import CareersList from "../Careers/CareersList";
 import ProgramsList from "../Careers/ProgramsList";
 
@@ -13,7 +14,6 @@ import {
 
 
 export default function MainNav() {
-
     return (
       <div>
       <Navbar type="dark" theme="info" expand="md">
@@ -26,9 +26,7 @@ export default function MainNav() {
               </NavLink>
               </NavItem>
               <NavItem>
-              <NavLink>
-                Login
-              </NavLink>
+              <NavLink href="/login">Login</NavLink>
               </NavItem>
               <NavItem>
               <NavLink>
@@ -42,3 +40,4 @@ export default function MainNav() {
           </div>
     );
   }
+
