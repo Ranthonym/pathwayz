@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import styled from "styled-components";
 import Question from "./Question";
 import QuestionCount from "./QuestionCount";
@@ -53,13 +53,13 @@ const Quiz = (props) => {
 };
 
 Quiz.propTypes = {
-  answer: PropTypes.string.isRequired,
-  answerOptions: PropTypes.array.isRequired,
-  counter: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  questionId: PropTypes.number.isRequired,
-  questionTotal: PropTypes.number.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired,
+  answer: propTypes.string.isRequired,
+  answerOptions: propTypes.array.isRequired,
+  counter: propTypes.number.isRequired,
+  question: propTypes.string.isRequired,
+  questionId: propTypes.number.isRequired,
+  questionTotal: propTypes.number.isRequired,
+  onAnswerSelected: propTypes.func.isRequired,
 };
 
 export default Quiz;

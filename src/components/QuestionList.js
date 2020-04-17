@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Question from './Question';
+import React from "react";
+import propTypes from "prop-types";
+import Question from "./Question";
 
 const QuestionList = ({ questions, handleAnswerClick, handleEnterPress }) => {
   return (
     <ul className="question-list">
-      {questions.map(question => {
+      {questions.map((question) => {
         return (
           <Question
             key={question.question.props.children.toString()}
@@ -18,12 +18,12 @@ const QuestionList = ({ questions, handleAnswerClick, handleEnterPress }) => {
       })}
     </ul>
   );
-}
+};
 
 QuestionList.propTypes = {
-  questions: PropTypes.array.isRequired,
-  handleAnswerClick: PropTypes.func.isRequired,
-  handleEnterPress: PropTypes.func.isRequired
+  questions: propTypes.array.isRequired,
+  handleAnswerClick: propTypes.func.isRequired,
+  handleEnterPress: propTypes.func.isRequired,
 };
 
 export default QuestionList;

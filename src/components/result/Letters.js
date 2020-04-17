@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { Wrapper } from "../utils/ResultWrapper";
 import { LetterA, LetterB, LetterC, LetterD } from "../definitions/LettersDef";
 import { NextBtn } from "../utils/Buttons";
@@ -152,7 +152,8 @@ class Letters extends Component {
 }
 
 Letters.propTypes = {
-  resultLetters: PropTypes.string.isRequired,
+  resultLetters: propTypes.string.isRequired,
+
 };
 
 export default Letters;

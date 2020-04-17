@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import styled from "styled-components";
 import { fonts } from "../utils/_var";
 
@@ -30,7 +30,7 @@ const Question = (props) => {
 };
 
 Question.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: propTypes.string.isRequired,
 };
 
 export default Question;

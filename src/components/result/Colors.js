@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { BrownDef, GreenDef, BlueDef, RedDef } from "../definitions/ColorsDef";
 import { Wrapper } from "../utils/ResultWrapper";
 import { NextBtn } from "../utils/Buttons";
@@ -156,11 +156,14 @@ class Colors extends Component {
 }
 
 Colors.propTypes = {
-  resultColors: PropTypes.string.isRequired,
-  resultBrown: PropTypes.string.isRequired,
-  resultGreen: PropTypes.string.isRequired,
-  resultBlue: PropTypes.string.isRequired,
-  resultRed: PropTypes.string.isRequired,
+
+  resultColors: propTypes.string.isRequired,
+  resultBrown: propTypes.string.isRequired,
+  resultGreen: propTypes.string.isRequired,
+  resultBlue: propTypes.string.isRequired,
+  resultRed: propTypes.string.isRequired,
+
+
 };
 
 export default Colors;

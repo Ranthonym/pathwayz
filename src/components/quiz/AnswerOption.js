@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import styled from "styled-components";
 import { fonts, colors } from "../utils/_var";
 
@@ -73,10 +73,11 @@ const AnswerOption = (props) => {
 };
 
 AnswerOption.propTypes = {
-  answerType: PropTypes.string.isRequired,
-  answerContent: PropTypes.string.isRequired,
-  answer: PropTypes.string.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired,
+  answerType: propTypes.string.isRequired,
+  answerContent: propTypes.string.isRequired,
+  answer: propTypes.string.isRequired,
+  onAnswerSelected: propTypes.func.isRequired,
+
 };
 
 export default AnswerOption;

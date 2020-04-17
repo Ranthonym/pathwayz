@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import styled from "styled-components";
 import { fonts, colors } from "../utils/_var";
 import { media } from "../utils/_media-queries";
@@ -40,8 +40,8 @@ const QuestionCount = (props) => {
 };
 
 QuestionCount.propTypes = {
-  counter: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
+  counter: propTypes.number.isRequired,
+  total: propTypes.number.isRequired,
 };
 
 export default QuestionCount;
