@@ -5,52 +5,49 @@ import UserProfile from "./UserProfile";
 import Chat from "./chat";
 
 export default function Sidebar(props) {
-  const [messages, setMessages] = useState(false);
-  const [userProfile, setUserProfile] = useState(false);
-  const [resources, setResources] = useState(false);
   const [exploreCareers, setExploreCareers] = useState(false);
   let rightcontainer;
 
   function handleMessagesClick() {
     props.quiz(false);
-    setUserProfile(false);
-    setResources(false);
-    setExploreCareers(false);
-    props.setMessages(true);
+    props.setUserProfile(false);
+    props.setResources(false);
+    props.setExploreCareers(false);
+    props.setMessages(!props.message);
   }
   function handleUserProfileClick() {
     props.quiz(false);
-    setMessages(false);
-    setResources(false);
-    setExploreCareers(false);
-    setUserProfile(!userProfile);
+    props.setMessages(false);
+    props.setResources(false);
+    props.setExploreCareers(false);
+    props.setUserProfile(!props.userProfile);
   }
   function handleResourcesClick() {
     props.quiz(false);
-    setMessages(false);
-    setUserProfile(false);
-    setExploreCareers(false);
-    setResources(!resources);
+    props.setMessages(false);
+    props.setUserProfile(false);
+    props.setExploreCareers(false);
+    props.setResources(!props.resources);
   }
   function handleExploreCareersClick() {
     props.quiz(false);
-    setMessages(false);
-    setUserProfile(false);
-    setResources(false);
-    setExploreCareers(!exploreCareers);
+    props.setMessages(false);
+    props.setUserProfile(false);
+    props.setResources(false);
+    props.setExploreCareers(!props.exploreCareers);
   }
 
   if (props.message) {
     rightcontainer = <Button theme="light">Messages</Button>;
     //    rightcontainer = <Chat />;
   }
-  if (userProfile) {
+  if (props.userProfile) {
     rightcontainer = <UserProfile />;
   }
-  if (resources) {
+  if (props.resources) {
     rightcontainer = <Button theme="light">Resources</Button>;
   }
-  if (exploreCareers) {
+  if (props.exploreCareers) {
     rightcontainer = <Button theme="light">Explore Careers</Button>;
   }
 
