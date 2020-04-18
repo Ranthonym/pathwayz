@@ -5,23 +5,20 @@ import UserProfile from "./UserProfile";
 import Chat from "./chat";
 
 export default function Sidebar(props) {
-  const [messages, setMessages] = useState(false);
-  const [userProfile, setUserProfile] = useState(false);
-  const [resources, setResources] = useState(false);
   const [exploreCareers, setExploreCareers] = useState(false);
   let rightcontainer;
 
   function handleMessagesClick() {
     props.quiz(false);
     props.setUserProfile(false);
-    setResources(false);
+    props.setResources(false);
     setExploreCareers(false);
     props.setMessages(!props.message);
   }
   function handleUserProfileClick() {
     props.quiz(false);
     props.setMessages(false);
-    setResources(false);
+    props.setResources(false);
     setExploreCareers(false);
     props.setUserProfile(!props.userProfile);
   }
@@ -30,13 +27,13 @@ export default function Sidebar(props) {
     props.setMessages(false);
     props.setUserProfile(false);
     setExploreCareers(false);
-    setResources(!resources);
+    props.setResources(!props.resources);
   }
   function handleExploreCareersClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setUserProfile(false);
-    setResources(false);
+    props.setResources(false);
     setExploreCareers(!exploreCareers);
   }
 
@@ -47,7 +44,7 @@ export default function Sidebar(props) {
   if (props.userProfile) {
     rightcontainer = <UserProfile />;
   }
-  if (resources) {
+  if (props.resources) {
     rightcontainer = <Button theme="light">Resources</Button>;
   }
   if (exploreCareers) {
