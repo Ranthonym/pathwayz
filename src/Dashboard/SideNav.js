@@ -110,7 +110,11 @@ export default class DashNav extends React.Component {
           </Navbar>
         </div>
         <div>
-          <Sidebar quiz={this.handler} messages={this.handleMessages} />
+          <Sidebar
+            quiz={this.handler}
+            setMessages={this.handleMessages}
+            message={this.state.messages}
+          />
         </div>
         <div>{quiz}</div>
       </div>
