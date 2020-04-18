@@ -33,3 +33,6 @@
   margin: 0; /* Remove margins */
 }
 
+.popover {
+  max-width: 80%;
+}
