@@ -24,6 +24,7 @@ export default function CareersItem(props) {
           </Row>
           <div><h5 className="education">Education</h5>{props.education}</div>
           <Button
+                onClick={props.onClick}
                 theme="info"
                 className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
               >
