@@ -1,7 +1,7 @@
 import React from "react";
 
 import CareersList from "../components/careers/CareersList";
-import ProgramsList from "../Careers/ProgramsList";
+import ProgramsList from "../components/careers/ProgramsList";
 
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "shards-react";
 
