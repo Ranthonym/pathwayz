@@ -8,7 +8,7 @@ import { injectGlobal } from "styled-components";
 // global styles
 injectGlobal`
   body {
-    background-color: ${colors.$colorBg};
+    background-color: white;
     color: #fff;
   }
 `;

@@ -128,7 +128,6 @@ export default class Test extends Component {
                 </div>
                 <span class="settings-tray--right">
                   <i class="material-icons">cached</i>
-                  <i class="material-icons">message</i>
                   <i class="material-icons">menu</i>
                 </span>
               </div>
@@ -162,11 +161,6 @@ export default class Test extends Component {
               <div class="row no-gutters">
                 <div class="col-md-3 offset-md-9">
                   <div class="chat-bubble chat-bubble--right">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <div class="chat-bubble chat-bubble--left">Hello dude!</div>
                 </div>
               </div>
               <div class="row">
