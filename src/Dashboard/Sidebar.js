@@ -13,29 +13,29 @@ export default function Sidebar(props) {
 
   function handleMessagesClick() {
     props.quiz(false);
-    setUserProfile(false);
+    props.setUserProfile(false);
     setResources(false);
     setExploreCareers(false);
-    props.setMessages(true);
+    props.setMessages(!props.message);
   }
   function handleUserProfileClick() {
     props.quiz(false);
-    setMessages(false);
+    props.setMessages(false);
     setResources(false);
     setExploreCareers(false);
-    setUserProfile(!userProfile);
+    props.setUserProfile(!props.userProfile);
   }
   function handleResourcesClick() {
     props.quiz(false);
-    setMessages(false);
-    setUserProfile(false);
+    props.setMessages(false);
+    props.setUserProfile(false);
     setExploreCareers(false);
     setResources(!resources);
   }
   function handleExploreCareersClick() {
     props.quiz(false);
-    setMessages(false);
-    setUserProfile(false);
+    props.setMessages(false);
+    props.setUserProfile(false);
     setResources(false);
     setExploreCareers(!exploreCareers);
   }
@@ -44,7 +44,7 @@ export default function Sidebar(props) {
     rightcontainer = <Button theme="light">Messages</Button>;
     //    rightcontainer = <Chat />;
   }
-  if (userProfile) {
+  if (props.userProfile) {
     rightcontainer = <UserProfile />;
   }
   if (resources) {

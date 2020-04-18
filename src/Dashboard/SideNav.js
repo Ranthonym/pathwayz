@@ -36,6 +36,7 @@ export default class DashNav extends React.Component {
     this.setState({
       quiz: !this.state.quiz,
       messages: false,
+      userProfile: false,
     });
   }
 
@@ -46,9 +47,14 @@ export default class DashNav extends React.Component {
   };
 
   handleMessages = (val) => {
-    console.log(this.state.messages);
     this.setState({
       messages: val,
+    });
+  };
+
+  handleUserProfile = (val) => {
+    this.setState({
+      userProfile: val,
     });
   };
 
@@ -114,6 +120,8 @@ export default class DashNav extends React.Component {
             quiz={this.handler}
             setMessages={this.handleMessages}
             message={this.state.messages}
+            setUserProfile={this.handleUserProfile}
+            userProfile={this.state.userProfile}
           />
         </div>
         <div>{quiz}</div>
