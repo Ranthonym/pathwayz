@@ -156,11 +156,11 @@ class Colors extends Component {
 }
 
 Colors.propTypes = {
-  resultColors: PropTypes.string.isRequired,
-  resultBrown: PropTypes.string.isRequired,
-  resultGreen: PropTypes.string.isRequired,
-  resultBlue: PropTypes.string.isRequired,
-  resultRed: PropTypes.string.isRequired
-}
+  resultColors: propTypes.string.isRequired,
+  resultBrown: propTypes.string.isRequired,
+  resultGreen: propTypes.string.isRequired,
+  resultBlue: propTypes.string.isRequired,
+  resultRed: propTypes.string.isRequired,
+};
 
 export default Colors;
