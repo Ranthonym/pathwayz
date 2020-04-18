@@ -3,21 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animejs": "^2.2.0",
     "cookie-parser": "^1.4.5",
     "node-sass": "^4.13.1",
     "npm-watch": "^0.6.0",
+    "prop-types": "^15.6.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-chat-widget": "^3.0.0-beta.2",
     "react-dom": "^16.13.1",
+    "react-modal": "^3.0.3",
+    "react-native": "^0.62.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-modal": "^3.0.3",
     "recharts": "^1.0.0-alpha.6",
-    "styled-components": "^2.2.0",
     "shards-react": "^1.0.3",
-    "animejs": "^2.2.0",
-    "prop-types": "^15.6.0"
+    "styled-components": "^2.2.0"
   },
   "devDependencies": {},
   "watch": {

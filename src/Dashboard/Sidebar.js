@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { Button } from "shards-react";
 import UserProfile from "./UserProfile";
+import Chat from "./chat";
 
 export default function Sidebar(props) {
   const [messages, setMessages] = useState(false);
@@ -15,7 +16,7 @@ export default function Sidebar(props) {
     setUserProfile(false);
     setResources(false);
     setExploreCareers(false);
-    setMessages(!messages);
+    props.setMessages(true);
   }
   function handleUserProfileClick() {
     props.quiz(false);
@@ -39,8 +40,9 @@ export default function Sidebar(props) {
     setExploreCareers(!exploreCareers);
   }
 
-  if (messages) {
+  if (props.message) {
     rightcontainer = <Button theme="light">Messages</Button>;
+    //    rightcontainer = <Chat />;
   }
   if (userProfile) {
     rightcontainer = <UserProfile />;
