@@ -13,7 +13,7 @@ export default function ProgramsItem(props) {
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
-          <h4>{props.program}</h4>
+          <h4>{props.name}</h4>
           <h5>{props.school}</h5>
         </CardHeader>
         <CardBody className="pt-0">
@@ -25,7 +25,7 @@ export default function ProgramsItem(props) {
             <Col>
               <div align="center">
                 <h5>Career Paths Include</h5>
-                {props.path}
+                {props.courses}
               </div>
             </Col>
           </Row>

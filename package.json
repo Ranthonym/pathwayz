@@ -13,14 +13,15 @@
     "react-chat-widget": "^3.0.0-beta.2",
     "react-dom": "^16.13.1",
     "react-modal": "^3.0.3",
-    "react-native": "^0.62.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "recharts": "^1.0.0-alpha.6",
     "shards-react": "^1.0.3",
     "styled-components": "^2.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "socket.io": "^2.3.0"
+  },
   "watch": {
     "build": {
       "patterns": [

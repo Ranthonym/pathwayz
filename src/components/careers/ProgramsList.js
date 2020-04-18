@@ -72,7 +72,7 @@ export default function ProgramsList() {
       <ProgramsItem
         key={program.id}
         id={program.id}
-        program={program.title}
+        name={program.name}
         description={program.description}
         requirements={program.required_courses}
         path={program.path}
@@ -90,9 +90,9 @@ export default function ProgramsList() {
 }
 
 ProgramsItem.propTypes = {
-  program: propTypes.string,
+  name: propTypes.string,
   description: propTypes.string,
   requirements: propTypes.instanceOf(Element),
-  path: propTypes.string,
+  courses: propTypes.string,
   school: propTypes.string,
 };

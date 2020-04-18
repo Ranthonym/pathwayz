@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 
-import { Widget, addResponseMessage } from "react-chat-widget";
+import { Widget, addResponseMessage, addUserMessage } from "react-chat-widget";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
@@ -30,7 +30,7 @@ export default function Application() {
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
-    // addResponseMessage("response text");
+    addResponseMessage("response: ", newMessage);
     //send ajax request via addUserMessage
   };
 
