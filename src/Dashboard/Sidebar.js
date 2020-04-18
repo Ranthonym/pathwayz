@@ -12,21 +12,21 @@ export default function Sidebar(props) {
     props.quiz(false);
     props.setUserProfile(false);
     props.setResources(false);
-    setExploreCareers(false);
+    props.setExploreCareers(false);
     props.setMessages(!props.message);
   }
   function handleUserProfileClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setResources(false);
-    setExploreCareers(false);
+    props.setExploreCareers(false);
     props.setUserProfile(!props.userProfile);
   }
   function handleResourcesClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setUserProfile(false);
-    setExploreCareers(false);
+    props.setExploreCareers(false);
     props.setResources(!props.resources);
   }
   function handleExploreCareersClick() {
@@ -34,7 +34,7 @@ export default function Sidebar(props) {
     props.setMessages(false);
     props.setUserProfile(false);
     props.setResources(false);
-    setExploreCareers(!exploreCareers);
+    props.setExploreCareers(!props.exploreCareers);
   }
 
   if (props.message) {
@@ -47,7 +47,7 @@ export default function Sidebar(props) {
   if (props.resources) {
     rightcontainer = <Button theme="light">Resources</Button>;
   }
-  if (exploreCareers) {
+  if (props.exploreCareers) {
     rightcontainer = <Button theme="light">Explore Careers</Button>;
   }
 
