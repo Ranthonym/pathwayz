@@ -30,7 +30,7 @@ const Question = (props) => {
 };
 
 Question.propTypes = {
-  content: PropTypes.string.isRequired
+  content: propTypes.string.isRequired
 }
 
 export default Question;

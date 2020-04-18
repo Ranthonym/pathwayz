@@ -23,7 +23,7 @@ export default function ProgramsList() {
           </li>
         </ul>
       ),
-      path:
+      courses:
         "Software Engineer, Embedded Systems Engineer, Platform and Infrastructure Engineer, Software Architecture Engineer, Computer Systems Designer, Software Developer ",
       school: "York University",
     },
@@ -46,10 +46,10 @@ export default function ProgramsList() {
           </li>
         </ul>
       ),
-      path:
+      courses:
         "Software Engineer, Embedded Systems Engineer, Platform and Infrastructure Engineer, Software Architecture Engineer, Computer Systems Designer, Software Developer ",
       school: "Ryerson University",
-    },
+    }
   ];
 
   const programs = programsLists.map((program) => {
@@ -60,7 +60,7 @@ export default function ProgramsList() {
         program={program.name}
         description={program.description}
         requirements={program.requirements}
-        path={program.path}
+        courses={program.courses}
         school={program.school}
       />
     );
