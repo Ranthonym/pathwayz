@@ -62,4 +62,5 @@ Quiz.propTypes = {
   onAnswerSelected: propTypes.func.isRequired,
 };
 
+
 export default Quiz;
