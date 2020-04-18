@@ -53,13 +53,13 @@ const Quiz = (props) => {
 };
 
 Quiz.propTypes = {
-  answer: propTypes.string.isRequired,
-  answerOptions: propTypes.array.isRequired,
-  counter: propTypes.number.isRequired,
-  question: propTypes.string.isRequired,
-  questionId: propTypes.number.isRequired,
-  questionTotal: propTypes.number.isRequired,
-  onAnswerSelected: propTypes.func.isRequired,
-};
+  answer: PropTypes.string.isRequired,
+  answerOptions: PropTypes.array.isRequired,
+  counter: PropTypes.number.isRequired,
+  question: PropTypes.string.isRequired,
+  questionId: PropTypes.number.isRequired,
+  questionTotal: PropTypes.number.isRequired,
+  onAnswerSelected: PropTypes.func.isRequired
+}
 
 export default Quiz;

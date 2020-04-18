@@ -152,8 +152,7 @@ class Letters extends Component {
 }
 
 Letters.propTypes = {
-  resultLetters: propTypes.string.isRequired,
-
-};
+  resultLetters: PropTypes.string.isRequired,
+}
 
 export default Letters;

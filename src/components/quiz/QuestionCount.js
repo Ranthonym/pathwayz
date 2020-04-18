@@ -40,8 +40,8 @@ const QuestionCount = (props) => {
 };
 
 QuestionCount.propTypes = {
-  counter: propTypes.number.isRequired,
-  total: propTypes.number.isRequired,
-};
+  counter: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
+}
 
 export default QuestionCount;

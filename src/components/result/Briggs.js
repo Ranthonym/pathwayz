@@ -637,9 +637,7 @@ class Briggs extends Component {
 }
 
 Briggs.propTypes = {
-
-  resultBriggs: propTypes.string.isRequired,
-
+  resultBriggs: PropTypes.string.isRequired,
 };
 
 export default Briggs;
