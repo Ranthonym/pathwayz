@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import MessageIn from "./messageIncoming";
+import MessageOut from "./messageSent";
 
 // const top5Careers = ["career1", "career2", "career3", "career4", "career5"];
 
@@ -21,12 +23,12 @@ export default class Test extends Component {
               </span>
             </div>
 
-            <div class="search-box">
+            {/* <div class="search-box">
               <div class="input-wrapper">
                 <i class="material-icons">search</i>
                 <input placeholder="Search here" type="text" />
               </div>
-            </div>
+            </div> */}
 
             <div class="friend-drawer friend-drawer--onhover">
               <img
@@ -65,54 +67,6 @@ export default class Test extends Component {
               </div>
               <span class="time text-muted small">00:32</span>
             </div>
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-              />
-              <div class="text">
-                <h6>Layla</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-                alt=""
-              />
-              <div class="text">
-                <h6>Optimus</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-                alt=""
-              />
-              <div class="text">
-                <h6>Optimus</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
-
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-                alt=""
-              />
-              <div class="text">
-                <h6>James</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
           </div>
           <div class="col-md-8">
             <div class="settings-tray">
@@ -133,36 +87,11 @@ export default class Test extends Component {
               </div>
             </div>
             <div class="chat-panel">
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <div class="chat-bubble chat-bubble--left">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                  <div class="chat-bubble chat-bubble--right">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <div class="chat-bubble chat-bubble--left">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                  <div class="chat-bubble chat-bubble--right">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3">
-                  <div class="chat-bubble chat-bubble--left">Hello dude!</div>
-                </div>
-              </div>
-              <div class="row no-gutters">
-                <div class="col-md-3 offset-md-9">
-                  <div class="chat-bubble chat-bubble--right">Hello dude!</div>
-                </div>
-              </div>
+              <MessageIn />
+              <MessageOut />
+              <MessageIn />
+              <MessageIn />
+              <MessageOut />
               <div class="row">
                 <div class="col-12">
                   <div class="chat-box-tray">
