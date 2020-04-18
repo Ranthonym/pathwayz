@@ -25,6 +25,7 @@ export default class DashNav extends React.Component {
     this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.state = {
+      messages: false,
       quiz: false,
       dropdownOpen: false,
       collapseOpen: false,
@@ -34,8 +35,22 @@ export default class DashNav extends React.Component {
   startQuiz() {
     this.setState({
       quiz: !this.state.quiz,
+      messages: false,
     });
   }
+
+  handler = (val) => {
+    this.setState({
+      quiz: val,
+    });
+  };
+
+  handleMessages = (val) => {
+    console.log(this.state.messages);
+    this.setState({
+      messages: val,
+    });
+  };
 
   toggleDropdown() {
     this.setState({
@@ -95,7 +110,7 @@ export default class DashNav extends React.Component {
           </Navbar>
         </div>
         <div>
-          <Sidebar />
+          <Sidebar quiz={this.handler} messages={this.handleMessages} />
         </div>
         <div>{quiz}</div>
       </div>

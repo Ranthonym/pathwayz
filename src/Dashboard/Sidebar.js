@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { Button } from "shards-react";
 import UserProfile from "./UserProfile";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   const [messages, setMessages] = useState(false);
   const [userProfile, setUserProfile] = useState(false);
   const [resources, setResources] = useState(false);
@@ -11,24 +11,28 @@ export default function Sidebar() {
   let rightcontainer;
 
   function handleMessagesClick() {
+    props.quiz(false);
     setUserProfile(false);
     setResources(false);
     setExploreCareers(false);
     setMessages(!messages);
   }
   function handleUserProfileClick() {
+    props.quiz(false);
     setMessages(false);
     setResources(false);
     setExploreCareers(false);
     setUserProfile(!userProfile);
   }
   function handleResourcesClick() {
+    props.quiz(false);
     setMessages(false);
     setUserProfile(false);
     setExploreCareers(false);
     setResources(!resources);
   }
   function handleExploreCareersClick() {
+    props.quiz(false);
     setMessages(false);
     setUserProfile(false);
     setResources(false);
