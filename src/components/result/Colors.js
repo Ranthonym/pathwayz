@@ -160,7 +160,8 @@ Colors.propTypes = {
   resultBrown: propTypes.string.isRequired,
   resultGreen: propTypes.string.isRequired,
   resultBlue: propTypes.string.isRequired,
-  resultRed: propTypes.string.isRequired
-}
+  resultRed: propTypes.string.isRequired,
+};
+
 
 export default Colors;
