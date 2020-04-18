@@ -33,3 +33,10 @@
   margin: 0; /* Remove margins */
 }
 
+#quiz {
+  margin-left: 140px;
+}
+
+#rightcontainer {
+  margin-left: 315px;
+}

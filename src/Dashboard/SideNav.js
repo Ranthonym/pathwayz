@@ -16,8 +16,6 @@ import {
   Collapse,
 } from "shards-react";
 import Sidebar from "./Sidebar";
-// const { mode, transition } = useVisualMode(SHOW);
-// const SHOW = "SHOW";
 export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +25,7 @@ export default class DashNav extends React.Component {
     this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.state = {
+      messages: false,
       quiz: false,
       dropdownOpen: false,
       collapseOpen: false,
@@ -36,8 +35,22 @@ export default class DashNav extends React.Component {
   startQuiz() {
     this.setState({
       quiz: !this.state.quiz,
+      messages: false,
     });
   }
+
+  handler = (val) => {
+    this.setState({
+      quiz: val,
+    });
+  };
+
+  handleMessages = (val) => {
+    console.log(this.state.messages);
+    this.setState({
+      messages: val,
+    });
+  };
 
   toggleDropdown() {
     this.setState({
@@ -51,19 +64,20 @@ export default class DashNav extends React.Component {
     });
   }
 
-  // takeAssessment() {
-  //   transition(SHOW);
-  // }
   render() {
     const isTakingQuiz = this.state.quiz;
     let quiz;
     if (isTakingQuiz) {
-      quiz = <QuizApp totalQuestions={5} />;
+      quiz = (
+        <div id="quiz">
+          {" "}
+          <QuizApp totalQuestions={5} />
+        </div>
+      );
     }
     return (
       <div>
         <div>
-          {/* {mode === SHOW && <QuizApp totalQuestions={5} />} */}
           <Navbar type="dark" theme="info" expand="md">
             <NavbarBrand href="#">PathFinder</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} />
@@ -96,7 +110,7 @@ export default class DashNav extends React.Component {
           </Navbar>
         </div>
         <div>
-          <Sidebar />
+          <Sidebar quiz={this.handler} messages={this.handleMessages} />
         </div>
         <div>{quiz}</div>
       </div>

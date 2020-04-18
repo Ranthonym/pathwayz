@@ -17,7 +17,7 @@ import "./App.css";
 
 // routes
 import MainNav from "./Main/MainNav";
-import Dashboard from "./Dashboard/Dashboard";
+import Dashboard from "./Dashboard/SideNav";
 import Login from "./containers/Login";
 import test from "./components/result/test";
 
