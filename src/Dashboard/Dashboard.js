@@ -5,8 +5,7 @@ import SideNav from "./SideNav";
 export default function Dashboard() {
   return (
     <div>
-    <SideNav/>
-    <UserProfile/>
+      <SideNav />
     </div>
-  )
+  );
 }

@@ -16,8 +16,6 @@ import {
   Collapse,
 } from "shards-react";
 import Sidebar from "./Sidebar";
-// const { mode, transition } = useVisualMode(SHOW);
-// const SHOW = "SHOW";
 export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
@@ -51,19 +49,20 @@ export default class DashNav extends React.Component {
     });
   }
 
-  // takeAssessment() {
-  //   transition(SHOW);
-  // }
   render() {
     const isTakingQuiz = this.state.quiz;
     let quiz;
     if (isTakingQuiz) {
-      quiz = <QuizApp totalQuestions={5} />;
+      quiz = (
+        <div id="quiz">
+          {" "}
+          <QuizApp totalQuestions={5} />
+        </div>
+      );
     }
     return (
       <div>
         <div>
-          {/* {mode === SHOW && <QuizApp totalQuestions={5} />} */}
           <Navbar type="dark" theme="info" expand="md">
             <NavbarBrand href="#">PathFinder</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} />
