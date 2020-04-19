@@ -1,43 +1,87 @@
-import React, { useState } from "react";
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-import "./Login.css";
+import React from "react";
+import Popup from "reactjs-popup";
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Form,
+  FormInput,
+  FormGroup,
+} from "shards-react";
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
+class Login extends React.Component {
+  render() {
+    return (
+      <div>
+        <Navbar type="dark" theme="info" expand="md">
+          <NavbarBrand href="#">PathFinder</NavbarBrand>
+          <Nav type="dark" navbar className="ml-auto" expand="md">
+            <NavItem>
+              <Popup
+                trigger={<NavLink>Login</NavLink>}
+                modal
+                closeOnDocumentClick
+              >
+                <div id="popup">
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="#username">Username</label>
+                      <FormInput id="#username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="#password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                  </Form>
+                </div>
+              </Popup>
+            </NavItem>
+            <NavItem>
+              <Popup
+                trigger={<NavLink>Signup</NavLink>}
+                modal
+                closeOnDocumentClick
+              >
+                <div id="popup">
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="#username">Username</label>
+                      <FormInput id="#username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="#password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#new-password">Confirm Password</label>
+                      <FormInput
+                        type="password"
+                        id="#new-password"
+                        placeholder="Re-enter Password"
+                      />
+                    </FormGroup>
+                  </Form>
+                </div>
+              </Popup>
+            </NavItem>
+            <NavItem>
+              <NavLink>Help</NavLink>
+            </NavItem>
+          </Nav>
+        </Navbar>
+      </div>
+    );
   }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
-  return (
-    <div className="Login">
-      <form onSubmit={handleSubmit}>
-        <FormGroup controlId="email" bssize="large">
-          <FormLabel>Email</FormLabel>
-          <FormControl
-            autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup controlId="password" bssize="large">
-          <FormLabel>Password</FormLabel>
-          <FormControl
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-          />
-        </FormGroup>
-        <Button block bssize="large" disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-      </form>
-    </div>
-  );
 }
+
+export default Login;
