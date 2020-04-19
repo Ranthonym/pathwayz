@@ -6,9 +6,10 @@ import { fonts, colors } from "../components/utils/_var";
 import { media } from "../components/utils/_media-queries";
 
 const Wrapper = styled.div`
-  position: fixed;
+  // position: fixed;
+  margin-left: 100px;
   min-height: 100%;
-  max-width: 100%;
+  width: 200px;
   background: ${colors.$colorBg};
   h1 {
     position: relative;
