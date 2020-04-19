@@ -142,7 +142,7 @@ export default class DashNav extends React.Component {
             exploreCareers={this.state.exploreCareers}
           />
         </div>
-        <div>{quiz}</div>
+        <div id="quiz">{quiz}</div>
       </div>
     );
   }

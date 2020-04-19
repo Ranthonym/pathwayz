@@ -38,6 +38,7 @@
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
+  display: flex;
 }
 
 body {
@@ -47,7 +48,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 .container {
-  margin: 60px auto;
+  margin: 20px auto;
   background: white;
   padding: 0;
   border-radius: 7px;
@@ -161,6 +162,9 @@ hr {
   100% {
     opacity: 1;
   }
+}
+#send-box {
+  margin-top: 180px;
 }
 .offset-md-9 .chat-bubble {
   background: #00b8d8;
