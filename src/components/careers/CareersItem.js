@@ -68,7 +68,7 @@ export default class CareersItem extends React.Component {
               >
                 View programs related to this career &rarr;
               </Button>
-        <CardFooter><div align="center">Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆ Limited ★ ★ ☆ Fair ★ ★ ★ Good</div></CardFooter>
+        <CardFooter><div align="center">Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆ Limited ★ ★ ☆ Fair ★ ★ ★ Good</div><i class="fa fa-heart"></i></CardFooter>
         </PopoverBody>
         </Popover>
         <div>{program}</div>
