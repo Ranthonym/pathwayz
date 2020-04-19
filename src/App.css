@@ -159,13 +159,15 @@ hr {
   height: 660px;
 }
 #profile-container {
+  margin-top: 25px;
   display: flex;
 }
 #profile {
   margin-left: 10px;
   height: 660px;
-  width: 700px;
+  width: 675px;
 }
+
 #chatbox-right {
   margin-left: 400px;
 }
