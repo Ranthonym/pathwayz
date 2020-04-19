@@ -17,63 +17,60 @@ class Login extends React.Component {
       <div>
         <Navbar type="dark" theme="info" expand="md">
           <NavbarBrand href="#">PathFinder</NavbarBrand>
-
           <Nav type="dark" navbar className="ml-auto" expand="md">
             <NavItem>
-              <NavLink>Signup</NavLink>
+              <Popup
+                trigger={<NavLink>Signup</NavLink>}
+                modal
+                closeOnDocumentClick
+              >
+                <div id="popup">
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="#username">Username</label>
+                      <FormInput id="#username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="#password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                  </Form>
+                </div>
+              </Popup>
             </NavItem>
             <NavItem>
-              <NavLink href="/login">Login</NavLink>
+              <Popup
+                trigger={<NavLink>Login</NavLink>}
+                modal
+                closeOnDocumentClick
+              >
+                <div id="popup">
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="#username">Username</label>
+                      <FormInput id="#username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="#password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                  </Form>
+                </div>
+              </Popup>
             </NavItem>
             <NavItem>
               <NavLink>Help</NavLink>
             </NavItem>
           </Nav>
         </Navbar>
-        <Popup
-          trigger={<button className="button"> Login </button>}
-          modal
-          closeOnDocumentClick
-        >
-          <div id="popup">
-            <Form>
-              <FormGroup>
-                <label htmlFor="#username">Username</label>
-                <FormInput id="#username" placeholder="Username" />
-              </FormGroup>
-              <FormGroup>
-                <label htmlFor="#password">Password</label>
-                <FormInput
-                  type="password"
-                  id="#password"
-                  placeholder="Password"
-                />
-              </FormGroup>
-            </Form>
-          </div>
-        </Popup>
-        <Popup
-          trigger={<button className="button"> Signup </button>}
-          modal
-          closeOnDocumentClick
-        >
-          <div id="popup">
-            <Form>
-              <FormGroup>
-                <label htmlFor="#username">Username</label>
-                <FormInput id="#username" placeholder="Username" />
-              </FormGroup>
-              <FormGroup>
-                <label htmlFor="#password">Password</label>
-                <FormInput
-                  type="password"
-                  id="#password"
-                  placeholder="Password"
-                />
-              </FormGroup>
-            </Form>
-          </div>
-        </Popup>
       </div>
     );
   }
