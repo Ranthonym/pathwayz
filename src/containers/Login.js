@@ -20,7 +20,7 @@ class Login extends React.Component {
           <Nav type="dark" navbar className="ml-auto" expand="md">
             <NavItem>
               <Popup
-                trigger={<NavLink>Signup</NavLink>}
+                trigger={<NavLink>Login</NavLink>}
                 modal
                 closeOnDocumentClick
               >
@@ -44,7 +44,7 @@ class Login extends React.Component {
             </NavItem>
             <NavItem>
               <Popup
-                trigger={<NavLink>Login</NavLink>}
+                trigger={<NavLink>Signup</NavLink>}
                 modal
                 closeOnDocumentClick
               >
@@ -60,6 +60,14 @@ class Login extends React.Component {
                         type="password"
                         id="#password"
                         placeholder="Password"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="#new-password">Confirm Password</label>
+                      <FormInput
+                        type="password"
+                        id="#new-password"
+                        placeholder="Re-enter Password"
                       />
                     </FormGroup>
                   </Form>
