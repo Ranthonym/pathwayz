@@ -74,7 +74,6 @@ export default class Test extends Component {
                 <h6>Rahul</h6>
                 <p class="text-muted">Software Developer</p>
               </div>
-              <span class="time text-muted small">00:32</span>
             </div>
             <div
               onClick={this.onConversation2Click}
@@ -89,7 +88,6 @@ export default class Test extends Component {
                 <h6>Raho</h6>
                 <p class="text-muted">Software Developer</p>
               </div>
-              <span class="time text-muted small">13:21</span>
             </div>
             <hr />
           </div>
