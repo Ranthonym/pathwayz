@@ -1,11 +1,35 @@
 import React from "react";
 import Popup from "reactjs-popup";
-import { Form, FormInput, FormGroup } from "shards-react";
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Form,
+  FormInput,
+  FormGroup,
+} from "shards-react";
 
 class Login extends React.Component {
   render() {
     return (
       <div>
+        <Navbar type="dark" theme="info" expand="md">
+          <NavbarBrand href="#">PathFinder</NavbarBrand>
+
+          <Nav type="dark" navbar className="ml-auto" expand="md">
+            <NavItem>
+              <NavLink>Signup</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/login">Login</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Help</NavLink>
+            </NavItem>
+          </Nav>
+        </Navbar>
         <Popup
           trigger={<button className="button"> Login </button>}
           modal
