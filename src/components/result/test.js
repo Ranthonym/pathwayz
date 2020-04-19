@@ -51,7 +51,7 @@ export default class Test extends Component {
               <span class="settings-tray--right">
                 <i class="material-icons">cached</i>
                 <i class="material-icons">message</i>
-                <i class="material-icons">menu</i>
+                <i class="material-icons"> menu</i>
               </span>
             </div>
 
@@ -104,10 +104,7 @@ export default class Test extends Component {
                   <h6>{this.state.senderName}</h6>
                   <p class="text-muted">Software Developer</p>
                 </div>
-                <span class="settings-tray--right">
-                  <i class="material-icons">cached</i>
-                  <i class="material-icons">menu</i>
-                </span>
+                <span class="settings-tray--right"></span>
               </div>
             </div>
 
