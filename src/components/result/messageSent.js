@@ -5,7 +5,7 @@ import React from "react";
 export default function MessageIn(props) {
   return (
     <div class="row no-gutters">
-      <div class="col-md-3 offset-md-9">
+      <div id="chatbox-right" class="col-md-3 offset-md-9">
         <div class="chat-bubble chat-bubble--right">{props.content}</div>
       </div>
     </div>
