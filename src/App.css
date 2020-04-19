@@ -154,6 +154,18 @@ hr {
   border-radius: 9px;
   animation: fadeIn 1s ease-in;
 }
+#userprofile {
+  margin-left: 0;
+  height: 660px;
+}
+#profile-container {
+  display: flex;
+}
+#profile {
+  margin-left: 10px;
+  height: 660px;
+  width: 700px;
+}
 #chatbox-right {
   margin-left: 400px;
 }
