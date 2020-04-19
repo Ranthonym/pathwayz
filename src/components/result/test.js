@@ -1,10 +1,42 @@
 import React, { Component } from "react";
 import MessageIn from "./messageIncoming";
 import MessageOut from "./messageSent";
+import MessageList from "./messageList";
+import image from "../../";
 
 // const top5Careers = ["career1", "career2", "career3", "career4", "career5"];
 
 export default class Test extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      convoID: 1,
+      senderName: "Rahul",
+      senderImage:
+        "https://avatars3.githubusercontent.com/u/50722244?s=460&u=1f7dfa9d8cd14a3befb3ab5f7304b9aa9159eba3&v=4",
+    };
+    this.onConversation1Click = this.onConversation1Click.bind(this);
+    this.onConversation2Click = this.onConversation2Click.bind(this);
+  }
+
+  onConversation1Click() {
+    this.setState({
+      convoID: 1,
+      senderName: "Rahul",
+      senderImage:
+        "https://avatars3.githubusercontent.com/u/50722244?s=460&u=1f7dfa9d8cd14a3befb3ab5f7304b9aa9159eba3&v=4",
+    });
+  }
+
+  onConversation2Click() {
+    this.setState({
+      convoID: 2,
+      senderName: "Raho",
+      senderImage:
+        "https://avatars3.githubusercontent.com/u/53961799?s=460&u=008ac14516a347a79623b8b8b115980d2e267c09&v=4",
+    });
+  }
+
   render() {
     return (
       <div class="container">
@@ -13,7 +45,7 @@ export default class Test extends Component {
             <div class="settings-tray">
               <img
                 class="profile-image"
-                src="https://picsum.photos/id/1027/2848/4272"
+                src="https://avatars1.githubusercontent.com/u/43259449?s=460&v=4"
                 alt="Profile img"
               />
               <span class="settings-tray--right">
@@ -29,56 +61,50 @@ export default class Test extends Component {
                 <input placeholder="Search here" type="text" />
               </div>
             </div> */}
-
-            <div class="friend-drawer friend-drawer--onhover">
+            <div
+              onClick={this.onConversation1Click}
+              class="friend-drawer friend-drawer--onhover"
+            >
               <img
                 class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
+                src="https://avatars3.githubusercontent.com/u/50722244?s=460&u=1f7dfa9d8cd14a3befb3ab5f7304b9aa9159eba3&v=4"
                 alt=""
               />
               <div class="text">
-                <h6>Layla</h6>
-                <p class="text-muted">Hey, you're arrested!</p>
+                <h6>Rahul</h6>
+                <p class="text-muted">Software Developer</p>
+              </div>
+              <span class="time text-muted small">00:32</span>
+            </div>
+            <div
+              onClick={this.onConversation2Click}
+              class="friend-drawer friend-drawer--onhover"
+            >
+              <img
+                class="profile-image"
+                src="https://avatars3.githubusercontent.com/u/53961799?s=460&u=008ac14516a347a79623b8b8b115980d2e267c09&v=4"
+                alt=""
+              />
+              <div class="text">
+                <h6>Raho</h6>
+                <p class="text-muted">Software Developer</p>
               </div>
               <span class="time text-muted small">13:21</span>
             </div>
             <hr />
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-                alt=""
-              />
-              <div class="text">
-                <h6>Layla</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
-            <div class="friend-drawer friend-drawer--onhover">
-              <img
-                class="profile-image"
-                src="https://i.picsum.photos/id/1005/5760/3840.jpg"
-                alt=""
-              />
-              <div class="text">
-                <h6>Layla</h6>
-                <p class="text-muted">Wanna grab a beer?</p>
-              </div>
-              <span class="time text-muted small">00:32</span>
-            </div>
           </div>
+
           <div class="col-md-8">
             <div class="settings-tray">
               <div class="friend-drawer no-gutters friend-drawer--grey">
                 <img
                   class="profile-image"
-                  src="https://i.picsum.photos/id/1005/5760/3840.jpg"
+                  src={this.state.senderImage}
                   alt=""
                 />
                 <div class="text">
-                  <h6>James</h6>
-                  <p class="text-muted">Layin' down the law since ...</p>
+                  <h6>{this.state.senderName}</h6>
+                  <p class="text-muted">Software Developer</p>
                 </div>
                 <span class="settings-tray--right">
                   <i class="material-icons">cached</i>
@@ -86,12 +112,9 @@ export default class Test extends Component {
                 </span>
               </div>
             </div>
+
             <div class="chat-panel">
-              <MessageIn />
-              <MessageOut />
-              <MessageIn />
-              <MessageIn />
-              <MessageOut />
+              <MessageList id={this.state.convoID} />
               <div class="row">
                 <div class="col-12">
                   <div class="chat-box-tray">
