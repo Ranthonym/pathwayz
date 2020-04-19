@@ -36,3 +36,14 @@
 .popover {
   max-width: 80%;
 }
+
+.careerItem {
+  width: 300px;
+  height: 60px;
+  margin: 10px
+}
+
+.programItem {
+  width: 300px;
+  margin: 10px;
+}

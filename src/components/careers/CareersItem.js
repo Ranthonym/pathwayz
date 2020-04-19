@@ -1,13 +1,24 @@
 import React from "react";
 import { Row, Col, Button, CardFooter, Popover, PopoverBody, PopoverHeader} from "shards-react";
+import ProgramsItem from "./ProgramsItem"
 
 export default class CareersItem extends React.Component {
   constructor(props) {
     super(props);
+
+    this.showProgram = this.showProgram.bind(this);
     this.toggle = this.toggle.bind(this);
+    
     this.state = {
+      program: false,
       open: false
     };
+  }
+
+  showProgram() {
+    this.setState({
+      program: !this.state.program,
+    });
   }
 
   toggle() {
@@ -17,10 +28,15 @@ export default class CareersItem extends React.Component {
   }
    
     render() {
+      const isShowingProgram = this.state.program;
+      let program;
+      if (isShowingProgram) {
+        program = <ProgramsItem/>;
+      }
     return (
         <div>
         <div>
-        <Button theme="light" id="popover-1" onClick={this.toggle}>
+        <Button className="careerItem" theme="light" id="popover-1" onClick={this.toggle}>
           <h4>{this.props.title}</h4>
           </Button>
           </div>
@@ -46,7 +62,7 @@ export default class CareersItem extends React.Component {
           </Row>
           <div><h5 className="education">Education</h5>{this.props.education}</div>
           <Button
-                onClick={this.props.onClick}
+                onClick={this.showProgram}
                 theme="info"
                 className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
               >
@@ -55,6 +71,7 @@ export default class CareersItem extends React.Component {
         <CardFooter><div align="center">Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆ Limited ★ ★ ☆ Fair ★ ★ ★ Good</div></CardFooter>
         </PopoverBody>
         </Popover>
+        <div>{program}</div>
         </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
+import { Container } from "shards-react";
 import ProgramsItem from "./ProgramsItem";
 
 export default function ProgramsList() {
@@ -69,7 +70,7 @@ export default function ProgramsList() {
   return (
     <section className="Programs">
       <h4>Programs</h4>
-      <ul className="programs_list">{programs}</ul>
+      <Container><ul className="programs_list">{programs}</ul></Container>
     </section>
   );
 }
