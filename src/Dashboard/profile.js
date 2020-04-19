@@ -4,29 +4,61 @@ import "./UserProfile.css";
 import {
   Card,
   CardHeader,
-  CardTitle,
   CardBody,
   CardFooter,
+  CardImg,
   Button,
 } from "shards-react";
 
 export default function profile() {
   return (
     <Card id="profile">
-      <CardHeader>User Profile</CardHeader>
+      <CardHeader>
+        {/* <CardTitle> My Career Plan </CardTitle> */}
+        <CardImg
+          id="profileIMG"
+          src="https://png.pngtree.com/png-vector/20190105/ourlarge/pngtree-successpersonaldevelopmentleadercareer-line-icon-png-image_311546.jpg"
+        />
+      </CardHeader>
       <CardBody>
-        <div align="center">
-          <CardTitle>Fake User</CardTitle>
-        </div>
-        <div align="center">
-          <p>User111@gmail.com</p>
-        </div>
-        <div align="center">
-          <Button size="sm" theme="info">
-            View Assessment
-          </Button>
-        </div>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
+        <Button id="profile-button" size="sm" theme="info">
+          Software Engineer
+        </Button>
       </CardBody>
+
       <CardFooter></CardFooter>
     </Card>
   );

@@ -16,20 +16,27 @@ export default function UserProfile() {
   return (
     <div id="profile-container">
       <Card id="userprofile" style={{ maxWidth: "300px" }}>
-        <CardHeader>User Profile</CardHeader>
+        <CardHeader>
+          <CardTitle></CardTitle>
+        </CardHeader>
         <CardImg
           className="userImg"
           src="https://avatars.servers.getgo.com/emails/%7B0%7D/medium.jpg"
         />
         <CardBody>
           <div align="center">
-            <CardTitle>Fake User</CardTitle>
+            <CardTitle> User </CardTitle>
           </div>
+          <div align="center">user@example.com</div>
+          <CardHeader>
+            <div>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum is simply dummy text.
+            </div>
+          </CardHeader>
           <div align="center">
-            <p>User111@gmail.com</p>
-          </div>
-          <div align="center">
-            <Button size="sm" theme="info">
+            <Button id="userprofile-button" size="sm" theme="info">
               View Assessment
             </Button>
           </div>
