@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import CareersItem from "./CareersItem";
 
 
-export default function CareersList() {
-
-const careersLists = [
+export default class CareersList extends React.Component {
+state = {
+    filter: "",
+    careersLists: [
   {
     id: 1,
     title: "Software Engineer",
@@ -22,8 +23,21 @@ const careersLists = [
     salary: "$100,000-$110,000",
     outlook: "Job prospects: ★ ★ ☆ Fair"
    }
-];
+]
+};
 
+handleChange = event => {
+  this.setState({ filter: event.target.value });
+};
+
+render() {
+  const { filter, careersLists } = this.state;
+  const lowercasedFilter = filter.toLowerCase();
+  const filteredData = careersLists.filter(item => {
+    return Object.keys(item).some(key =>
+      item[key].toLowerCase().includes(lowercasedFilter)
+    );
+  });
 
 const careers = careersLists.map(career => {
   return (
@@ -40,11 +54,18 @@ const careers = careersLists.map(career => {
 });
 
 return (
-  <section className="Careers">
-    <h4>Careers</h4>
-    <ul className="careers_list">{careers}</ul>
-  </section>
+  <div>
+  <input value={filter} onChange={this.handleChange} />
+  {filteredData.map(item => (
+    <div key={item.id}>
+      <div>
+      <ul className="careers_list">{careers}</ul>
+      </div>
+    </div>
+  ))}
+</div>
 );
+}
 }
 
 CareersItem.propTypes = {
@@ -54,3 +75,5 @@ CareersItem.propTypes = {
   education: PropTypes.string, 
   salary: PropTypes.string
 };
+
+ReactDOM.render(<careersList />, document.getElementById("root"));
