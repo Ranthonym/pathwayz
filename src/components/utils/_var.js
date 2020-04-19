@@ -5,7 +5,7 @@ const fonts = {
 };
 
 const colors = {
-  $colorBg: "#060613",
+  $colorBg: "white",
   $colorCardBg: "#060613",
   $colorGold: "#0093af",
 };
