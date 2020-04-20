@@ -54,16 +54,16 @@ export default function Sidebar(props) {
   return (
     <div>
       <div className="sidebar">
-        <a onClick={handleUserProfileClick} href="#profile">
+        <a onClick={handleUserProfileClick}>
           <i className="fa fa-fw fa-home"></i>Dashboard
         </a>
-        <a onClick={handleMessagesClick} href="#messages">
+        <a onClick={handleMessagesClick}>
           <i className="fa fa-fw fa-envelope"></i> Messages
         </a>
-        <a onClick={handleResourcesClick} href="#resources">
+        <a onClick={handleResourcesClick}>
           <i className="fa fa-fw fa-edit"></i>Resources
         </a>
-        <a onClick={handleExploreCareersClick} href="#search">
+        <a onClick={handleExploreCareersClick}>
           <i className="fa fa-fw fa-search"></i>Explore Careers
         </a>
       </div>

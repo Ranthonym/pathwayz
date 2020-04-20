@@ -5,7 +5,6 @@ import {
   Col,
   Card,
   CardBody,
-  CardImg,
   CardFooter,
   CardHeader,
 } from "shards-react";
@@ -130,6 +129,36 @@ export default function Videos() {
             <CardFooter className="blog-footer">
               <div>By: Scholarship Canada</div>
               <div>December 12, 2017</div>
+            </CardFooter>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row className="row">
+        <Col>
+          <Card className="blog-item">
+            <iframe
+              className="video"
+              src="https://www.youtube.com/embed/bGmWFWWEaj8"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div align="center">
+              <CardHeader>
+                <a href="https://www.youtube.com/embed/bGmWFWWEaj8">
+                Deciding What to Study [VIDEO]
+                </a>
+              </CardHeader>
+            </div>
+            <CardBody>
+              <p>
+              We share our best advice for choosing your programs in this short video.
+              </p>
+            </CardBody>
+            <CardFooter className="blog-footer">
+              <div>By Vancouver Island University</div>
+              <div>January 14, 2020</div>
             </CardFooter>
           </Card>
         </Col>
