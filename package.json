@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-4.10.3.tgz",
     "animejs": "^2.2.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",

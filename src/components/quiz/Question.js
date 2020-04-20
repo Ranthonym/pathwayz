@@ -22,7 +22,7 @@ const Question = (props) => {
     <Wrapper>
       <div className="row">
         <div className="col">
-          <h1>{props.content}</h1>
+          <h1 id="quiz-question">{props.content}</h1>
         </div>
       </div>
     </Wrapper>
