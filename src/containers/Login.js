@@ -45,6 +45,7 @@ class Login extends React.Component {
                       <Button
                         theme="info"
                         className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                        href="/dashboard"
                       >
                         Sign In
                       </Button>
@@ -91,6 +92,7 @@ class Login extends React.Component {
                       <Button
                         theme="info"
                         className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                        href="/dashboard"
                       >
                         Create Account
                       </Button>
