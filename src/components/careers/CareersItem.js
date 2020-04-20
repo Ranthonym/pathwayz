@@ -8,6 +8,7 @@ import {
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
+import FavouriteButton from "./favourites";
 import ProgramsItem from "./ProgramsItem";
 export default class CareersItem extends React.Component {
   constructor(props) {
@@ -80,6 +81,8 @@ export default class CareersItem extends React.Component {
             >
               View programs related to this career &rarr;
             </Button>
+            <FavouriteButton id={this.props.id} />
+
             <CardFooter>
               <div align="center">
                 Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆
