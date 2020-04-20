@@ -22,7 +22,7 @@ import Dashboard from "./Dashboard/SideNav";
 import Login from "./containers/Login";
 import test from "./components/result/test";
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("http://localhost:3001");
 socket.on("message", function (message) {
   console.log(`The server has a message for you: ${message}`);
 });
