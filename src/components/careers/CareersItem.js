@@ -35,5 +35,3 @@ export default function CareersItem(props) {
       </Card>
     );
   }
-
-

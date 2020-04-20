@@ -72,7 +72,7 @@ export default function ProgramsList() {
       <ProgramsItem
         key={program.id}
         id={program.id}
-        name={program.name}
+        title={program.title}
         description={program.description}
         requirements={program.required_courses}
         path={program.path}
