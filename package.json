@@ -5,6 +5,7 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "node-sass": "^4.13.1",
     "npm-watch": "^0.6.0",
     "prop-types": "^15.6.0",
@@ -17,6 +18,7 @@
     "react-scripts": "3.4.1",
     "recharts": "^1.0.0-alpha.6",
     "shards-react": "^1.0.3",
+    "socket.io-client": "^2.3.0",
     "styled-components": "^2.2.0"
   },
   "devDependencies": {
