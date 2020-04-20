@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import CareersItem from "./CareersItem";
 
 
-export default function CareersList() {
+export default class CareersList extends React.Component {
 
-const careersLists = [
+careersLists = [
   {
     id: 1,
     title: "Software Engineer",
@@ -24,8 +24,13 @@ const careersLists = [
    }
 ];
 
+state = {
+  search : ""
+}
 
 const careers = careersLists.map(career => {
+  const {search} = this.state;
+  const title = career.title.toLowerCase()
   return (
     <CareersItem
       key={career.id}
@@ -35,16 +40,35 @@ const careers = careersLists.map(career => {
       description={career.description}
       education={career.education}
       salary={career.salary}
-    />
-  );
-});
+      />
+      );
+    });
+
+    onchange = e =>{
+      this.setState({ search : e.target.value });
+  }
+
+render() {
+  const {search} = this.state;
+  const filteredCareers = careersLists.filter( careers =>{
+      return careers.name.toLowerCase().indexOf( search.toLowerCase() ) !== -1
+  })
 
 return (
   <section className="Careers">
+    <input placeholder="Search Careers" onChange={this.onchange}></input>
     <h4>Careers</h4>
+    <div className="row">
+                        {
+                            filteredCareers.map( careers =>{
+                                return this.renderCareers(careers)
+                            })
+                        }
+                    </div>
     <ul className="careers_list">{careers}</ul>
   </section>
 );
+}
 }
 
 CareersItem.propTypes = {
