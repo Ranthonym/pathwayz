@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./UserProfile.css";
+import CareersItem from "../components/careers/CareersItem";
 
 import {
   Card,
@@ -10,7 +11,50 @@ import {
   Button,
 } from "shards-react";
 
-export default function profile() {
+export default function Profile() {
+  const [favourite, setFavourites] = useState([]);
+  const [career, setCareers] = useState([]);
+
+  useEffect(() => {
+    getCareers();
+  }, [career]);
+
+  useEffect(() => {
+    getFavourites();
+  }, []);
+
+  function getCareers() {
+    fetch("http://localhost:3001/personalities/16/requirements")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCareers(data);
+      });
+  }
+
+  function getFavourites() {
+    fetch("http://localhost:3001/favourites")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setFavourites(data);
+      });
+  }
+  const careers = career.map((career) => {
+    const myFavourites = favourite.map((favourite) => {
+      if (favourite.career_id === career.id) {
+        return (
+          <Button id="profile-button" size="sm" theme="info">
+            {career.title}
+          </Button>
+        );
+      }
+    });
+    return myFavourites;
+  });
+
   return (
     <Card id="profile">
       <CardHeader>
@@ -21,7 +65,7 @@ export default function profile() {
         />
       </CardHeader>
       <CardBody>
-        <Button id="profile-button" size="sm" theme="info">
+        {/* <Button id="profile-button" size="sm" theme="info">
           Software Engineer
         </Button>
         <Button id="profile-button" size="sm" theme="info">
@@ -56,7 +100,8 @@ export default function profile() {
         </Button>
         <Button id="profile-button" size="sm" theme="info">
           Software Engineer
-        </Button>
+        </Button> */}
+        {careers}
       </CardBody>
 
       <CardFooter></CardFooter>
