@@ -36,10 +36,12 @@ socket.emit("session", username);
 export default function Application() {
   let [chat, setChat] = useState(false);
 
-  useEffect(
-    () => addResponseMessage("Welcome to the chat! How can we help you?"),
-    []
-  );
+  useEffect(() => {
+    // addResponseMessage("Welcome to the chat! How can we help you?");
+    socket.on("message", function (message) {
+      addResponseMessage(message);
+    });
+  }, []);
 
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
@@ -47,17 +49,9 @@ export default function Application() {
     socket.emit("message", newMessage);
     setChat = true;
     // addResponseMessage(`${username} says: ${newMessage}`);
-    // addUserMessage(`${username} says: ${newMessage}`);
+
     //send ajax request via addUserMessage
   };
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     console.log("checking");
-  //     //make ajax request from server
-  //     addResponseMessage("response text");
-  //   }, 1000);
-  // });
 
   return (
     <div className="App">
