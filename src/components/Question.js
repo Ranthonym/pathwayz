@@ -232,10 +232,10 @@ class Question extends Component {
     return (
       <Wrapper className="container">
         <QuestionCard>
+          {/* <div className="corner" />
           <div className="corner" />
           <div className="corner" />
-          <div className="corner" />
-          <div className="corner" />
+          <div className="corner" /> */}
           {this.renderQuiz()}
         </QuestionCard>
       </Wrapper>
