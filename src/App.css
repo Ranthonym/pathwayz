@@ -33,6 +33,21 @@
   margin: 0; /* Remove margins */
 }
 
+.popover {
+  max-width: 80%;
+}
+
+.careerItem {
+  width: 300px;
+  height: 60px;
+  margin: 10px
+}
+
+.programItem {
+  width: 300px;
+  margin: 10px;
+}
+
 #rightcontainer {
   margin-left: 315px;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
