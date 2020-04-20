@@ -48,3 +48,225 @@
   margin: 10px;
 }
 
+#rightcontainer {
+  margin-left: 315px;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  display: flex;
+}
+
+body {
+  background-color: #3498db;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.container {
+  margin: 20px auto;
+  background: white;
+  padding: 0;
+  border-radius: 7px;
+}
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+.settings-tray {
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #eee;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+.settings-tray .no-gutters {
+  margin-left: 30px;
+  padding: 0;
+}
+.settings-tray--right {
+  float: right;
+}
+.settings-tray--right i {
+  margin-top: 10px;
+  font-size: 25px;
+  color: grey;
+  margin-left: 14px;
+  transition: 0.3s;
+}
+.settings-tray--right i:hover {
+  color: #00b8d8;
+  cursor: pointer;
+}
+.search-box {
+  background: #fafafa;
+  padding: 10px 13px;
+}
+.search-box .input-wrapper {
+  background: #fff;
+  border-radius: 40px;
+}
+.search-box .input-wrapper i {
+  color: grey;
+  margin-left: 7px;
+  vertical-align: middle;
+}
+input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+}
+input::placeholder {
+  color: #e3e3e3;
+  font-weight: 300;
+  margin-left: 20px;
+}
+input:focus {
+  outline: none;
+}
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  background: #fff;
+  transition: 0.3s ease;
+}
+.friend-drawer--grey {
+  background: #eee;
+}
+.friend-drawer .text {
+  margin-left: 12px;
+  width: 70%;
+}
+.friend-drawer .text h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.friend-drawer .text p {
+  margin: 0;
+}
+.friend-drawer .time {
+  color: grey;
+}
+.friend-drawer--onhover:hover {
+  background: #00b8d8;
+  cursor: pointer;
+}
+.friend-drawer--onhover:hover p,
+.friend-drawer--onhover:hover h6,
+.friend-drawer--onhover:hover .time {
+  color: #fff !important;
+}
+hr {
+  margin: 5px auto;
+  width: 60%;
+}
+.chat-bubble {
+  padding: 10px 14px;
+  width: 200px;
+  background: darkgrey;
+  margin: 10px 30px;
+  border-radius: 9px;
+  animation: fadeIn 1s ease-in;
+}
+#userprofile {
+  margin-left: 0;
+  height: 660px;
+}
+#profile-container {
+  margin-top: 25px;
+  display: flex;
+}
+#profile {
+  margin-left: 10px;
+  height: 660px;
+  width: 675px;
+}
+
+#chatbox-right {
+  margin-left: 400px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#send-box {
+  margin-top: 180px;
+}
+.offset-md-9 .chat-bubble {
+  background: #00b8d8;
+  color: #fff;
+}
+.chat-box-tray {
+  background: #eee;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+  align-items: center;
+  margin-top: 19px;
+  bottom: 0;
+}
+.chat-box-tray input {
+  margin: 0 10px;
+  padding: 6px 2px;
+}
+.chat-box-tray i {
+  color: grey;
+  font-size: 30px;
+  vertical-align: middle;
+}
+.chat-box-tray i:last-of-type {
+  margin-left: 25px;
+}
+
+#popup {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  width: 87px;
+  color: black;
+}
+
+#username {
+  width: 250px;
+}
+#password {
+  width: 250px;
+}
+#loginIMG {
+  width: 250px;
+  height: 250px;
+}
+#quiz-title {
+  width: 700px;
+  margin-left: 90px;
+  text-align: center;
+  color: rgb(124, 118, 118);
+}
+#quiz-description {
+  padding: 45px;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: rgb(124, 118, 118);
+  margin-left: 350px;
+  width: 800px;
+  height: 250px;
+  box-shadow: 5px 10px #888888;
+  border: 5px solid rgb(124, 118, 118);
+  border-color: rgb(124, 118, 118);
+  text-align: justify;
+  font-weight: 400;
+}
+
+#quiz-button {
+  font-weight: bold;
+  color: rgb(124, 118, 118);
+}
+
+#quiz-question {
+  color: white;
+}

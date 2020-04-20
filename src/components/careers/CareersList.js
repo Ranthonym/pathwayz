@@ -1,4 +1,6 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
+
 import PropTypes from "prop-types";
 import CareersItem from "./CareersItem";
 
@@ -54,6 +56,7 @@ export default class CareersList extends React.Component {
     });
 
     return (
+
       <section className="Careers">
         <input placeholder="Search Careers" onChange={this.onchange}></input>
         <h4>Careers</h4>
@@ -73,6 +76,7 @@ export default class CareersList extends React.Component {
           })}
         </div>
       </section>
+
     );
   }
 }

@@ -59,7 +59,7 @@ Quiz.propTypes = {
   question: propTypes.string.isRequired,
   questionId: propTypes.number.isRequired,
   questionTotal: propTypes.number.isRequired,
-  onAnswerSelected: propTypes.func.isRequired
-}
+  onAnswerSelected: propTypes.func.isRequired,
+};
 
 export default Quiz;

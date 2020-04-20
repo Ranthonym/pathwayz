@@ -29,12 +29,14 @@ export default class ProgramsItem extends React.Component {
 
   render() {
     return (
+
       <div>
         <div>
          <Button className="programItem" theme="light" id="popover-1" onClick={this.toggle}>
           <h4>{this.props.name}</h4>
           <h5>{this.props.school}</h5>
           </Button>
+
           </div>
           <Popover
           placement="bottom"
@@ -51,7 +53,9 @@ export default class ProgramsItem extends React.Component {
             <Col>
               <div align="center">
                 <h5>Career Paths Include</h5>
+
                 {this.props.courses}
+
               </div>
             </Col>
           </Row>

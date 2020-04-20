@@ -1,16 +1,36 @@
 .card {
-  margin-top: 30px;
-  width: 80%;
-  margin-left: 140px;
+  /* margin-top: 30px; */
+  width: 70%;
+  margin-left: 340px;
   color: black;
+}
+
+.card ul {
+  margin-left: -345px;
 }
 
 .margin_left_320 {
   margin-left: 320px;
 }
 
-userImg {
-  width: 230px;
-  margin-left: 30px;
-  margin-top: 10px;
+.userImg {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  margin-left: 95px;
+  margin-top: 50px;
+}
+
+#profileIMG {
+  width: 250px;
+  margin-left: 160px;
+  height: 250px;
+}
+
+#userprofile-button {
+  margin: 10px;
+}
+
+#profile-button {
+  margin: 20px;
 }

@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import propTypes from "prop-types";
 import { Container } from "shards-react";
 import ProgramsItem from "./ProgramsItem";
 
 export default function ProgramsList() {
+  const [program, setPrograms] = useState([]);
+
+  useEffect(() => {
+    getPrograms();
+  }, [program]);
+
+  function getPrograms() {
+    fetch("http://localhost:3001/programs/2")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setPrograms(data);
+      });
+  }
   const programsLists = [
     {
       id: 1,
@@ -53,15 +68,15 @@ export default function ProgramsList() {
     }
   ];
 
-  const programs = programsLists.map((program) => {
+  const programs = program.map((program) => {
     return (
       <ProgramsItem
         key={program.id}
         id={program.id}
         name={program.name}
         description={program.description}
-        requirements={program.requirements}
-        courses={program.courses}
+        requirements={program.required_courses}
+        path={program.path}
         school={program.school}
       />
     );

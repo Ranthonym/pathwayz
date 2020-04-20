@@ -1,0 +1,32 @@
+.input {
+  margin: 20px;
+  margin-left: 250px;
+}
+
+.container {
+  max-width: 1335px;
+  margin: 0px auto;
+}
+
+/* .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+} */
+.blog-item {
+  height: 500px;
+  width: 350px;
+  margin: 10px;
+  padding: 0px;
+}  
+
+
+.blog-footer {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.video {
+width: 350px;
+height: 310px;
+}

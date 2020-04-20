@@ -6,15 +6,16 @@ import { fonts, colors } from "../components/utils/_var";
 import { media } from "../components/utils/_media-queries";
 
 const Wrapper = styled.div`
-  position: fixed;
+  // position: fixed;
+  margin-left: 100px;
   min-height: 100%;
-  max-width: 100%;
-  background: ${colors.$colorBg};
+  width: 200px;
+  background: white;
   h1 {
     position: relative;
     font-family: ${fonts.$titleFont};
     font-size: 1.1em;
-    color: ${colors.$colorGold};
+    color: white;
     text-align: center;
     padding-top: 2em;
     ${media.tablet`font-size: 1.5em; letter-spacing: 1.5px;`};
@@ -39,20 +40,23 @@ const Intro = ({ title, _onStartClick }) => {
   return (
     <Wrapper className="container">
       <IntroCard>
+        {/* <div className="corner" />
         <div className="corner" />
         <div className="corner" />
-        <div className="corner" />
-        <div className="corner" />
-        <h1>{title}</h1>
+        <div className="corner" /> */}
+        <h1 id="quiz-title">{title}</h1>
         {/* TODO: WILL CHANGE THIS THING DOWN HERE */}
         <ul className="list-group">
-          <li className="list-group-item">Consists of 40 questions</li>
-          <li className="list-group-item">Answer honestly</li>
+          <li id="quiz-description" className="list-group-item">
+            This assessment consists of 15 questions. Answer honestly as we want
+            to ensure that we match you with the career that's best suited for
+            you.
+          </li>
         </ul>
         <StartBtn onClick={_onStartClick}>
-          <span>Begin</span>
+          <span id="quiz-button">Start Now</span>
           <div className="icon">
-            <i className="fa fa-arrow-right" />
+            <i id="quiz-button" className="fa fa-arrow-right" />
           </div>
         </StartBtn>
       </IntroCard>

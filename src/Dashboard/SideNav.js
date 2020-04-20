@@ -14,30 +14,75 @@ import {
   DropdownMenu,
   DropdownItem,
   Collapse,
+  Tooltip
 } from "shards-react";
 import Sidebar from "./Sidebar";
-// const { mode, transition } = useVisualMode(SHOW);
-// const SHOW = "SHOW";
 export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { open: false };
 
     this.startQuiz = this.startQuiz.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.state = {
+      messages: false,
+      userProfile: true,
+      resources: false,
+      exploreCareers: false,
       quiz: false,
       dropdownOpen: false,
       collapseOpen: false,
     };
   }
 
+  toggle() {
+    this.setState({
+      open: !this.state.open
+    });
+  }
+
   startQuiz() {
     this.setState({
       quiz: !this.state.quiz,
+      messages: false,
+      userProfile: false,
+      resources: false,
+      exploreCareers: false,
     });
   }
+
+  handler = (val) => {
+    this.setState({
+      quiz: val,
+    });
+  };
+
+  handleMessages = (val) => {
+    this.setState({
+      messages: val,
+    });
+  };
+
+  handleUserProfile = (val) => {
+    this.setState({
+      userProfile: val,
+    });
+  };
+
+  handleResources = (val) => {
+    this.setState({
+      resources: val,
+    });
+  };
+
+  handleExploreCareers = (val) => {
+    this.setState({
+      exploreCareers: val,
+    });
+  };
 
   toggleDropdown() {
     this.setState({
@@ -51,26 +96,34 @@ export default class DashNav extends React.Component {
     });
   }
 
-  // takeAssessment() {
-  //   transition(SHOW);
-  // }
   render() {
     const isTakingQuiz = this.state.quiz;
     let quiz;
     if (isTakingQuiz) {
-      quiz = <QuizApp totalQuestions={5} />;
+      quiz = (
+        <div id="quiz">
+          {" "}
+          <QuizApp totalQuestions={5} />
+        </div>
+      );
     }
     return (
       <div>
         <div>
-          {/* {mode === SHOW && <QuizApp totalQuestions={5} />} */}
           <Navbar type="dark" theme="info" expand="md">
             <NavbarBrand href="#">PathFinder</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} />
             <Collapse open={this.state.collapseOpen} navbar>
               <Nav type="dark" navbar className="ml-auto" expand="md">
                 <NavItem>
-                  <Button theme="light">Chat with a mentor!</Button>
+                  <Button id="TooltipExample" theme="light">Chat with a mentor!</Button>
+                  <Tooltip
+          open={this.state.open}
+          target="#TooltipExample"
+          toggle={this.toggle}
+        >
+          Live chat with one of our mentors!😁 
+        </Tooltip>
                 </NavItem>
                 <NavItem>
                   <NavLink>About</NavLink>
@@ -96,9 +149,19 @@ export default class DashNav extends React.Component {
           </Navbar>
         </div>
         <div>
-          <Sidebar />
+          <Sidebar
+            quiz={this.handler}
+            setMessages={this.handleMessages}
+            message={this.state.messages}
+            setUserProfile={this.handleUserProfile}
+            userProfile={this.state.userProfile}
+            setResources={this.handleResources}
+            resources={this.state.resources}
+            setExploreCareers={this.handleExploreCareers}
+            exploreCareers={this.state.exploreCareers}
+          />
         </div>
-        <div>{quiz}</div>
+        <div id="quiz">{quiz}</div>
       </div>
     );
   }
