@@ -14,11 +14,14 @@ import {
   DropdownMenu,
   DropdownItem,
   Collapse,
+  Tooltip
 } from "shards-react";
 import Sidebar from "./Sidebar";
 export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { open: false };
 
     this.startQuiz = this.startQuiz.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
@@ -33,6 +36,12 @@ export default class DashNav extends React.Component {
       dropdownOpen: false,
       collapseOpen: false,
     };
+  }
+
+  toggle() {
+    this.setState({
+      open: !this.state.open
+    });
   }
 
   startQuiz() {
@@ -107,7 +116,14 @@ export default class DashNav extends React.Component {
             <Collapse open={this.state.collapseOpen} navbar>
               <Nav type="dark" navbar className="ml-auto" expand="md">
                 <NavItem>
-                  <Button theme="light">Chat with a mentor!</Button>
+                  <Button id="TooltipExample" theme="light">Chat with a mentor!</Button>
+                  <Tooltip
+          open={this.state.open}
+          target="#TooltipExample"
+          toggle={this.toggle}
+        >
+          Live chat with one of our mentors!😁 
+        </Tooltip>
                 </NavItem>
                 <NavItem>
                   <NavLink>About</NavLink>
