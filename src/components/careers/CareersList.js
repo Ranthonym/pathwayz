@@ -29,6 +29,7 @@ export default function CareersList() {
         description={career.description}
         education={career.education}
         salary={career.salary}
+        career={career}
       />
     );
   });

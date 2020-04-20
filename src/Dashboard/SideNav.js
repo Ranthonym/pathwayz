@@ -26,6 +26,9 @@ export default class DashNav extends React.Component {
 
     this.state = {
       messages: false,
+      userProfile: true,
+      resources: false,
+      exploreCareers: false,
       quiz: false,
       dropdownOpen: false,
       collapseOpen: false,
