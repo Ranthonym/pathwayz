@@ -1,13 +1,22 @@
-
 import React, { useState, useEffect } from "react";
-
 import PropTypes from "prop-types";
 import CareersItem from "./CareersItem";
 
 export default class CareersList extends React.Component {
   state = {
     search: "",
+    career: [],
   };
+
+  componentDidMount() {
+    fetch("http://localhost:3001/personalities/16/requirements")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({ career: data });
+      });
+  }
 
   render() {
     const careersLists = [
@@ -33,7 +42,7 @@ export default class CareersList extends React.Component {
       },
     ];
 
-    const careers = careersLists.map((career) => {
+    const careers = this.state.career.map((career) => {
       return (
         <CareersItem
           key={career.id}
@@ -51,12 +60,11 @@ export default class CareersList extends React.Component {
       this.setState({ search: e.target.value });
     };
     const { search } = this.state;
-    const filteredCareers = careersLists.filter((careers) => {
+    const filteredCareers = this.state.career.filter((careers) => {
       return careers.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
 
     return (
-
       <section className="Careers">
         <input placeholder="Search Careers" onChange={this.onchange}></input>
         <h4>Careers</h4>
@@ -76,7 +84,6 @@ export default class CareersList extends React.Component {
           })}
         </div>
       </section>
-
     );
   }
 }
