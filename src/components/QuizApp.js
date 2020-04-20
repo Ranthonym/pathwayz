@@ -16,7 +16,7 @@ class QuizApp extends Component {
     return (
       <Intro
         _onStartClick={this._onStartClick}
-        title="Myers-Briggs Personality Test"
+        title="Let's Get You Started by Taking the Career Matching Assessment"
       />
     );
   }

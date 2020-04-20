@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserProfile.css";
-import Profile from "./profile";
+import Profile from "./Profile";
 
 import {
   Card,

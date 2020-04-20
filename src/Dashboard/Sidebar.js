@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import { Button } from "shards-react";
 import UserProfile from "./UserProfile";
 import Chat from "../components/result/test";
+import Blogs from "../components/resources/Blogs"
 
 export default function Sidebar(props) {
   const [exploreCareers, setExploreCareers] = useState(false);
@@ -13,28 +14,28 @@ export default function Sidebar(props) {
     props.setUserProfile(false);
     props.setResources(false);
     props.setExploreCareers(false);
-    props.setMessages(!props.message);
+    props.setMessages(true);
   }
   function handleUserProfileClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setResources(false);
     props.setExploreCareers(false);
-    props.setUserProfile(!props.userProfile);
+    props.setUserProfile(true);
   }
   function handleResourcesClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setUserProfile(false);
     props.setExploreCareers(false);
-    props.setResources(!props.resources);
+    props.setResources(true);
   }
   function handleExploreCareersClick() {
     props.quiz(false);
     props.setMessages(false);
     props.setUserProfile(false);
     props.setResources(false);
-    props.setExploreCareers(!props.exploreCareers);
+    props.setExploreCareers(true);
   }
 
   if (props.message) {
@@ -44,7 +45,7 @@ export default function Sidebar(props) {
     rightcontainer = <UserProfile />;
   }
   if (props.resources) {
-    rightcontainer = <Button theme="light"> Resources</Button>;
+    rightcontainer = <Blogs/>
   }
   if (props.exploreCareers) {
     rightcontainer = <Button theme="light">Explore Careers</Button>;
@@ -53,16 +54,16 @@ export default function Sidebar(props) {
   return (
     <div>
       <div className="sidebar">
-        <a onClick={handleUserProfileClick} href="#profile">
+        <a onClick={handleUserProfileClick}>
           <i className="fa fa-fw fa-home"></i>Dashboard
         </a>
-        <a onClick={handleMessagesClick} href="#messages">
+        <a onClick={handleMessagesClick}>
           <i className="fa fa-fw fa-envelope"></i> Messages
         </a>
-        <a onClick={handleResourcesClick} href="#resources">
+        <a onClick={handleResourcesClick}>
           <i className="fa fa-fw fa-edit"></i>Resources
         </a>
-        <a onClick={handleExploreCareersClick} href="#search">
+        <a onClick={handleExploreCareersClick}>
           <i className="fa fa-fw fa-search"></i>Explore Careers
         </a>
       </div>
