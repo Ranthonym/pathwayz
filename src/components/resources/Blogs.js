@@ -7,6 +7,7 @@ import {  Container, Row, Col, Card, CardBody, CardImg, CardFooter, CardHeader, 
   DropdownMenu
 }  from "shards-react";
 import "./Blogs.css"
+import Videos from "./Videos"
 
 export default class Blogs extends React.Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class Blogs extends React.Component {
     <Container className="container">
       <Row className="row">
         <Col>
+        <Videos/>
           <Card className="blog-item">
             <CardImg top src="https://www.online-bachelor-degrees.com/wp-content/uploads/2018/05/finance-management-tools.jpg"></CardImg>
             <div align="center"><CardHeader><a href="https://uwaterloo.ca/beyond-ideas/stories/financing/ultimate-guide-financing-your-education">Ultimate guide: Financing your education</a></CardHeader></div>
