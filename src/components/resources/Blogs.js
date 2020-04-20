@@ -14,13 +14,30 @@ export default class Blogs extends React.Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      open: false
+      open: false,
+      displayVideos: false,
+      displayBlogs: false
     };
+    this._onVideoClick = this._onVideoClick.bind(this);
+    this._onBlogClick = this._onBlogClick.bind(this);
   }
 
   toggle() {
     this.setState({ open: !this.state.open });
   }
+
+  _onVideoClick() {
+    this.setState({
+      displayVideos: true,
+    });
+  }
+
+  _onBlogClick() {
+    this.setState({
+      displayBlogs: true,
+    });
+  }
+
   render() {
   return (
     <div>
@@ -34,22 +51,26 @@ export default class Blogs extends React.Component {
     >
        <DropdownToggle theme="info" caret></DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem>Blogs</DropdownItem>
-            <DropdownItem>Videos</DropdownItem>
+            <DropdownItem onClick={this._onBlogClick}>Blogs</DropdownItem>
+            <DropdownItem onClick={this._onVideoClick}>Videos</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </InputGroup>
     <Container className="container">
+    {this.state.displayVideos ?
+           <Videos /> :
+           null
+        }
+
       <Row className="row">
         <Col>
-        <Videos/>
           <Card className="blog-item">
             <CardImg top src="https://www.online-bachelor-degrees.com/wp-content/uploads/2018/05/finance-management-tools.jpg"></CardImg>
             <div align="center"><CardHeader><a href="https://uwaterloo.ca/beyond-ideas/stories/financing/ultimate-guide-financing-your-education">Ultimate guide: Financing your education</a></CardHeader></div>
             <CardBody>
               <p>Getting scholarships and bursaries can make a big difference for your funds.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By University of Waterloo</div><div>February 28, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By: University of Waterloo</div><div>February 28, 2020</div></CardFooter>
           </Card>
         </Col>
           </Row>
@@ -75,7 +96,7 @@ export default class Blogs extends React.Component {
             <CardBody>
               <p>Reframe, reassess, and be ready to try again.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By CPA Ontario</div><div>March 31, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By: CPA Ontario</div><div>March 31, 2020</div></CardFooter>
           </Card>
         </Col>
         </Row>

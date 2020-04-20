@@ -37,7 +37,7 @@ export default function Videos() {
               </p>
             </CardBody>
             <CardFooter className="blog-footer">
-              <div>By Scholarships Canada</div>
+              <div>By: Scholarships Canada</div>
               <div>February 05, 2020</div>
             </CardFooter>
           </Card>
@@ -67,7 +67,7 @@ export default function Videos() {
               </p>
             </CardBody>
             <CardFooter className="blog-footer">
-              <div>By Vancouver Island University</div>
+              <div>By: Vancouver Island University</div>
               <div>January 23, 2020</div>
             </CardFooter>
           </Card>
@@ -157,7 +157,7 @@ export default function Videos() {
               </p>
             </CardBody>
             <CardFooter className="blog-footer">
-              <div>By Vancouver Island University</div>
+              <div>By: Vancouver Island University</div>
               <div>January 14, 2020</div>
             </CardFooter>
           </Card>
