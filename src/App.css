@@ -209,5 +209,20 @@ hr {
 }
 
 #popup {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  width: 87px;
   color: black;
+}
+
+#username {
+  width: 250px;
+}
+#password {
+  width: 250px;
+}
+#loginIMG {
+  width: 250px;
+  height: 250px;
 }
