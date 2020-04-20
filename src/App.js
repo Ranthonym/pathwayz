@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import io from "socket.io-client";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -21,26 +22,36 @@ import Dashboard from "./Dashboard/SideNav";
 import Login from "./containers/Login";
 import test from "./components/result/test";
 
+const socket = io.connect("http://localhost:5000");
+socket.on("message", function (message) {
+  console.log(`The server has a message for you: ${message}`);
+});
+
+// The visitor is asked for their username...
+const username = prompt("What's your username?");
+
+// It's sent with the signal "little_newbie" (to differentiate it from "message")
+socket.emit("session", username);
+
 export default function Application() {
-  useEffect(
-    () => addResponseMessage("Welcome to the chat! How can we help you?"),
-    []
-  );
+  let [chat, setChat] = useState(false);
+
+  useEffect(() => {
+    // addResponseMessage("Welcome to the chat! How can we help you?");
+    socket.on("message", function (message) {
+      addResponseMessage(message);
+    });
+  }, []);
 
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
-    addResponseMessage("response: ", newMessage);
+    socket.emit("message", newMessage);
+    setChat = true;
+    // addResponseMessage(`${username} says: ${newMessage}`);
+
     //send ajax request via addUserMessage
   };
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     console.log("checking");
-  //     //make ajax request from server
-  //     addResponseMessage("response text");
-  //   }, 1000);
-  // });
 
   return (
     <div className="App">
@@ -50,6 +61,7 @@ export default function Application() {
         profileAvatar={logo}
         title="Chat with a Mentor"
         subtitle="Mentor name goes here"
+        showTimeStamp="true"
       />
       <Router>
         <Route exact path="/" component={MainNav} />
