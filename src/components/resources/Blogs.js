@@ -23,9 +23,9 @@ export default class Blogs extends React.Component {
   render() {
   return (
     <div>
-      <h2>Additional Resources</h2>
+      <h3><strong>Additional Resources</strong></h3>
     <InputGroup className="input">
-    <FormInput />
+    <FormInput placeholder="Search resources" />
     <Dropdown
       addonType="append"
       open={this.state.open}
@@ -47,7 +47,7 @@ export default class Blogs extends React.Component {
             <CardBody>
               <p>Getting scholarships and bursaries can make a big difference for your funds.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By University of Waterloo</div><div>Feb 28, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By University of Waterloo</div><div>February 28, 2020</div></CardFooter>
           </Card>
         </Col>
           </Row>
@@ -60,7 +60,7 @@ export default class Blogs extends React.Component {
             <CardBody>
               <p>Classes cancelled and moving online? COVID-19 is no joke, but neither is your education. Find advice to keep on top of your work.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By: Logan Bright</div><div>Mar 16, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By: Logan Bright</div><div>March 16, 2020</div></CardFooter>
           </Card>
         </Col>
         </Row>
@@ -73,7 +73,7 @@ export default class Blogs extends React.Component {
             <CardBody>
               <p>Reframe, reassess, and be ready to try again.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By CPA Ontario</div><div>Mar 31, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By CPA Ontario</div><div>March 31, 2020</div></CardFooter>
           </Card>
         </Col>
         </Row>
@@ -86,7 +86,7 @@ export default class Blogs extends React.Component {
             <CardBody>
               <p>Classes cancelled and moving online? COVID-19 is no joke, but neither is your education. Find advice to keep on top of your work.</p>
             </CardBody>
-            <CardFooter className="blog-footer"><div>By: Scholarship Canada</div><div>Feb 07, 2020</div></CardFooter>
+            <CardFooter className="blog-footer"><div>By: Scholarship Canada</div><div>February 07, 2020</div></CardFooter>
           </Card>
         </Col>
         </Row>
@@ -94,8 +94,8 @@ export default class Blogs extends React.Component {
         <Row className="row">
         <Col>
         <Card className="blog-item">
-            <CardImg top src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-SmallScholarshipsBigRewardsSFSCSIC.jpg" />
-            <div align="center"><CardHeader><a href="https://www.scholarshipscanada.com/News/9/5155/Small-Scholarships,-Big-Rewards">Small Scholarships, Big Rewards</a></CardHeader></div>
+            <CardImg top src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-TopScholarshipApplicationKeywords.jpg" />
+            <div align="center"><CardHeader><a href="https://www.scholarshipscanada.com/News/9/5152/7-Keywords-to-Include-When-Applying-for-Scholarships">7 Keywords to Include When Applying for Scholarships</a></CardHeader></div>
             <CardBody>
               <p>Classes cancelled and moving online? COVID-19 is no joke, but neither is your education. Find advice to keep on top of your work.</p>
             </CardBody>
