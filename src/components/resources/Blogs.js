@@ -8,12 +8,8 @@ import {
   CardImg,
   CardFooter,
   CardHeader,
-  InputGroup,
-  FormInput,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu,
+  Breadcrumb,
+  BreadcrumbItem,
 } from "shards-react";
 import "./Blogs.css";
 import Videos from "./Videos";
@@ -21,7 +17,7 @@ import Videos from "./Videos";
 export default class Blogs extends React.Component {
   constructor(props) {
     super(props);
-    this.toggle = this.toggle.bind(this);
+
     this.state = {
       open: false,
       displayVideos: false,
@@ -29,10 +25,6 @@ export default class Blogs extends React.Component {
     };
     this._onVideoClick = this._onVideoClick.bind(this);
     this._onBlogClick = this._onBlogClick.bind(this);
-  }
-
-  toggle() {
-    this.setState({ open: !this.state.open });
   }
 
   _onVideoClick() {
@@ -207,20 +199,18 @@ export default class Blogs extends React.Component {
         <h3>
           <strong>Additional Resources</strong>
         </h3>
-        <InputGroup className="input">
-          <FormInput placeholder="Search resources" />
-          <Dropdown
-            addonType="append"
-            open={this.state.open}
-            toggle={this.toggle}
-          >
-            <DropdownToggle theme="info" caret></DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem onClick={this._onBlogClick}>Blogs</DropdownItem>
-              <DropdownItem onClick={this._onVideoClick}>Videos</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </InputGroup>
+        <div align="center">
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <BreadcrumbItem active onClick={this._onBlogClick}>
+            <a href="#">Blogs</a>
+            </BreadcrumbItem>
+          </BreadcrumbItem>
+          <BreadcrumbItem active onClick={this._onVideoClick}>
+             <a href="#">Videos</a>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        </div>
         <Container className="container">{container}</Container>
       </div>
     );
