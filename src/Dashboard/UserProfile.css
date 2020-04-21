@@ -4,8 +4,11 @@
   margin-left: 340px;
   color: black;
   background: white;
+  max-height: 640px;
 }
-
+#quiz-result {
+  margin-left: 20px;
+}
 .card ul {
   margin-left: -345px;
 }

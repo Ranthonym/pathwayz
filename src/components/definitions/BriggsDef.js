@@ -1,6 +1,7 @@
 import React from "react";
 import { CardDef } from "../utils/Cards";
 import styled from "styled-components";
+import { CardTitle, CardBody } from "shards-react";
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -23,15 +24,24 @@ export default ({ title, content, onBackClick, CareersList }) => {
   return (
     <Wrapper className="container">
       <CardDef>
-        <h1>{title}</h1>
+        <CardTitle>
+          {" "}
+          <h1>{title}</h1>
+        </CardTitle>
+
         {/* <div 
         className="close" onClick={onBackClick}>
           <i className="fa fa-times" aria-hidden="true" />
         </div> */}
-        <p className="text-justify">{content}</p>
-        <h3>Your Top 5 Career Options</h3>
-        {/* <ul className="text-justify">{CareersList}</ul> */}
-        <CareersList />
+        <CardBody>
+          <div>
+            <p className="text-justify">{content}</p>
+            {/* <h5>Your Top 5 Career Options</h5> */}
+            {/* <ul className="text-justify">{CareersList}</ul> */}
+
+            <CareersList />
+          </div>
+        </CardBody>
       </CardDef>
     </Wrapper>
   );
