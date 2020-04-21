@@ -24,7 +24,7 @@ export default function MessageList(props) {
     if (message.conversation_id === props.id) {
       if (message.user_id === 1) {
         return (
-          <MessageIn
+          <MessageOut
             key={message.id}
             id={message.id}
             content={message.message}
@@ -32,7 +32,7 @@ export default function MessageList(props) {
         );
       } else {
         return (
-          <MessageOut
+          <MessageIn
             key={message.id}
             id={message.id}
             content={message.message}
