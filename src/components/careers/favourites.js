@@ -59,20 +59,20 @@ import React, { useState, useEffect } from "react";
 import { Button } from "shards-react";
 
 export default function FavouriteButton(props) {
-  const [favourites, setFavourites] = useState(false);
-  useEffect(() => {
-    getFavourite();
-  }, []);
+  // const [favourites, setFavourites] = useState(false);
+  // useEffect(() => {
+  //   getFavourite();
+  // }, []);
 
-  function getFavourite() {
-    fetch("http://localhost:3001/favourites")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setFavourites(data);
-      });
-  }
+  // function getFavourite() {
+  //   fetch("http://localhost:3001/favourites")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setFavourites(data);
+  //     });
+  // }
   function addFavourite() {
     let user_id = 1;
     console.log(props.id);
@@ -83,20 +83,19 @@ export default function FavouriteButton(props) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ user_id, career_id }),
-    })
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        getFavourite();
-      });
+    }).then((response) => {
+      return response.text();
+    });
+    // .then((data) => {
+    //   getFavourite();
+    // });
   }
   return (
     <Button
       theme="info"
       className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
     >
-      <span onClick={addFavourite}>Add Career to Dashboard</span>
+      <span onClick={addFavourite}>Add Career to Dashboard &hearts;</span>
     </Button>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import CareersItem from "./CareersItem";
+import CareersItem from "../components/careers/CareersItem";
 
-export default class CareersList extends React.Component {
+export default class Explore extends React.Component {
   state = {
+    search: "",
     career: [],
   };
 
@@ -41,23 +42,33 @@ export default class CareersList extends React.Component {
     //   },
     // ];
 
-    const careers = this.state.career.map((career) => {
-      return (
-        <CareersItem
-          key={career.id}
-          id={career.id}
-          title={career.title}
-          outlook={career.outlook}
-          description={career.description}
-          education={career.education}
-          salary={career.salary}
-        />
-      );
+    onchange = (e) => {
+      this.setState({ search: e.target.value });
+    };
+    const { search } = this.state;
+    const filteredCareers = this.state.career.filter((careers) => {
+      return careers.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
 
     return (
       <section className="Careers">
-        <div className="row">{careers}</div>
+        <input placeholder="Search Careers" onChange={this.onchange}></input>
+        <h4>Careers</h4>
+        <div className="row">
+          {filteredCareers.map((careers) => {
+            return (
+              <CareersItem
+                key={careers.id}
+                id={careers.id}
+                title={careers.title}
+                outlook={careers.outlook}
+                description={careers.description}
+                education={careers.education}
+                salary={careers.salary}
+              />
+            );
+          })}
+        </div>
       </section>
     );
   }

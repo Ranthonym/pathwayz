@@ -23,8 +23,6 @@ export default function MainNav() {
           </NavItem>
         </Nav>
       </Navbar>
-      <CareersList />
-      <ProgramsList />
     </div>
   );
 }
