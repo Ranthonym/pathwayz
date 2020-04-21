@@ -28,10 +28,10 @@ socket.on("message", function (message) {
 });
 
 // The visitor is asked for their username...
-const username = prompt("What's your username?");
+//const username = prompt("What's your username?");
 
 // It's sent with the signal "little_newbie" (to differentiate it from "message")
-socket.emit("session", username);
+//socket.emit("session", username);
 
 export default function Application() {
   let [chat, setChat] = useState(false);
