@@ -302,6 +302,7 @@ hr {
 
 #profile-pic {
   margin-left: 130px;
+  border-radius: 40px;
 }
 #message-box {
   margin-top: 20px;
