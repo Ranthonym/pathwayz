@@ -302,7 +302,7 @@ hr {
 
 #profile-pic {
   margin-left: 130px;
-  border-radius: 40px;
+  border-radius: 60px;
 }
 #message-box {
   margin-top: 20px;
@@ -315,4 +315,8 @@ hr {
   margin-left: 0px;
   height: 500px;
   width: 960px;
+}
+
+#career-popup {
+  display: flex;
 }

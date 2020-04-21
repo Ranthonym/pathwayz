@@ -1,11 +1,11 @@
 import React from "react";
+import Popup from "reactjs-popup";
 import {
   Row,
   Col,
   Button,
   CardFooter,
   CardBody,
-  Popover,
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
@@ -46,21 +46,22 @@ export default class CareersItem extends React.Component {
     }
     return (
       <div>
-        <div>
-          <Button
-            className="careerItem"
-            theme="light"
-            id="popover-1"
-            onClick={this.toggle}
-          >
-            <h4>{this.props.title}</h4>
-          </Button>
-        </div>
-        <Popover
-          placement="bottom"
+        <Popup
+          trigger={
+            <div>
+              <Button
+                className="careerItem"
+                theme="light"
+                id="popover-1"
+                onClick={this.toggle}
+              >
+                <h4>{this.props.title}</h4>
+              </Button>
+            </div>
+          }
+          modal
           open={this.state.open}
           toggle={this.toggle}
-          target="#popover-1"
         >
           <PopoverHeader>
             <h5>{this.props.outlook}</h5>
@@ -107,7 +108,7 @@ export default class CareersItem extends React.Component {
               </div>
             </CardFooter>
           </PopoverBody>
-        </Popover>
+        </Popup>
       </div>
     );
   }
