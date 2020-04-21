@@ -28,10 +28,10 @@ socket.on("message", function (message) {
 });
 
 // The visitor is asked for their username...
-const username = prompt("What's your username?");
+// const username = prompt("What's your username?");
 
 // It's sent with the signal "little_newbie" (to differentiate it from "message")
-socket.emit("session", username);
+// socket.emit("session", username);
 
 export default function Application() {
   let [chat, setChat] = useState(false);
@@ -43,14 +43,27 @@ export default function Application() {
     });
   }, []);
 
+  //saving message in db
+  function addMessage(message) {
+    let user_id = 1;
+    let conversation_id = 1;
+    fetch("http://localhost:3001/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ user_id, conversation_id, message }),
+    }).then((response) => {
+      return response.text();
+    });
+  }
+
   const handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
     socket.emit("message", newMessage);
     setChat = true;
-    // addResponseMessage(`${username} says: ${newMessage}`);
-
-    //send ajax request via addUserMessage
+    addMessage(newMessage);
   };
 
   return (
@@ -60,8 +73,8 @@ export default function Application() {
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={logo}
         title="Chat with a Mentor"
-        subtitle="Mentor name goes here"
         showTimeStamp="true"
+        senderPlaceHolder={"Type a message..."}
       />
       <Router>
         <Route exact path="/" component={MainNav} />

@@ -10,24 +10,24 @@ const Wrapper = styled.div`
   overflow: scroll;
 `;
 
-
 export default ({ title, content, onBackClick, CareersList }) => {
   // const careers = CareersList.map((career) => {
   //   return <li>{career.title}</li>;
   // });
 
-// export default ({ title, content, onBackClick, top5Careers }) => {
-//   const careerList = top5Careers.map((career) => {
-//     return <li>{career.title}</li>;
-//   });
+  // export default ({ title, content, onBackClick, top5Careers }) => {
+  //   const careerList = top5Careers.map((career) => {
+  //     return <li>{career.title}</li>;
+  //   });
 
   return (
     <Wrapper className="container">
       <CardDef>
         <h1>{title}</h1>
-        <div className="close" onClick={onBackClick}>
+        {/* <div 
+        className="close" onClick={onBackClick}>
           <i className="fa fa-times" aria-hidden="true" />
-        </div>
+        </div> */}
         <p className="text-justify">{content}</p>
         <h3>Your Top 5 Career Options</h3>
         {/* <ul className="text-justify">{CareersList}</ul> */}
