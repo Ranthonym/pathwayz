@@ -32,9 +32,16 @@ export default class ProgramsItem extends React.Component {
 
       <div>
         <div>
-         <Button className="programItem" theme="light" id="popover-1" onClick={this.toggle}>
-          <h4>{this.props.title}</h4>
-          <h5>{this.props.school}</h5>
+
+          <Button
+            className="programItem"
+            theme="light"
+            id="program-button"
+            onClick={this.toggle}
+          >
+            <h4>{this.props.title}</h4>
+            <h5>{this.props.school}</h5>
+
           </Button>
 
           </div>

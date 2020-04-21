@@ -68,25 +68,67 @@ export default function ProgramsList() {
     },
   ];
 
-  const programs = program.map((program) => {
-    return (
-      <ProgramsItem
-        key={program.id}
-        id={program.id}
-        title={program.title}
-        description={program.description}
-        required_courses={program.required_courses}
-        courses={program.course}
-        grade_average={program.grade_average}
-      />
-    );
+  const programs1 = program.map((program) => {
+    if (program.id <= 2)
+      return (
+        <div>
+          <ProgramsItem
+            key={program.id}
+            id={program.id}
+            title={program.title}
+            description={program.description}
+            required_courses={program.required_courses}
+            courses={program.course}
+            grade_average={program.grade_average}
+          />
+        </div>
+      );
+  });
+  const programs2 = program.map((program) => {
+    if (program.id >= 3 && program.id <= 4)
+      return (
+        <div>
+          <ProgramsItem
+            key={program.id}
+            id={program.id}
+            title={program.title}
+            description={program.description}
+            required_courses={program.required_courses}
+            courses={program.course}
+            grade_average={program.grade_average}
+          />
+        </div>
+      );
+  });
+  const programs3 = program.map((program) => {
+    if (program.id > 4)
+      return (
+        <div>
+          <ProgramsItem
+            key={program.id}
+            id={program.id}
+            title={program.title}
+            description={program.description}
+            required_courses={program.required_courses}
+            courses={program.course}
+            grade_average={program.grade_average}
+          />
+        </div>
+      );
   });
 
   return (
     <section className="Programs">
-      <h4>Programs</h4>
       <Container>
-        <ul className="programs_list">{programs}</ul>
+        <ul id="program-list" className="programs_list">
+          {programs1}
+        </ul>
+        <ul id="program-list" className="programs_list">
+          {programs2}
+        </ul>
+        <ul id="program-list" className="programs_list">
+          {programs3}
+        </ul>
       </Container>
     </section>
   );

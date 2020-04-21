@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import CareersItem from "../components/careers/CareersItem";
-
+import { Card, CardTitle } from "shards-react";
 export default class Explore extends React.Component {
   state = {
     search: "",
@@ -52,8 +52,11 @@ export default class Explore extends React.Component {
 
     return (
       <section className="Careers">
-        <input placeholder="Search Careers" onChange={this.onchange}></input>
-        <h4>Careers</h4>
+        {/* <CardTitle>Search Through All The Career Options</CardTitle> */}
+        <Card id="search-bar">
+          <input placeholder="Search Careers" onChange={this.onchange}></input>
+        </Card>
+
         <div className="row">
           {filteredCareers.map((careers) => {
             return (
