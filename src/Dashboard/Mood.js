@@ -1,5 +1,5 @@
 import React from "react";
-import { FormTextarea } from "shards-react";
+import { FormTextarea, Button } from "shards-react";
 
 export default class Mood  extends React.Component {
     constructor(props) {
@@ -20,6 +20,7 @@ export default class Mood  extends React.Component {
             {(value && `🗣 ${value}`) || "🤔 Waiting for you to say something..."}
           </p>
           <FormTextarea action="/https://apis.paralleldots.com/v5/emotion" method="post" onChange={this.handleChange} />
+          <Button theme="info">Submit</Button>
         </div>
       );
     }
