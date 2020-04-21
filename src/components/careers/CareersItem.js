@@ -1,15 +1,14 @@
 import React from "react";
+import Popup from "reactjs-popup";
 import {
   Row,
   Col,
   Button,
   CardFooter,
   CardBody,
-  Popover,
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
-import Popup from "reactjs-popup";
 import FavouriteButton from "./favourites";
 import ProgramsList from "./ProgramsList";
 export default class CareersItem extends React.Component {
@@ -64,7 +63,6 @@ export default class CareersItem extends React.Component {
           modal
           open={this.state.open}
           toggle={this.toggle}
-          target="#popover-1"
         >
           <PopoverHeader>
             <h5> Job Outlook: {this.props.outlook}</h5>
