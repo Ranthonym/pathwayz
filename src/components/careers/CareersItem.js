@@ -9,6 +9,7 @@ import {
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
+import Popup from "reactjs-popup";
 import FavouriteButton from "./favourites";
 import ProgramsList from "./ProgramsList";
 export default class CareersItem extends React.Component {
@@ -45,7 +46,6 @@ export default class CareersItem extends React.Component {
       program = <ProgramsList />;
     }
     return (
-
       <div id="program-titles">
         <Popup
           id="career-popover"
@@ -62,7 +62,6 @@ export default class CareersItem extends React.Component {
             </div>
           }
           modal
-
           open={this.state.open}
           toggle={this.toggle}
           target="#popover-1"
@@ -117,7 +116,7 @@ export default class CareersItem extends React.Component {
               </div>
             </CardFooter>
           </PopoverBody>
-        </Popover>
+        </Popup>
       </div>
     );
   }
