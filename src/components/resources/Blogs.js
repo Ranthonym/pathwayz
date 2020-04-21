@@ -1,15 +1,12 @@
 import React from "react";
 import {
   Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardImg,
-  CardFooter,
-  CardHeader,
-  Breadcrumb,
-  BreadcrumbItem,
+  InputGroup,
+  FormInput,
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu,
 } from "shards-react";
 import "./Blogs.css";
 import Videos from "./Videos";
@@ -18,7 +15,7 @@ import BlogPost from "./BlogPost";
 export default class Blogs extends React.Component {
   constructor(props) {
     super(props);
-
+    this.toggle = this.toggle.bind(this);
     this.state = {
       open: false,
       displayVideos: false,
@@ -26,6 +23,10 @@ export default class Blogs extends React.Component {
     };
     this._onVideoClick = this._onVideoClick.bind(this);
     this._onBlogClick = this._onBlogClick.bind(this);
+  }
+
+  toggle() {
+    this.setState({ open: !this.state.open });
   }
 
   _onVideoClick() {
@@ -63,7 +64,6 @@ export default class Blogs extends React.Component {
     }
     return (
       <div>
-
         <InputGroup id="resources-input" className="input">
           <FormInput placeholder="Search resources" />
           <Dropdown
@@ -78,7 +78,6 @@ export default class Blogs extends React.Component {
             </DropdownMenu>
           </Dropdown>
         </InputGroup>
-
         <Container className="container">{container}</Container>
       </div>
     );

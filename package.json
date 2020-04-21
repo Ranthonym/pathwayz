@@ -9,7 +9,6 @@
     "cors": "^2.8.5",
     "node-sass": "^4.13.1",
     "npm-watch": "^0.6.0",
-    "paralleldots": "^3.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",

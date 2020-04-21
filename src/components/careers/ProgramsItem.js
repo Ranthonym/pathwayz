@@ -34,7 +34,7 @@ export default class ProgramsItem extends React.Component {
           <Button
             className="programItem"
             theme="light"
-            id="popover-1"
+            id="program-button"
             onClick={this.toggle}
           >
             <h4>{this.props.title}</h4>
