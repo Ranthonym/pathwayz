@@ -9,7 +9,7 @@ export default class Explore extends React.Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3001/personalities/16/requirements")
+    fetch("http://localhost:3001/careers")
       .then((response) => {
         return response.json();
       })
