@@ -15,24 +15,26 @@ import {
 export default function UserProfile() {
   return (
     <div id="profile-container">
-      <Card id="userprofile" style={{ maxWidth: "300px" }}>
+      <Card id="userprofile" style={{ maxWidth: "600px" }}>
         <CardHeader>
           <CardTitle></CardTitle>
         </CardHeader>
         <CardImg
+          id="profile-pic"
           className="userImg"
           src="https://avatars.servers.getgo.com/emails/%7B0%7D/medium.jpg"
         />
         <CardBody>
           <div align="center">
-            <CardTitle> User </CardTitle>
+            <CardTitle> Asmaa </CardTitle>
           </div>
-          <div align="center">user@example.com</div>
+          <div align="center">Type ENTJ: The Field Marshall</div>
           <CardHeader>
             <div>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum is simply dummy text.
+              You tend to be organized and logical above all else. You were born
+              to lead and can help steer an organization towards their vision,
+              using your excellent organizing and understanding of what needs to
+              get done.
             </div>
           </CardHeader>
           <div align="center">

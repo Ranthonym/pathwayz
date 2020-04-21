@@ -4,17 +4,19 @@ import {
   Col,
   Button,
   CardFooter,
+  CardBody,
   Popover,
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
 import FavouriteButton from "./favourites";
-import ProgramsItem from "./ProgramsItem";
+import ProgramsList from "./ProgramsList";
 export default class CareersItem extends React.Component {
   constructor(props) {
     super(props);
     this.showProgram = this.showProgram.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.toggleClose = this.toggleClose.bind(this);
     this.state = {
       program: false,
       open: false,
@@ -27,14 +29,20 @@ export default class CareersItem extends React.Component {
   }
   toggle() {
     this.setState({
-      open: !this.state.open,
+      open: true,
+    });
+  }
+
+  toggleClose() {
+    this.setState({
+      open: false,
     });
   }
   render() {
     const isShowingProgram = this.state.program;
     let program;
     if (isShowingProgram) {
-      program = <ProgramsItem />;
+      program = <ProgramsList />;
     }
     return (
       <div>
@@ -74,25 +82,32 @@ export default class CareersItem extends React.Component {
               <h5 className="education">Education</h5>
               {this.props.education}
             </div>
-            <Button
-              onClick={this.showProgram}
-              theme="info"
-              className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
-            >
-              View programs related to this career &rarr;
-            </Button>
-            <FavouriteButton id={this.props.id} />
-
+            <div id="program-button">
+              <Button
+                onClick={this.showProgram}
+                theme="info"
+                className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+              >
+                View programs related to this career
+              </Button>
+              <FavouriteButton id={this.props.id}> </FavouriteButton>
+              <Button
+                onClick={this.toggleClose}
+                theme="info"
+                className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+              >
+                Go Back To Career Options
+              </Button>
+            </div>
+            <CardBody>{program}</CardBody>
             <CardFooter>
               <div align="center">
                 Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆
                 Limited ★ ★ ☆ Fair ★ ★ ★ Good
               </div>
-              <i class="fa fa-heart"></i>
             </CardFooter>
           </PopoverBody>
         </Popover>
-        <div>{program}</div>
       </div>
     );
   }

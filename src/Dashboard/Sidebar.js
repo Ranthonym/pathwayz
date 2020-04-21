@@ -3,7 +3,8 @@ import "./Sidebar.css";
 import { Button } from "shards-react";
 import UserProfile from "./UserProfile";
 import Chat from "../components/result/test";
-import Blogs from "../components/resources/Blogs"
+import Blogs from "../components/resources/Blogs";
+import Explore from "../Dashboard/explore";
 
 export default function Sidebar(props) {
   const [exploreCareers, setExploreCareers] = useState(false);
@@ -45,10 +46,10 @@ export default function Sidebar(props) {
     rightcontainer = <UserProfile />;
   }
   if (props.resources) {
-    rightcontainer = <Blogs/>
+    rightcontainer = <Blogs />;
   }
   if (props.exploreCareers) {
-    rightcontainer = <Button theme="light">Explore Careers</Button>;
+    rightcontainer = <Explore />;
   }
 
   return (
