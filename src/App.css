@@ -34,7 +34,7 @@
 }
 
 .popover {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .careerItem {
@@ -280,18 +280,13 @@ hr {
 #quiz-question {
   color: white;
 }
-#career-button {
+#program-button {
   display: flex;
+  width: 80%;
   padding-top: 5px;
-  width: 600px;
+  margin-left: 0px;
 }
 
-#cb {
-  margin: 5px;
-}
-#career-description {
-  margin-bottom: 15px;
-}
 #blog-container {
   display: flex;
   flex-direction: row;
@@ -299,11 +294,15 @@ hr {
 }
 #blog-card {
   width: 300px;
-  height: 480px;
+  height: 515px;
+}
+#blogcard {
+  height: 490px;
 }
 
 #profile-pic {
   margin-left: 130px;
+  border-radius: 60px;
 }
 #message-box {
   margin-top: 20px;
@@ -318,37 +317,6 @@ hr {
   width: 960px;
 }
 
-
 #career-popup {
-  display: inline;
-}
-
-#popover-1 {
-  width: 300px;
-  margin: 10px;
-}
-
-h4 {
-  font-size: 15px;
-}
-
-#program-button {
-  height: 120px;
-  width: 250px;
-  padding: 10px;
-}
-#program-list {
-  padding: 0;
   display: flex;
 }
-#career-popover {
-  width: 20px;
-}
-
-#search-bar {
-  margin-top: 100px;
-  margin-left: 20px;
-  margin: 70px;
-  height: 40px;
-}
-
