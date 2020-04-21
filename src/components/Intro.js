@@ -29,7 +29,7 @@ const Wrapper = styled.div`
       font-family: ${fonts.$latoFont};
       border: 0;
       margin-bottom: 0;
-      color: ${colors.$colorGold};
+      color: white;
       ${media.tablet`font-size: 1.3em`};
       text-align: center;
     }
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
 const Intro = ({ title, _onStartClick }) => {
   return (
-    <Wrapper className="container">
+    <Wrapper id="quiz-intro">
       <IntroCard>
         {/* <div className="corner" />
         <div className="corner" />
