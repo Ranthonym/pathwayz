@@ -69,8 +69,8 @@ body {
   border-radius: 7px;
 }
 .profile-image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 40px;
 }
 .settings-tray {
@@ -165,6 +165,7 @@ hr {
   padding: 10px 14px;
   width: 200px;
   background: darkgrey;
+  color: #fff;
   margin: 10px 30px;
   border-radius: 9px;
   animation: fadeIn 1s ease-in;
@@ -193,7 +194,7 @@ hr {
 }
 
 #chatbox-right {
-  margin-left: 400px;
+  margin-left: 350px;
 }
 @keyframes fadeIn {
   0% {
@@ -204,7 +205,7 @@ hr {
   }
 }
 #send-box {
-  margin-top: 180px;
+  margin-top: 50px;
 }
 .offset-md-9 .chat-bubble {
   background: #00b8d8;
@@ -298,4 +299,16 @@ hr {
 
 #profile-pic {
   margin-left: 130px;
+}
+#message-box {
+  margin-top: 20px;
+  margin-left: 0px;
+  height: 650px;
+  width: 960px;
+}
+
+#message-body {
+  margin-left: 0px;
+  height: 500px;
+  width: 960px;
 }
