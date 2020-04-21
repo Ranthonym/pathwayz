@@ -57,8 +57,9 @@ export default class Blogs extends React.Component {
           <div id="blog-container">
             <Row className="row">
               <Col>
-                <Card id="blog-card" className="blog-item">
+                <Card id="blogcard" className="blog-item">
                   <CardImg
+                    id="blog-pic"
                     top
                     src="https://www.online-bachelor-degrees.com/wp-content/uploads/2018/05/finance-management-tools.jpg"
                   ></CardImg>
@@ -85,7 +86,7 @@ export default class Blogs extends React.Component {
 
             <Row className="row">
               <Col>
-                <Card id="blog-card" className="blog-item">
+                <Card id="blogcard" className="blog-item">
                   <CardImg
                     top
                     src="https://www.edgeip.com/images/FCK/Image/202003/00-SFG-HowtoWorkandStudyFromHomeSFSIC.jpg"
@@ -114,7 +115,7 @@ export default class Blogs extends React.Component {
 
             <Row className="row">
               <Col>
-                <Card id="blog-card" className="blog-item">
+                <Card id="blogcard" className="blog-item">
                   <CardImg
                     top
                     src="https://www.edgeip.com/images/FCK/Image/202003/25-CPAOntario-HowtoSelfMotivate.jpg"
@@ -140,7 +141,7 @@ export default class Blogs extends React.Component {
           <div id="blog-container">
             <Row className="row">
               <Col>
-                <Card id="blog-card" className="blog-item">
+                <Card id="blogcard" className="blog-item">
                   <CardImg
                     top
                     src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-SmallScholarshipsBigRewardsSFSCSIC.jpg"
@@ -169,7 +170,7 @@ export default class Blogs extends React.Component {
 
             <Row className="row">
               <Col>
-                <Card id="blog-card" className="blog-item">
+                <Card id="blogcard" className="blog-item">
                   <CardImg
                     top
                     src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-TopScholarshipApplicationKeywords.jpg"
@@ -204,10 +205,7 @@ export default class Blogs extends React.Component {
     }
     return (
       <div>
-        <h3>
-          <strong>Additional Resources</strong>
-        </h3>
-        <InputGroup className="input">
+        <InputGroup id="resources-input" className="input">
           <FormInput placeholder="Search resources" />
           <Dropdown
             addonType="append"
