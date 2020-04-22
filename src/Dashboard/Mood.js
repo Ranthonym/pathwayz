@@ -106,7 +106,12 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji">😱</div> <div>Fear</div>
               <div>{this.state.fear}%</div>{" "}
-              <Button id="mood-resource" theme="info">
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://www.psychologytoday.com/ca/blog/insight-therapy/201009/overcoming-fear-the-only-way-out-is-through"
+                target="_blank"
+              >
                 Let's Get Rid of Those Fears!
               </Button>
             </div>
@@ -115,7 +120,12 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji">😔</div> <div>Sad</div>
               <div>{this.state.sad}%</div>{" "}
-              <Button id="mood-resource" theme="info">
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://www.chabad.com.au/templates/viewemail_cdo/aid/3698190"
+                target="_blank"
+              >
                 Let's Turn That Frown Upside Down!
               </Button>
             </div>
@@ -123,7 +133,12 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji">😴</div> <div> Bored</div>
               <div>{this.state.bored}%</div>{" "}
-              <Button id="mood-resource" theme="info">
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://www.goodhousekeeping.com/life/a26872864/what-to-do-when-bored/"
+                target="_blank"
+              >
                 Let's Spice Things Up!
               </Button>
             </div>
@@ -131,7 +146,12 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji"> 😀</div> <div>Happy</div>
               <div>{this.state.happy}%</div>{" "}
-              <Button id="mood-resource" theme="info">
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://www.keen.com/articles/psychic/how-to-channel-happiness"
+                target="_blank"
+              >
                 Let's Do Something with All That Dopamine !
               </Button>
             </div>
@@ -139,15 +159,25 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji"> 🤩</div> <div>Excited</div>
               <div>{this.state.excited}%</div>{" "}
-              <Button id="mood-resource" theme="info">
-                Let's Take That Energy and Create Something Beautiful!
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://innerpeaceouterjoy.com/follow-your-curiosity-excitement-bliss/"
+                target="_blank"
+              >
+                Let's Follow That Excitement and Create Something Beautiful!
               </Button>
             </div>
             <div id="column">
               {" "}
               <div id="emoji">😡</div> <div>Angry</div>
               <div>{this.state.angry}%</div>{" "}
-              <Button id="mood-resource" theme="info">
+              <Button
+                id="mood-resource"
+                theme="info"
+                href="https://medium.com/the-ascent/use-anger-to-your-advantage-by-learning-how-to-channel-it-8c6bc5257daa"
+                target="_blank"
+              >
                 Let's Channel that Anger Elsewhere!
               </Button>
             </div>
