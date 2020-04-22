@@ -30,7 +30,7 @@ const Wrapper = styled.div`
       line-height: 2.3rem;
       cursor: pointer;
       font-family: ${fonts.$mainFont};
-      color: ${colors.$colorGold};
+      color: rgb(124, 118, 118);
       &::before {
         content: "";
         position: absolute;
@@ -39,8 +39,6 @@ const Wrapper = styled.div`
         display: block;
         width: 25px;
         height: 25px;
-        border: 2px solid ${colors.$colorGold};
-        border-radius: 4px;
         z-index: -1;
       }
       &,
@@ -77,7 +75,6 @@ AnswerOption.propTypes = {
   answerContent: propTypes.string.isRequired,
   answer: propTypes.string.isRequired,
   onAnswerSelected: propTypes.func.isRequired,
-
 };
 
 export default AnswerOption;

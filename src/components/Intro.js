@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { StartBtn } from "../components/utils/Buttons";
-import { IntroCard } from "../components/utils/Cards";
+import { IntroCard, CardDef } from "../components/utils/Cards";
 import { fonts, colors } from "../components/utils/_var";
 import { media } from "../components/utils/_media-queries";
 
 const Wrapper = styled.div`
   // position: fixed;
-  margin-left: 100px;
+
   min-height: 100%;
   width: 200px;
   background: white;
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     position: relative;
     font-family: ${fonts.$titleFont};
     font-size: 1.1em;
-    color: white;
+    // color: white;
     text-align: center;
     padding-top: 2em;
     ${media.tablet`font-size: 1.5em; letter-spacing: 1.5px;`};
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
       font-family: ${fonts.$latoFont};
       border: 0;
       margin-bottom: 0;
-      color: ${colors.$colorGold};
+      color: white;
       ${media.tablet`font-size: 1.3em`};
       text-align: center;
     }
@@ -38,8 +38,8 @@ const Wrapper = styled.div`
 
 const Intro = ({ title, _onStartClick }) => {
   return (
-    <Wrapper className="container">
-      <IntroCard>
+    <Wrapper>
+      <CardDef>
         {/* <div className="corner" />
         <div className="corner" />
         <div className="corner" />
@@ -59,7 +59,7 @@ const Intro = ({ title, _onStartClick }) => {
             <i id="quiz-button" className="fa fa-arrow-right" />
           </div>
         </StartBtn>
-      </IntroCard>
+      </CardDef>
     </Wrapper>
   );
 };
