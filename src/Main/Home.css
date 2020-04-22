@@ -34,3 +34,13 @@ Home {
     justify-content: center;
   }
 }
+
+#home-image {
+  background-image: url("./Pathwayz.jpg");
+  height: 670px;
+  width: 1500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
