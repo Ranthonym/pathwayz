@@ -1,13 +1,11 @@
-.Home {
+.Home1 {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
 }
 
-
-.Home-content {
+.Home-content1 {
   height: 60vh;
   width:60vw;
   display: flex;
@@ -19,20 +17,74 @@
   font-family: 'Lobster', cursive;
   font-size: 30px;
 }
+.home-button{
+  font-weight: 500;
+}
 
 .slogan{
   margin-right: 260px;
-  margin-top: -250px;
+  margin-top: -270px;
 }
 
+.Home2 {
+  height: 100%;
+  width: 100%;
+  background-color: #5bc0de;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  }
+
+  .Home-content2 {
+    height: 40vh;
+    width:40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    margin-right: -850px;
+  }
+
+.mentors {
+  display: flex;
+  flex-direction: row;
+}
+
+.mentor-title {
+font-weight: bold;
+color: white;
+margin-top: -40px;
+margin-left: -20px;
+}
+
+.avatar-size {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.home-button {
+  font-weight: bold;
+  margin-right: -850px;
+  margin-bottom: -50px;
+}
+
+.testimonial {
+  margin-right: -450px;
+  margin-bottom: -100px;
+}
 
 @media (min-width: 650px ) {
   .App {
       background-position: center center;
   }
 
-  .Home-content {
+  .Home-content1 {
       align-items: flex-end;
       justify-content: center;
   }
+
+  .Home-content2 {
+    align-items: flex-end;
+    justify-content: center;
+}
 }
