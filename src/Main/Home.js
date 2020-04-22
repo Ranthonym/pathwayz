@@ -9,7 +9,6 @@ import {
   Button,
 } from "shards-react";
 
-
 import "./Home.css";
 import Testimonial from "./Testimonial"
 
