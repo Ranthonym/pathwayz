@@ -373,36 +373,41 @@ h4 {
 #row {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
 }
 
 #mood-card {
   margin-left: 0px;
-  margin-top: 20px;
 }
 #column {
-  padding: 30px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 #emoji {
   font-size: 50px;
 }
 
 #diary {
-  border: 1px solid #000;
-  height: 200px;
+  border: 1px solid rgb(124, 118, 118);
+  height: 150px;
   width: 750px;
   padding: 10px;
   margin: 10px;
   font-size: 20px;
 }
 #diary-button {
-  background-color: #00b8d8;
-  border: 1px solid #00b8d8;
+  background-color: rgb(124, 118, 118);
+  border: 1px solid rgb(124, 118, 118);
   border-radius: 4px;
-  height: 150px;
+  height: 70px;
   width: 100px;
   color: white;
+}
+
+#mood-resource {
+  width: 125px;
+  height: 90px;
 }
