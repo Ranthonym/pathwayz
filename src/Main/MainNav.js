@@ -17,7 +17,7 @@ export default function MainNav() {
             <NavLink>Signup</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/login">Login</NavLink>
+            <NavLink>Login</NavLink>
           </NavItem>
           <NavItem>
             <NavLink>Help</NavLink>

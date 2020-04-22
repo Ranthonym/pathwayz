@@ -2,7 +2,7 @@ import React from "react";
 
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "shards-react";
 import "./Home.css";
-import MainNav from "./MainNav";
+import MainNav from "../containers/Login";
 
 import Pathwayz from "./Pathwayz.jpg";
 
