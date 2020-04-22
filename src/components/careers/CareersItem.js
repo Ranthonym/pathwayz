@@ -85,7 +85,7 @@ export default class CareersItem extends React.Component {
                 Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆
                 Limited ★ ★ ☆ Fair ★ ★ ★ Good
               </div>
-              <i class="fa fa-heart"></i>
+              <span class="material-icons">favorite_border</span>
             </CardFooter>
           </PopoverBody>
         </Popover>

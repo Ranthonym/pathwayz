@@ -7,6 +7,7 @@
     "animejs": "^2.2.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "material-design-icons": "^3.0.1",
     "node-sass": "^4.13.1",
     "npm-watch": "^0.6.0",
     "paralleldots": "^3.2.5",
@@ -22,7 +23,8 @@
     "reactjs-popup": "^1.5.0",
     "recharts": "^1.0.0-alpha.6",
     "shards-react": "^1.0.3",
-    "styled-components": "^2.2.0"
+    "styled-components": "^2.2.0",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "socket.io": "^2.3.0"

@@ -14,7 +14,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Collapse,
-  Tooltip
+  Tooltip,
 } from "shards-react";
 import Sidebar from "./Sidebar";
 export default class DashNav extends React.Component {
@@ -33,6 +33,7 @@ export default class DashNav extends React.Component {
       resources: false,
       exploreCareers: false,
       quiz: false,
+      moodMonitor: false,
       dropdownOpen: false,
       collapseOpen: false,
     };
@@ -40,7 +41,7 @@ export default class DashNav extends React.Component {
 
   toggle() {
     this.setState({
-      open: !this.state.open
+      open: !this.state.open,
     });
   }
 
@@ -51,6 +52,7 @@ export default class DashNav extends React.Component {
       userProfile: false,
       resources: false,
       exploreCareers: false,
+      moodMonitor: false,
     });
   }
 
@@ -81,6 +83,12 @@ export default class DashNav extends React.Component {
   handleExploreCareers = (val) => {
     this.setState({
       exploreCareers: val,
+    });
+  };
+
+  handleMoodMonitor = (val) => {
+    this.setState({
+      moodMonitor: val,
     });
   };
 
@@ -116,14 +124,16 @@ export default class DashNav extends React.Component {
             <Collapse open={this.state.collapseOpen} navbar>
               <Nav type="dark" navbar className="ml-auto" expand="md">
                 <NavItem>
-                  <Button id="TooltipExample" theme="light">Chat with a mentor!</Button>
+                  <Button id="TooltipExample" theme="light">
+                    Chat with a mentor!
+                  </Button>
                   <Tooltip
-          open={this.state.open}
-          target="#TooltipExample"
-          toggle={this.toggle}
-        >
-          Live chat with one of our mentors!😁 
-        </Tooltip>
+                    open={this.state.open}
+                    target="#TooltipExample"
+                    toggle={this.toggle}
+                  >
+                    Live chat with one of our mentors!😁
+                  </Tooltip>
                 </NavItem>
                 <NavItem>
                   <NavLink>About</NavLink>
@@ -133,7 +143,7 @@ export default class DashNav extends React.Component {
                   toggle={this.toggleDropdown}
                 >
                   <DropdownToggle nav caret>
-                    <i className="fa fa-fw fa-user"></i>
+                    <span class="material-icons">account_circle</span>
                   </DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem> My Dashboard</DropdownItem>
@@ -159,6 +169,8 @@ export default class DashNav extends React.Component {
             resources={this.state.resources}
             setExploreCareers={this.handleExploreCareers}
             exploreCareers={this.state.exploreCareers}
+            setMoodMonitor={this.handleMoodMonitor}
+            moodMonitor={this.state.moodMonitor}
           />
         </div>
         <div id="quiz">{quiz}</div>

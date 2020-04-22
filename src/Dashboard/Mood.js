@@ -19,8 +19,10 @@ export default class Mood  extends React.Component {
           <p className="mb-2">
             {(value && `🗣 ${value}`) || "🤔 Waiting for you to say something..."}
           </p>
-          <FormTextarea action="/https://apis.paralleldots.com/v5/emotion" method="post" onChange={this.handleChange} />
-          <Button theme="info">Submit</Button>
+         <form action="/emotion" method="post">
+           <input type="text" name="text"></input>
+           <input type="submit" name="submit" />
+           </form> 
         </div>
       );
     }

@@ -1,23 +1,30 @@
 const pd = require("paralleldots");
+const express = require("express");
+const app = express();
 
-pd.apiKey = "UTmusb8UAcope1kSPfMamsxiPU2R14Lg5VwPJdHFKpU";
+pd.apiKey = process.env.PARALLELDOTS_KEY;
 
-pd.emotion("I am trying to imagine you with a personality.", "en")
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.log(error);
+const handlePromise = (promise, res) => {
+  promise
+    .then((response) => {
+      res.send(response);
+      console.log(response);
+    })
+    .catch((error) => {
+      res.send(error);
+      console.log(error);
+    });
+};
+
+app.post("/emotion", function(req, res) {
+  const text = req.body.text;
+  console.log(text);
+
+  Promise.all([pd.emotion(text)]).then((results) => {
+    let response = {
+      emotion: JSON.parse(results[0]),
+    };
+    res.send(response);
   });
-
-const textArray = JSON.stringify([
-  "I am trying to imagine you with a personality.",
-  "This is shit.",
-]);
-pd.emotionBatch(textArray, "en")
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+  handlePromise(pd.emotion(req.body.text), res);
+});
