@@ -26,7 +26,7 @@ export default function UserProfile() {
         />
         <CardBody>
           <div align="center">
-            <CardTitle> Asmaa </CardTitle>
+            <CardTitle>Asmaa</CardTitle>
           </div>
           <div align="center">Type ENTJ: The Field Marshall</div>
           <CardHeader>

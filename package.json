@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/styles": "^4.9.10",
     "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-4.10.3.tgz",
     "animejs": "^2.2.0",
     "cookie-parser": "^1.4.5",
@@ -20,6 +21,7 @@
     "react-dom": "^16.13.1",
     "react-modal": "^3.0.3",
     "react-modal-login": "^1.4.5",
+    "react-player": "^1.15.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-syntax-highlighter": "^12.2.1",

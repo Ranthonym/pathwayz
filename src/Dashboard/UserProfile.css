@@ -13,6 +13,10 @@
 .card ul {
   /* margin-left: -345px; */
 }
+.user-title {
+  margin-left: 100px;
+  margin-top: 10px;
+}
 
 .margin_left_320 {
   margin-left: 320px;
