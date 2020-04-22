@@ -48,21 +48,21 @@ export default class ProgramsItem extends React.Component {
           target="#popover-1"
         >
           <PopoverHeader>
-            <h5>What You'll Learn</h5>
+            <h5 align="center">What You'll Learn</h5>
           </PopoverHeader>
           <PopoverBody>
             <div>{this.props.description}</div>
             <Row className="border-bottom py-2 bg-light">
               <Col>
                 <div align="center">
-                  <h5>Some Courses You'll Take</h5>
+                  <h5>Admission Requirements</h5>
 
                   {this.props.courses}
                 </div>
               </Col>
             </Row>
             <div>
-              <h5 className="education">Admission Requirements</h5>
+              <h5 className="education"></h5>
               {this.props.required_courses}
               {this.props.grade_average}
             </div>
@@ -73,7 +73,6 @@ export default class ProgramsItem extends React.Component {
             >
               &larr; Back
             </Button>
-            <CardFooter></CardFooter>
           </PopoverBody>
         </Popover>
       </div>
