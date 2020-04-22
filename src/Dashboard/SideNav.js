@@ -47,7 +47,7 @@ export default class DashNav extends React.Component {
 
   startQuiz() {
     this.setState({
-      quiz: !this.state.quiz,
+      quiz: true,
       messages: false,
       userProfile: false,
       resources: false,
