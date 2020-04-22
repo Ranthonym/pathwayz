@@ -29,10 +29,10 @@ export default class DashNav extends React.Component {
 
     this.state = {
       messages: false,
-      userProfile: true,
+      userProfile: false,
       resources: false,
       exploreCareers: false,
-      quiz: false,
+      quiz: true,
       moodMonitor: false,
       dropdownOpen: false,
       collapseOpen: false,
@@ -125,7 +125,7 @@ export default class DashNav extends React.Component {
               <Nav type="dark" navbar className="ml-auto" expand="md">
                 <NavItem>
                   <Button id="TooltipExample" theme="light">
-                    Chat with a mentor
+                    Chat with a Career Advisor
                   </Button>
                   <Tooltip
                     open={this.state.open}

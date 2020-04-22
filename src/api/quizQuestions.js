@@ -97,101 +97,101 @@ var quizQuestions = [
       },
     ],
   },
-  // // question #6
-  // {
-  //   question: "I tend to keep my social circle small.",
-  //   answers: [
-  //     {
-  //       // briggs, color, letter
-  //       type: "I,Green,C",
-  //       content: "YEP! THAT IS ME!",
-  //     },
-  //     {
-  //       type: " ",
-  //       content: "I HAVE NO IDEA!",
-  //     },
-  //     {
-  //       type: "I,Green,C,No",
-  //       content: "NAH, THAT CAN'T BE ME!",
-  //     },
-  //   ],
-  // },
-  // // question #7
-  // {
-  //   question: "I like to share my ideas with others.",
-  //   answers: [
-  //     {
-  //       // briggs, color, letter
-  //       type: "E,Blue,B",
-  //       content: "YEP! THAT IS ME!",
-  //     },
-  //     {
-  //       type: " ",
-  //       content: "I HAVE NO IDEA!",
-  //     },
-  //     {
-  //       type: "E,Blue,B,No",
-  //       content: "NAH, THAT CAN'T BE ME!",
-  //     },
-  //   ],
-  // },
-  // // question #8
-  // {
-  //   question: "I enjoy using social media.",
-  //   answers: [
-  //     {
-  //       // briggs, color, letter
-  //       type: "E,Blue,B",
-  //       content: "YEP! THAT IS ME!",
-  //     },
-  //     {
-  //       type: " ",
-  //       content: "I HAVE NO IDEA!",
-  //     },
-  //     {
-  //       type: "E,Blue,B,No",
-  //       content: "NAH, THAT CAN'T BE ME!",
-  //     },
-  //   ],
-  // },
-  // // question #9
-  // {
-  //   question: "I always express concern for others when making decisions.",
-  //   answers: [
-  //     {
-  //       // briggs, color, letter
-  //       type: "F,Blue,B",
-  //       content: "YEP! THAT IS ME!",
-  //     },
-  //     {
-  //       type: " ",
-  //       content: "I HAVE NO IDEA!",
-  //     },
-  //     {
-  //       type: "F,Blue,B,No",
-  //       content: "NAH, THAT CAN'T BE ME!",
-  //     },
-  //   ],
-  // },
-  // // question #10
-  // {
-  //   question: "I like to try new things.",
-  //   answers: [
-  //     {
-  //       // briggs, color, letter
-  //       type: "P,Red,A",
-  //       content: "YEP! THAT IS ME!",
-  //     },
-  //     {
-  //       type: " ",
-  //       content: "I HAVE NO IDEA!",
-  //     },
-  //     {
-  //       type: "P,Red,A,No",
-  //       content: "NAH, THAT CAN'T BE ME!",
-  //     },
-  //   ],
-  // },
+  // question #6
+  {
+    question: "I tend to keep my social circle small.",
+    answers: [
+      {
+        // briggs, color, letter
+        type: "I,Green,C",
+        content: "YEP! THAT IS ME!",
+      },
+      {
+        type: " ",
+        content: "I HAVE NO IDEA!",
+      },
+      {
+        type: "I,Green,C,No",
+        content: "NAH, THAT CAN'T BE ME!",
+      },
+    ],
+  },
+  // question #7
+  {
+    question: "I like to share my ideas with others.",
+    answers: [
+      {
+        // briggs, color, letter
+        type: "E,Blue,B",
+        content: "YEP! THAT IS ME!",
+      },
+      {
+        type: " ",
+        content: "I HAVE NO IDEA!",
+      },
+      {
+        type: "E,Blue,B,No",
+        content: "NAH, THAT CAN'T BE ME!",
+      },
+    ],
+  },
+  // question #8
+  {
+    question: "I enjoy using social media.",
+    answers: [
+      {
+        // briggs, color, letter
+        type: "E,Blue,B",
+        content: "YEP! THAT IS ME!",
+      },
+      {
+        type: " ",
+        content: "I HAVE NO IDEA!",
+      },
+      {
+        type: "E,Blue,B,No",
+        content: "NAH, THAT CAN'T BE ME!",
+      },
+    ],
+  },
+  // question #9
+  {
+    question: "I always express concern for others when making decisions.",
+    answers: [
+      {
+        // briggs, color, letter
+        type: "F,Blue,B",
+        content: "YEP! THAT IS ME!",
+      },
+      {
+        type: " ",
+        content: "I HAVE NO IDEA!",
+      },
+      {
+        type: "F,Blue,B,No",
+        content: "NAH, THAT CAN'T BE ME!",
+      },
+    ],
+  },
+  // question #10
+  {
+    question: "I like to try new things.",
+    answers: [
+      {
+        // briggs, color, letter
+        type: "P,Red,A",
+        content: "YEP! THAT IS ME!",
+      },
+      {
+        type: " ",
+        content: "I HAVE NO IDEA!",
+      },
+      {
+        type: "P,Red,A,No",
+        content: "NAH, THAT CAN'T BE ME!",
+      },
+    ],
+  },
   // // question #11
   // {
   //   question: 'I can easily adjust to a change in decision.',

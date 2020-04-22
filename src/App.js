@@ -73,7 +73,8 @@ export default function Application() {
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={logo}
-        title="Chat with a Mentor"
+        title="Chat with a Career Advisor"
+        subtitle="We're here to assist you 😀"
         showTimeStamp="true"
         senderPlaceHolder={"Type a message..."}
       />
