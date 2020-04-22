@@ -117,7 +117,7 @@ input {
   width: 80%;
 }
 input::placeholder {
-  color: #e3e3e3;
+  color: #000000;
   font-weight: 300;
   margin-left: 20px;
 }
@@ -280,6 +280,7 @@ hr {
 #quiz-question {
   color: white;
 }
+
 #career-button {
   display: flex;
   padding-top: 5px;

@@ -4,7 +4,11 @@ import { Button } from "shards-react";
 import UserProfile from "./UserProfile";
 import Chat from "../components/result/test";
 import Blogs from "../components/resources/Blogs";
+
+import Mood from "./Mood";
+
 import Explore from "../Dashboard/explore";
+
 
 export default function Sidebar(props) {
   const [exploreCareers, setExploreCareers] = useState(false);
@@ -16,6 +20,7 @@ export default function Sidebar(props) {
     props.setResources(false);
     props.setExploreCareers(false);
     props.setMessages(true);
+    props.setMoodMonitor(false);
   }
   function handleUserProfileClick() {
     props.quiz(false);
@@ -23,6 +28,7 @@ export default function Sidebar(props) {
     props.setResources(false);
     props.setExploreCareers(false);
     props.setUserProfile(true);
+    props.setMoodMonitor(false);
   }
   function handleResourcesClick() {
     props.quiz(false);
@@ -30,6 +36,7 @@ export default function Sidebar(props) {
     props.setUserProfile(false);
     props.setExploreCareers(false);
     props.setResources(true);
+    props.setMoodMonitor(false);
   }
   function handleExploreCareersClick() {
     props.quiz(false);
@@ -37,6 +44,15 @@ export default function Sidebar(props) {
     props.setUserProfile(false);
     props.setResources(false);
     props.setExploreCareers(true);
+    props.setMoodMonitor(false);
+  }
+  function handleMoodMonitorClick() {
+    props.quiz(false);
+    props.setMessages(false);
+    props.setUserProfile(false);
+    props.setResources(false);
+    props.setExploreCareers(false);
+    props.setMoodMonitor(true);
   }
 
   if (props.message) {
@@ -50,6 +66,9 @@ export default function Sidebar(props) {
   }
   if (props.exploreCareers) {
     rightcontainer = <Explore />;
+  }
+  if (props.moodMonitor) {
+    rightcontainer = <Mood />;
   }
 
   return (
@@ -66,6 +85,9 @@ export default function Sidebar(props) {
         </a>
         <a onClick={handleExploreCareersClick}>
           <i className="fa fa-fw fa-search"></i>Explore Careers
+        </a>
+        <a onClick={handleMoodMonitorClick}>
+          <span class="material-icons">insert_emoticon</span>Mood Monitor
         </a>
       </div>
       <div id="rightcontainer">{rightcontainer}</div>
