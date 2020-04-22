@@ -38,8 +38,14 @@ export default function UserProfile() {
             </div>
           </CardHeader>
           <div align="center">
-            <Button id="userprofile-button" size="sm" theme="info">
-              View Assessment
+            <Button
+              href="https://www.16personalities.com/entj-personality"
+              target="_blank"
+              id="userprofile-button"
+              size="sm"
+              theme="info"
+            >
+              Learn More About This Type
             </Button>
           </div>
         </CardBody>
