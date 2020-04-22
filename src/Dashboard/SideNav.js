@@ -119,7 +119,7 @@ export default class DashNav extends React.Component {
       <div>
         <div>
           <Navbar type="dark" theme="info" expand="md">
-            <NavbarBrand href="#">PathFinder</NavbarBrand>
+            <NavbarBrand href="/">PathWayz</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} />
             <Collapse open={this.state.collapseOpen} navbar>
               <Nav type="dark" navbar className="ml-auto" expand="md">

@@ -1,16 +1,16 @@
-import React from "react";
-
-import CareersList from "../components/careers/CareersList";
-import ProgramsList from "../components/careers/ProgramsList";
-import Mood from "../Dashboard/Mood";
+import React from 'react';
 
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "shards-react";
+import "./Home.css"
 
-export default function MainNav() {
+import Pathwayz from "./Pathwayz.jpg"
+
+export default function Home() {
+const imageUrl = Pathwayz;
   return (
     <div>
       <Navbar type="dark" theme="info" expand="md">
-        <NavbarBrand href="/">PathFinder</NavbarBrand>
+        <NavbarBrand href="/">PathWayz</NavbarBrand>
 
         <Nav type="dark" navbar className="ml-auto" expand="md">
           <NavItem>
@@ -24,13 +24,11 @@ export default function MainNav() {
           </NavItem>
         </Nav>
       </Navbar>
-
-      <div className="background">
+         <div className="Home" style={{backgroundImage: `url(${imageUrl})` }}>
+         <div className="Home-content">
+             <p className="slogan">finding the right program and career just got easier than ever.</p>
+         </div>
       </div>
-      {/* <CareersList />
-      <ProgramsList />
-      <Mood /> */}
-
-    </div>
+      </div>
   );
 }

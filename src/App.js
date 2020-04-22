@@ -17,7 +17,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 // routes
-import MainNav from "./Main/MainNav";
+import Home from "./Main/Home";
 import Dashboard from "./Dashboard/SideNav";
 import Login from "./containers/Login";
 import test from "./components/result/test";
@@ -79,7 +79,7 @@ export default function Application() {
         senderPlaceHolder={"Type a message..."}
       />
       <Router>
-        <Route exact path="/" component={MainNav} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/Dashboard" component={Dashboard} />
         <Route path="/login" component={Login} />
         <Route path="/test" component={test} />

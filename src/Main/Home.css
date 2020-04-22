@@ -1,0 +1,38 @@
+.Home {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+
+.Home-content {
+  height: 60vh;
+  width:60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+}
+
+.slogan{
+  margin-right: 260px;
+  margin-top: -250px;
+}
+
+
+@media (min-width: 650px ) {
+  .App {
+      background-position: center center;
+  }
+
+  .Home-content {
+      align-items: flex-end;
+      justify-content: center;
+  }
+}
