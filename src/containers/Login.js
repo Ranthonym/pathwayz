@@ -69,7 +69,15 @@ export default function Login() {
                 <div>
                   <Form>
                     <FormGroup>
+                      <label htmlFor="username">Name</label>
+                      <FormInput id="username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
                       <label htmlFor="username">Username</label>
+                      <FormInput id="username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="username">Email</label>
                       <FormInput id="username" placeholder="Username" />
                     </FormGroup>
                     <FormGroup>
