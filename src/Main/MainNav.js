@@ -2,6 +2,7 @@ import React from "react";
 
 import CareersList from "../components/careers/CareersList";
 import ProgramsList from "../components/careers/ProgramsList";
+import Mood from "../Dashboard/Mood";
 
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "shards-react";
 
@@ -23,6 +24,13 @@ export default function MainNav() {
           </NavItem>
         </Nav>
       </Navbar>
+
+      <div className="background">
+      </div>
+      {/* <CareersList />
+      <ProgramsList />
+      <Mood /> */}
+
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function UserProfile() {
         <CardImg
           id="profile-pic"
           className="userImg"
-          src="https://avatars.servers.getgo.com/emails/%7B0%7D/medium.jpg"
+          src="https://avatars1.githubusercontent.com/u/43259449?s=460&v=4"
         />
         <CardBody>
           <div align="center">

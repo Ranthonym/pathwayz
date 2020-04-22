@@ -1,11 +1,11 @@
 import React from "react";
+import Popup from "reactjs-popup";
 import {
   Row,
   Col,
   Button,
   CardFooter,
   CardBody,
-  Popover,
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
@@ -45,7 +45,6 @@ export default class CareersItem extends React.Component {
       program = <ProgramsList />;
     }
     return (
-
       <div id="program-titles">
         <Popup
           id="career-popover"
@@ -62,10 +61,8 @@ export default class CareersItem extends React.Component {
             </div>
           }
           modal
-
           open={this.state.open}
           toggle={this.toggle}
-          target="#popover-1"
         >
           <PopoverHeader>
             <h5> Job Outlook: {this.props.outlook}</h5>
@@ -115,9 +112,12 @@ export default class CareersItem extends React.Component {
                 Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆
                 Limited ★ ★ ☆ Fair ★ ★ ★ Good
               </div>
+
+              <span class="material-icons">favorite_border</span>
+
             </CardFooter>
           </PopoverBody>
-        </Popover>
+        </Popup>
       </div>
     );
   }
