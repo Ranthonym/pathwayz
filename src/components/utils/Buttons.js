@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { media } from './_media-queries'
+import styled from "styled-components";
+import { media } from "./_media-queries";
 
 const StartBtn = styled.div`
   display: block;
@@ -8,7 +8,7 @@ const StartBtn = styled.div`
   color: #fff;
   position: absolute;
   line-height: 3.5em;
-  bottom: 2em;
+  bottom: 200px;
   left: 0;
   right: 0;
   margin: auto;
@@ -40,7 +40,8 @@ const StartBtn = styled.div`
   }
   .fa {
     font-size: 1em;
-    transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4),
+      height 0.25s ease;
   }
   &:hover {
     opacity: 0.9;
@@ -57,7 +58,7 @@ const StartBtn = styled.div`
     }
   }
   ${media.laptop`width:15em;`};
-`
+`;
 
 const NextBtn = styled.div`
   display: block;
@@ -99,7 +100,8 @@ const NextBtn = styled.div`
   }
   .fa {
     font-size: 1em;
-    transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4),
+      height 0.25s ease;
   }
   &:hover {
     opacity: 0.9;
@@ -116,6 +118,6 @@ const NextBtn = styled.div`
     }
   }
   ${media.laptop`width:15em;`};
-`
+`;
 
-export { StartBtn, NextBtn }
+export { StartBtn, NextBtn };

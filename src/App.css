@@ -262,14 +262,21 @@ hr {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   color: rgb(124, 118, 118);
-  margin-left: 350px;
-  width: 800px;
+
+  width: 820px;
   height: 250px;
-  box-shadow: 5px 10px #888888;
-  border: 5px solid rgb(124, 118, 118);
-  border-color: rgb(124, 118, 118);
+  /* border: 5px solid rgb(124, 118, 118);
+  border-color: rgb(124, 118, 118); */
   text-align: justify;
   font-weight: 400;
+}
+.questionCount {
+  color: rgb(124, 118, 118);
+  font-size: 20px;
+}
+.radioCustomLabel {
+  color: rgb(124, 118, 118);
+  font-size: 20px;
 }
 
 #quiz-button {
@@ -278,7 +285,13 @@ hr {
 }
 
 #quiz-question {
-  color: white;
+  /* color: #00b8d8; */
+  color: rgb(124, 118, 118);
+  position: relative;
+  font-size: 30px;
+
+  text-align: center;
+  padding-top: 2em;
 }
 #career-button {
   display: flex;

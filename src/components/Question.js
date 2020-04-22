@@ -7,14 +7,21 @@ import quizQuestions from "../api/quizQuestions";
 import { QuestionCard } from "../components/utils/Cards";
 
 const Wrapper = styled.div`
-  position: fixed;
+  // position: fixed;
   min-height: 100%;
   max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: ${colors.$colorBg};
-  color: ${colors.$colorGold};
+  color: black;
+  h1 {
+    position: relative;
+    font-size: 4em;
+    // color: white;
+    text-align: center;
+    padding-top: 2em;
+  }
 `;
 
 class Question extends Component {
