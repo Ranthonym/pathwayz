@@ -106,32 +106,50 @@ export default class Mood extends React.Component {
               {" "}
               <div id="emoji">😱</div> <div>Fear</div>
               <div>{this.state.fear}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Get Rid of Those Fears!
+              </Button>
             </div>
 
             <div id="column">
               {" "}
               <div id="emoji">😔</div> <div>Sad</div>
               <div>{this.state.sad}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Turn That Frown Upside Down!
+              </Button>
             </div>
             <div id="column">
               {" "}
               <div id="emoji">😴</div> <div> Bored</div>
               <div>{this.state.bored}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Spice Things Up!
+              </Button>
             </div>
             <div id="column">
               {" "}
               <div id="emoji"> 😀</div> <div>Happy</div>
               <div>{this.state.happy}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Do Something with All That Dopamine !
+              </Button>
             </div>
             <div id="column">
               {" "}
               <div id="emoji"> 🤩</div> <div>Excited</div>
               <div>{this.state.excited}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Take That Energy and Create Something Beautiful!
+              </Button>
             </div>
             <div id="column">
               {" "}
               <div id="emoji">😡</div> <div>Angry</div>
               <div>{this.state.angry}%</div>{" "}
+              <Button id="mood-resource" theme="info">
+                Let's Channel that Anger Elsewhere!
+              </Button>
             </div>
           </div>
         </div>
