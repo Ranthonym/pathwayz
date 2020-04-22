@@ -16,7 +16,7 @@ const handlePromise = (promise, res) => {
     });
 };
 
-app.post("/emotion", function(req, res) {
+app.post("/emotion", function (req, res) {
   const text = req.body.text;
   console.log(text);
 
