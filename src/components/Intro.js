@@ -48,7 +48,7 @@ const Intro = ({ title, _onStartClick }) => {
         {/* TODO: WILL CHANGE THIS THING DOWN HERE */}
         <ul className="list-group">
           <li id="quiz-description" className="list-group-item">
-            This assessment consists of 15 questions. Answer honestly as we want
+            This assessment consists of 10 questions. Answer honestly as we want
             to ensure that we match you with the career that's best suited for
             you.
           </li>

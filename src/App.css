@@ -34,13 +34,13 @@
 }
 
 .popover {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .careerItem {
   width: 300px;
   height: 60px;
-  margin: 10px
+  margin: 10px;
 }
 
 .programItem {
@@ -69,8 +69,8 @@ body {
   border-radius: 7px;
 }
 .profile-image {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 40px;
 }
 .settings-tray {
@@ -165,12 +165,15 @@ hr {
   padding: 10px 14px;
   width: 200px;
   background: darkgrey;
+  color: #fff;
   margin: 10px 30px;
   border-radius: 9px;
   animation: fadeIn 1s ease-in;
 }
 #userprofile {
+  padding: 20px;
   margin-left: 0;
+  width: 400px;
   height: 660px;
 }
 #profile-container {
@@ -179,12 +182,19 @@ hr {
 }
 #profile {
   margin-left: 10px;
-  height: 660px;
-  width: 675px;
+  height: 260px;
+  width: 555px;
+  text-align: center;
+}
+#profile-chart {
+  margin-left: 10px;
+  height: 400px;
+  width: 555px;
+  text-align: center;
 }
 
 #chatbox-right {
-  margin-left: 400px;
+  margin-left: 350px;
 }
 @keyframes fadeIn {
   0% {
@@ -195,7 +205,7 @@ hr {
   }
 }
 #send-box {
-  margin-top: 180px;
+  margin-top: 50px;
 }
 .offset-md-9 .chat-bubble {
   background: #00b8d8;
@@ -271,10 +281,77 @@ hr {
   color: white;
 }
 
-p.mb-2 {
-  color: black;
+#career-button {
+  display: flex;
+  padding-top: 5px;
+  width: 600px;
 }
 
-.background {
-    background-image: url("https://miro.medium.com/max/800/1*W2-m3VBEZorKplSwMBdr1A.jpeg");
-   }
+#cb {
+  margin: 5px;
+}
+#career-description {
+  margin-bottom: 15px;
+}
+#blog-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+}
+#blog-card {
+  width: 300px;
+  height: 515px;
+}
+#blogcard {
+  height: 490px;
+}
+
+#profile-pic {
+  margin-left: 130px;
+  border-radius: 60px;
+}
+#message-box {
+  margin-top: 20px;
+  margin-left: 0px;
+  height: 650px;
+  width: 960px;
+}
+
+#message-body {
+  margin-left: 0px;
+  height: 500px;
+  width: 960px;
+}
+
+#career-popup {
+  display: inline;
+}
+
+#popover-1 {
+  width: 300px;
+  margin: 10px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+#program-button {
+  height: 120px;
+  width: 250px;
+  padding: 10px;
+}
+#program-list {
+  padding: 0;
+  display: flex;
+}
+#career-popover {
+  width: 20px;
+}
+
+#search-bar {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin: 70px;
+  height: 40px;
+}

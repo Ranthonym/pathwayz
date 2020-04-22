@@ -125,7 +125,9 @@ export default class DashNav extends React.Component {
               <Nav type="dark" navbar className="ml-auto" expand="md">
                 <NavItem>
                   <Button id="TooltipExample" theme="light">
-                    Chat with a mentor!
+
+                    Chat with a mentor
+      
                   </Button>
                   <Tooltip
                     open={this.state.open}

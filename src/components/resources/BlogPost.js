@@ -16,50 +16,17 @@ import {
   DropdownMenu,
 } from "shards-react";
 import "./Blogs.css";
-import Videos from "./Videos";
-import BlogPost from "./BlogPost";
 
-
-export default class Blogs extends React.Component {
-  constructor(props) {
-    super(props);
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      open: false,
-      displayVideos: false,
-      displayBlogs: true,
-    };
-    this._onVideoClick = this._onVideoClick.bind(this);
-    this._onBlogClick = this._onBlogClick.bind(this);
-  }
-
-  toggle() {
-    this.setState({ open: !this.state.open });
-  }
-
-  _onVideoClick() {
-    this.setState({
-      displayVideos: true,
-      displayBlogs: false,
-    });
-  }
-
-  _onBlogClick() {
-    this.setState({
-      displayBlogs: true,
-      displayVideos: false,
-    });
-  }
-
+export default class BlogPost extends React.Component {
   render() {
-    let container;
-    if (this.state.displayBlogs) {
-      container = (
-        <div>
+    return (
+      <div>
+        <div id="blog-container">
           <Row className="row">
             <Col>
-              <Card className="blog-item">
+              <Card id="blogcard" className="blog-item">
                 <CardImg
+                  id="blog-pic"
                   top
                   src="https://www.online-bachelor-degrees.com/wp-content/uploads/2018/05/finance-management-tools.jpg"
                 ></CardImg>
@@ -86,7 +53,7 @@ export default class Blogs extends React.Component {
 
           <Row className="row">
             <Col>
-              <Card className="blog-item">
+              <Card id="blogcard" className="blog-item">
                 <CardImg
                   top
                   src="https://www.edgeip.com/images/FCK/Image/202003/00-SFG-HowtoWorkandStudyFromHomeSFSIC.jpg"
@@ -115,7 +82,7 @@ export default class Blogs extends React.Component {
 
           <Row className="row">
             <Col>
-              <Card className="blog-item">
+              <Card id="blogcard" className="blog-item">
                 <CardImg
                   top
                   src="https://www.edgeip.com/images/FCK/Image/202003/25-CPAOntario-HowtoSelfMotivate.jpg"
@@ -137,10 +104,11 @@ export default class Blogs extends React.Component {
               </Card>
             </Col>
           </Row>
-
+        </div>
+        <div id="blog-container">
           <Row className="row">
             <Col>
-              <Card className="blog-item">
+              <Card id="blogcard" className="blog-item">
                 <CardImg
                   top
                   src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-SmallScholarshipsBigRewardsSFSCSIC.jpg"
@@ -169,7 +137,7 @@ export default class Blogs extends React.Component {
 
           <Row className="row">
             <Col>
-              <Card className="blog-item">
+              <Card id="blogcard" className="blog-item">
                 <CardImg
                   top
                   src="https://www.edgeip.com/images/FCK/Image/202002/00-SFG-TopScholarshipApplicationKeywords.jpg"
@@ -195,54 +163,35 @@ export default class Blogs extends React.Component {
               </Card>
             </Col>
           </Row>
-
-//           <BlogPost />
-//           <BlogPost />
-
+          <Row className="row">
+            <Col>
+              <Card id="blogcard" className="blog-item">
+                <CardImg
+                  id="blog-pic"
+                  top
+                  src="https://www.online-bachelor-degrees.com/wp-content/uploads/2018/05/finance-management-tools.jpg"
+                ></CardImg>
+                <div align="center">
+                  <CardHeader>
+                    <a href="https://uwaterloo.ca/beyond-ideas/stories/financing/ultimate-guide-financing-your-education">
+                      Ultimate guide: Financing your education
+                    </a>
+                  </CardHeader>
+                </div>
+                <CardBody>
+                  <p>
+                    Getting scholarships and bursaries can make a big difference
+                    for your funds.
+                  </p>
+                </CardBody>
+                <CardFooter className="blog-footer">
+                  <div>By: University of Waterloo</div>
+                  <div>February 28, 2020</div>
+                </CardFooter>
+              </Card>
+            </Col>
+          </Row>
         </div>
-      );
-    }
-    if (this.state.displayVideos) {
-      container = <Videos />;
-    }
-    return (
-      <div>
-        <h3>
-          <strong>Additional Resources</strong>
-        </h3>
-        <InputGroup className="input">
-      container = (
-        <div>
-          {" "}
-          <Videos />
-          <Videos />
-        </div>
-      );
-    }
-    return (
-      <div>
-        <InputGroup id="resources-input" className="input">
-          <FormInput placeholder="Search resources" />
-          <Dropdown
-            addonType="append"
-            open={this.state.open}
-            toggle={this.toggle}
-          >
-            <DropdownToggle theme="info" caret></DropdownToggle>
-            <DropdownMenu right>
-
-              <DropdownItem onClick={this._onBlogClick}>
-                <span class="material-icons">chrome_reader_mode</span>Blogs
-              </DropdownItem>
-              <DropdownItem onClick={this._onVideoClick}>
-                <span class="material-icons">video_library</span>Videos
-              </DropdownItem>
-              <DropdownItem onClick={this._onBlogClick}>Blogs</DropdownItem>
-              <DropdownItem onClick={this._onVideoClick}>Videos</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </InputGroup>
-        <Container className="container">{container}</Container>
       </div>
     );
   }

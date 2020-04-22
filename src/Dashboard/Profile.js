@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./UserProfile.css";
-import CareersItem from "../components/careers/CareersItem";
+import Chart from "../Dashboard/Chart";
 
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   CardFooter,
   CardImg,
   Button,
+  CardTitle,
 } from "shards-react";
 
 export default function Profile() {
@@ -56,55 +57,29 @@ export default function Profile() {
   });
 
   return (
-    <Card id="profile">
-      <CardHeader>
-        {/* <CardTitle> My Career Plan </CardTitle> */}
-        <CardImg
+    <div>
+      <Card id="profile">
+        <CardHeader>
+          <CardTitle> My Top Career Paths </CardTitle>
+          {/* <CardImg
           id="profileIMG"
           src="https://png.pngtree.com/png-vector/20190105/ourlarge/pngtree-successpersonaldevelopmentleadercareer-line-icon-png-image_311546.jpg"
-        />
-      </CardHeader>
-      <CardBody>
-        {/* <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button>
-        <Button id="profile-button" size="sm" theme="info">
-          Software Engineer
-        </Button> */}
-        {careers}
-      </CardBody>
+        /> */}
+        </CardHeader>
+        <CardBody>{careers}</CardBody>
 
-      <CardFooter></CardFooter>
-    </Card>
+        <CardFooter></CardFooter>
+      </Card>
+      <Card id="profile-chart">
+        <CardHeader>
+          <CardTitle> My Weekly Mood Reflection </CardTitle>
+        </CardHeader>
+        <CardBody>
+          <Chart />
+        </CardBody>
+
+        <CardFooter></CardFooter>
+      </Card>
+    </div>
   );
 }

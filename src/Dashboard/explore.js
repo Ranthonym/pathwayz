@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import CareersItem from "./CareersItem";
-
-export default class CareersList extends React.Component {
+import CareersItem from "../components/careers/CareersItem";
+import { Card, CardTitle } from "shards-react";
+export default class Explore extends React.Component {
   state = {
+    search: "",
     career: [],
   };
 
   componentDidMount() {
-    fetch("http://localhost:3001/personalities/16/requirements")
+    fetch("http://localhost:3001/careers")
       .then((response) => {
         return response.json();
       })
@@ -41,23 +42,36 @@ export default class CareersList extends React.Component {
     //   },
     // ];
 
-    const careers = this.state.career.map((career) => {
-      return (
-        <CareersItem
-          key={career.id}
-          id={career.id}
-          title={career.title}
-          outlook={career.outlook}
-          description={career.description}
-          education={career.education}
-          salary={career.salary}
-        />
-      );
+    onchange = (e) => {
+      this.setState({ search: e.target.value });
+    };
+    const { search } = this.state;
+    const filteredCareers = this.state.career.filter((careers) => {
+      return careers.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
 
     return (
       <section className="Careers">
-        <div className="row">{careers}</div>
+        {/* <CardTitle>Search Through All The Career Options</CardTitle> */}
+        <Card id="search-bar">
+          <input placeholder="Search Careers" onChange={this.onchange}></input>
+        </Card>
+
+        <div className="row">
+          {filteredCareers.map((careers) => {
+            return (
+              <CareersItem
+                key={careers.id}
+                id={careers.id}
+                title={careers.title}
+                outlook={careers.outlook}
+                description={careers.description}
+                education={careers.education}
+                salary={careers.salary}
+              />
+            );
+          })}
+        </div>
       </section>
     );
   }
