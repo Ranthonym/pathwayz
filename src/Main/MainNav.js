@@ -10,7 +10,7 @@ export default function MainNav() {
   return (
     <div>
       <Navbar type="dark" theme="info" expand="md">
-        <NavbarBrand href="#">PathFinder</NavbarBrand>
+        <NavbarBrand href="/">PathFinder</NavbarBrand>
 
         <Nav type="dark" navbar className="ml-auto" expand="md">
           <NavItem>
