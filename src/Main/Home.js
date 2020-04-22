@@ -46,7 +46,7 @@ export default function Home() {
         <div className="Home-content2">
 
           <div className="home-button">
-          <Button theme="warning" size="lg">
+          <Button theme="light" size="lg">
             <div><strong>Take our Career Assessment Today!</strong></div>
           </Button>
           </div>
