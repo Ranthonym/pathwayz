@@ -171,6 +171,37 @@ export default function Videos() {
             </Card>
           </Col>
         </Row>
+        <Row className="row">
+          <Col>
+            <Card id="blog-card" className="blog-item">
+              <iframe
+                className="video"
+                src="https://www.youtube.com/embed/E_nMwG6215s"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div align="center">
+                <CardHeader>
+                  <a href="https://www.youtube.com/embed/E_nMwG6215s">
+                    5 Myths About Scholarships [VIDEO]
+                  </a>
+                </CardHeader>
+              </div>
+              <CardBody>
+                <p>
+                  There's a lot of misinformation out there about scholarship
+                  deadlines and eligibility, so we've made a short video to bust
+                  the 5 biggest scholarship myths.
+                </p>
+              </CardBody>
+              <CardFooter className="blog-footer">
+                <div>By: Scholarships Canada</div>
+                <div>February 05, 2020</div>
+              </CardFooter>
+            </Card>
+          </Col>
+        </Row>
       </div>
     </div>
   );

@@ -34,7 +34,7 @@
 }
 
 .popover {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .careerItem {
@@ -117,7 +117,7 @@ input {
   width: 80%;
 }
 input::placeholder {
-  color: #e3e3e3;
+  color: #000000;
   font-weight: 300;
   margin-left: 20px;
 }
@@ -262,14 +262,21 @@ hr {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   color: rgb(124, 118, 118);
-  margin-left: 350px;
-  width: 800px;
+
+  width: 820px;
   height: 250px;
-  box-shadow: 5px 10px #888888;
-  border: 5px solid rgb(124, 118, 118);
-  border-color: rgb(124, 118, 118);
+  /* border: 5px solid rgb(124, 118, 118);
+  border-color: rgb(124, 118, 118); */
   text-align: justify;
   font-weight: 400;
+}
+.questionCount {
+  color: rgb(124, 118, 118);
+  font-size: 20px;
+}
+.radioCustomLabel {
+  color: rgb(124, 118, 118);
+  font-size: 20px;
 }
 
 #quiz-button {
@@ -278,15 +285,27 @@ hr {
 }
 
 #quiz-question {
-  color: white;
-}
-#program-button {
-  display: flex;
-  width: 80%;
-  padding-top: 5px;
-  margin-left: 0px;
+  /* color: #00b8d8; */
+  color: rgb(124, 118, 118);
+  position: relative;
+  font-size: 30px;
+
+  text-align: center;
+  padding-top: 2em;
 }
 
+#career-button {
+  display: flex;
+  padding-top: 5px;
+  width: 600px;
+}
+
+#cb {
+  margin: 5px;
+}
+#career-description {
+  margin-bottom: 15px;
+}
 #blog-container {
   display: flex;
   flex-direction: row;
@@ -294,11 +313,15 @@ hr {
 }
 #blog-card {
   width: 300px;
-  height: 480px;
+  height: 515px;
+}
+#blogcard {
+  height: 490px;
 }
 
 #profile-pic {
   margin-left: 130px;
+  border-radius: 60px;
 }
 #message-box {
   margin-top: 20px;
@@ -311,4 +334,38 @@ hr {
   margin-left: 0px;
   height: 500px;
   width: 960px;
+}
+
+#career-popup {
+  display: inline;
+}
+
+#popover-1 {
+  width: 260px;
+  margin: 10px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+#program-button {
+  height: 120px;
+  width: 250px;
+  padding: 10px;
+}
+#program-list {
+  padding: 0;
+  display: flex;
+}
+#career-popover {
+  width: 20px;
+}
+
+#search-bar {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin: 70px;
+  height: 40px;
+  width: 650px;
 }

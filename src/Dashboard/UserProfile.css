@@ -1,12 +1,17 @@
 .card {
-  /* margin-top: 30px; */
   width: 70%;
   margin-left: 340px;
   color: black;
+  background: white;
+  max-height: 640px;
+  height: 640px;
+  width: 900px;
 }
-
+#quiz-result {
+  margin-left: 150px;
+}
 .card ul {
-  margin-left: -345px;
+  /* margin-left: -345px; */
 }
 
 .margin_left_320 {

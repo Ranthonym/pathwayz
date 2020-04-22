@@ -16,9 +16,9 @@ const Wrapper = styled.div`
       .questionCount {
         position: relative;
         padding: 1em;
-        font-size: 1em;
+        font-size: 40px;
         font-family: ${fonts.$latoFont};
-        color: ${colors.$colorGold};
+        color: rgb(124, 118, 118);
         ${media.largerPhone`font-size: 1.2em;`};
       }
     }
@@ -43,6 +43,5 @@ QuestionCount.propTypes = {
   counter: propTypes.number.isRequired,
   total: propTypes.number.isRequired,
 };
-
 
 export default QuestionCount;
