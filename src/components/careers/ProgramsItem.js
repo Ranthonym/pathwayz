@@ -55,7 +55,7 @@ export default class ProgramsItem extends React.Component {
             <Row className="border-bottom py-2 bg-light">
               <Col>
                 <div align="center">
-                  <h5>Career Paths Include</h5>
+                  <h5>Some Courses You'll Take</h5>
 
                   {this.props.courses}
                 </div>

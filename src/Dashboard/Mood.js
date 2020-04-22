@@ -88,7 +88,7 @@ export default class Mood extends React.Component {
         </div>
         <div id="column">
           {" "}
-          <div id="emoji"> 🤩</div> <div>Excited</div>
+          <div id="emoji"> 😆</div> <div>Excited</div>
           <div> -- </div>{" "}
         </div>
         <div id="column">
