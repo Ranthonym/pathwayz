@@ -52,26 +52,31 @@ export default class Explore extends React.Component {
 
     return (
       <section className="Careers">
-        {/* <CardTitle>Search Through All The Career Options</CardTitle> */}
-        <Card id="search-bar">
-          <input placeholder="Search Careers" onChange={this.onchange}></input>
-        </Card>
+        <Card id="explore-body">
+          {/* <CardTitle>Search Through All The Career Options</CardTitle> */}
+          <Card id="search-bar">
+            <input
+              placeholder="Search Careers"
+              onChange={this.onchange}
+            ></input>
+          </Card>
 
-        <div className="row">
-          {filteredCareers.map((careers) => {
-            return (
-              <CareersItem
-                key={careers.id}
-                id={careers.id}
-                title={careers.title}
-                outlook={careers.outlook}
-                description={careers.description}
-                education={careers.education}
-                salary={careers.salary}
-              />
-            );
-          })}
-        </div>
+          <div id="explore-careers" className="row">
+            {filteredCareers.map((careers) => {
+              return (
+                <CareersItem
+                  key={careers.id}
+                  id={careers.id}
+                  title={careers.title}
+                  outlook={careers.outlook}
+                  description={careers.description}
+                  education={careers.education}
+                  salary={careers.salary}
+                />
+              );
+            })}
+          </div>
+        </Card>
       </section>
     );
   }

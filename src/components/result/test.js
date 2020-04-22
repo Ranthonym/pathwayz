@@ -120,7 +120,7 @@ export default class Test extends Component {
 
               <div class="chat-panel">
                 <MessageList id={this.state.convoID} />
-                <div class="row">
+                {/* <div class="row">
                   <div id="send-box" class="col-12">
                     <div class="chat-box-tray">
                       <i class="material-icons">sentiment_very_satisfied</i>
@@ -132,7 +132,7 @@ export default class Test extends Component {
                       <i class="material-icons">send</i>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -69,8 +69,8 @@ body {
   border-radius: 7px;
 }
 .profile-image {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 40px;
 }
 .settings-tray {
@@ -78,12 +78,14 @@ body {
   margin-right: 10px;
   background: #eee;
   padding: 10px 15px;
+  height: 80px;
   border-radius: 7px;
 }
 .settings-tray .no-gutters {
   margin-left: 30px;
   padding: 0;
 }
+
 .settings-tray--right {
   float: right;
 }
@@ -99,6 +101,7 @@ body {
   cursor: pointer;
 }
 .search-box {
+  bottom: 0;
   background: #fafafa;
   padding: 10px 13px;
 }
@@ -332,7 +335,7 @@ hr {
 
 #message-body {
   margin-left: 0px;
-  height: 500px;
+  height: 1000px;
   width: 960px;
 }
 
@@ -363,8 +366,9 @@ h4 {
 }
 
 #search-bar {
-  margin-top: 100px;
+  margin-top: 300px;
   margin-left: 20px;
+
   margin: 70px;
   height: 40px;
   width: 650px;
@@ -410,4 +414,16 @@ h4 {
 #mood-resource {
   width: 125px;
   height: 90px;
+}
+
+#explore-careers {
+  width: 900px;
+  margin: 12px;
+  height: 1000px;
+}
+
+#explore-body {
+  margin: 12px;
+  width: 900px;
+  height: 1500px;
 }
