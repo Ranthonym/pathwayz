@@ -7,13 +7,7 @@ import {
   CardBody,
   CardImg,
   CardFooter,
-  CardHeader,
-  InputGroup,
-  FormInput,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu,
+  CardHeader
 } from "shards-react";
 import "./Blogs.css";
 

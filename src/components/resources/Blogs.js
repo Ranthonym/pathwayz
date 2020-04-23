@@ -63,6 +63,7 @@ export default class Blogs extends React.Component {
               <div>Videos</div>
             </a>
           </BreadcrumbItem>
+          <BreadcrumbItem active>Additional Resources</BreadcrumbItem>
         </Breadcrumb>
         </div>
         <Container className="container">{container}</Container>

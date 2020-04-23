@@ -74,10 +74,11 @@ div:hover .mentors{
   margin-right: -840px;
   margin-bottom: -140px;
   font-weight: 700;
+  color: white;
 }
 
 .testimonial {
-  margin-right: -400px;
+  margin-right: -370px;
     margin-bottom: -180px;
     width: 400px;
     height: 200px;
@@ -108,6 +109,17 @@ div:hover .mentors{
     padding: 8px;
     height: 50px;
     line-height: 20px;
+  }
+  
+  @media all and (min-width: 480px) {
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
   }
 
 @media (min-width: 650px) {

@@ -1,4 +1,5 @@
 import React from "react";
+import Popup from "reactjs-popup";
 
 import {
   Navbar,
@@ -7,13 +8,17 @@ import {
   NavItem,
   NavLink,
   Button,
+  Form,
+  FormInput,
+  FormGroup,
+  CardImg
 } from "shards-react";
 
 import "./Home.css";
 import Testimonial from "./Testimonial";
 
 import Pathwayz from "./Pathwayz.jpg";
-import Login from "../containers/Login";
+
 
 export default function Home() {
   const imageUrl = Pathwayz;
@@ -27,18 +32,98 @@ export default function Home() {
         </div>
         </NavbarBrand>
         <Nav type="dark" navbar className="ml-auto" expand="md">
-          <NavItem>
-            <NavLink>Signup</NavLink>
+        <NavItem>
+            <Popup
+              trigger={<NavLink>Login</NavLink>}
+              modal
+              closeOnDocumentClick
+            >
+              <div id="popup">
+                <div>
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="username">Username</label>
+                      <FormInput id="username" placeholder="Username" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                    <Button
+                      theme="info"
+                      className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                      href="/dashboard"
+                    >
+                      Sign In
+                    </Button>
+                  </Form>
+                </div>
+                <div id="popup">
+                  <CardImg
+                    id="loginIMG"
+                    src="https://png.pngtree.com/png-vector/20190105/ourlarge/pngtree-successpersonaldevelopmentleadercareer-line-icon-png-image_311546.jpg"
+                  />
+                </div>
+              </div>
+            </Popup>
           </NavItem>
           <NavItem>
-            <NavLink href="/login">Login</NavLink>
+            <Popup
+              trigger={<NavLink>Signup</NavLink>}
+              modal
+              closeOnDocumentClick
+            >
+              <div id="popup">
+                <div>
+                  <Form>
+                    <FormGroup>
+                      <label htmlFor="username">Name</label>
+                      <FormInput id="username" placeholder="Name" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="username">Email</label>
+                      <FormInput id="username" placeholder="Email" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="password">Password</label>
+                      <FormInput
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="username">Image URL</label>
+                      <FormInput id="username" placeholder="Image URL" />
+                    </FormGroup>
+
+                    <Button
+                      theme="info"
+                      className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
+                      href="/dashboard"
+                    >
+                      Create Account
+                    </Button>
+                  </Form>
+                </div>
+                <div id="popup">
+                  <CardImg
+                    id="loginIMG"
+                    src="https://png.pngtree.com/png-vector/20190105/ourlarge/pngtree-successpersonaldevelopmentleadercareer-line-icon-png-image_311546.jpg"
+                  />
+                </div>
+              </div>
+            </Popup>
           </NavItem>
           <NavItem>
             <NavLink>Help</NavLink>
           </NavItem>
         </Nav>
       </Navbar>
-      <Login></Login>
 
       <div className="Home1" style={{ backgroundImage: `url(${imageUrl})` }}>
         <div className="Home-content1">
@@ -51,8 +136,8 @@ export default function Home() {
       <div className="Home2">
         <div className="Home-content2">
           <div className="home-button">
-          <Button theme="light" size="lg">
-            <div ><strong>confused, nervous, or unsure 
+          <Button theme="dark" size="lg">
+            <div ><strong>Confused, nervous, or unsure 
               <div>about life after high-school?</div>
               <div>speak to one of our career counsellors today</div>
               <div>or take our career assessment!</div></strong></div>

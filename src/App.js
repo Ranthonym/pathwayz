@@ -19,7 +19,6 @@ import "./App.css";
 // routes
 import Home from "./Main/Home";
 import Dashboard from "./Dashboard/SideNav";
-import Login from "./containers/Login";
 import test from "./components/result/test";
 
 const socket = io.connect("http://localhost:3001");
@@ -81,7 +80,6 @@ export default function Application() {
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/Dashboard" component={Dashboard} />
-        <Route path="/login" component={Login} />
         <Route path="/test" component={test} />
       </Router>
     </div>

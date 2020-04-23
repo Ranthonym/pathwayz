@@ -157,7 +157,7 @@ export default class Mood extends React.Component {
             </div>
             <div id="column">
               {" "}
-              <div id="emoji"></div>😆<div>Excited</div>
+              <div id="emoji">😆</div><div>Excited</div>
               <div>{this.state.excited}%</div>{" "}
               <Button
                 id="mood-resource"
@@ -170,7 +170,7 @@ export default class Mood extends React.Component {
             </div>
             <div id="column">
               {" "}
-              <div id="emoji">😡</div> <div>Angry</div>
+              <div id="emoji">😡</div><div>Angry</div>
               <div>{this.state.angry}%</div>{" "}
               <Button
                 id="mood-resource"
@@ -188,19 +188,17 @@ export default class Mood extends React.Component {
     return (
       <div>
         <Card id="mood-card">
-          <CardHeader>
-            <CardTitle>Mood Analyzer</CardTitle>
-          </CardHeader>
+            <CardHeader><div align="center">Mood Analyzer</div></CardHeader>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="diary">
               {" "}
               <p className="mb-2">
                 <CardBody>
                   {" "}
-                  We know that planning your future can be scary. This is why we
-                  have tailored some resources depending on your mood. Just type
+                  <strong>We know that planning your future can be scary. This is why we
+                  have tailored some resources for you depending on your mood. Just type
                   in how you feel about your career search so far and we'll help
-                  you out!{" "}
+                  you out!</strong>{" "}
                 </CardBody>
               </p>
             </label>{" "}
