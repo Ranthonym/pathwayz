@@ -69,8 +69,12 @@ export default function Login() {
                 <div>
                   <Form>
                     <FormGroup>
-                      <label htmlFor="username">Username</label>
-                      <FormInput id="username" placeholder="Username" />
+                      <label htmlFor="username">Name</label>
+                      <FormInput id="username" placeholder="Name" />
+                    </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="username">Email</label>
+                      <FormInput id="username" placeholder="Email" />
                     </FormGroup>
                     <FormGroup>
                       <label htmlFor="password">Password</label>
@@ -81,13 +85,10 @@ export default function Login() {
                       />
                     </FormGroup>
                     <FormGroup>
-                      <label htmlFor="new-password">Confirm Password</label>
-                      <FormInput
-                        type="password"
-                        id="new-password"
-                        placeholder="Re-enter Password"
-                      />
+                      <label htmlFor="username">Image URL</label>
+                      <FormInput id="username" placeholder="Image URL" />
                     </FormGroup>
+
                     <Button
                       theme="info"
                       className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
