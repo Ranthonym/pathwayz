@@ -84,6 +84,10 @@ export default function Login() {
                         placeholder="Password"
                       />
                     </FormGroup>
+                    <FormGroup>
+                      <label htmlFor="username">Image URL</label>
+                      <FormInput id="username" placeholder="Image URL" />
+                    </FormGroup>
 
                     <Button
                       theme="info"
