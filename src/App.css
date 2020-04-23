@@ -369,12 +369,12 @@ h4 {
 }
 
 #search-bar {
-  margin-top: 300px;
+  margin-top: 200px;
   margin-left: 20px;
 
-  margin: 70px;
+  margin: 10px;
   height: 40px;
-  width: 650px;
+  width: 830px;
 }
 
 #row {
@@ -427,5 +427,13 @@ h4 {
   margin: 12px;
   width: 900px;
   height: 1500px;
+}
+
+.breadcrumbs{
+  height: 50px;
+  width: 935px;
+  text-align:center;
+  margin: 20px;
+  margin-left: 10px;
 }
 

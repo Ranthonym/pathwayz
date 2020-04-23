@@ -1,31 +1,21 @@
 import React from "react";
-import {
-  Container,
-  InputGroup,
-  FormInput,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu,
-} from "shards-react";
+import { Container, Breadcrumb, BreadcrumbItem } from "shards-react";
+
 import "./Blogs.css";
 import Videos from "./Videos";
 import BlogPost from "./BlogPost";
 export default class Blogs extends React.Component {
   constructor(props) {
     super(props);
-    this.toggle = this.toggle.bind(this);
+
     this.state = {
-      open: false,
       displayVideos: false,
       displayBlogs: true,
     };
     this._onVideoClick = this._onVideoClick.bind(this);
     this._onBlogClick = this._onBlogClick.bind(this);
   }
-  toggle() {
-    this.setState({ open: !this.state.open });
-  }
+
   _onVideoClick() {
     this.setState({
       displayVideos: true,
@@ -59,20 +49,22 @@ export default class Blogs extends React.Component {
     }
     return (
       <div>
-        <InputGroup id="resources-input" className="input">
-          <FormInput placeholder="Search resources" />
-          <Dropdown
-            addonType="append"
-            open={this.state.open}
-            toggle={this.toggle}
-          >
-            <DropdownToggle theme="info" caret></DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem onClick={this._onBlogClick}>Blogs</DropdownItem>
-              <DropdownItem onClick={this._onVideoClick}>Videos</DropdownItem>
-            </DropdownMenu>
-          </Dropdown>
-        </InputGroup>
+      <div align="center">
+        <Breadcrumb className="breadcrumbs">
+          <BreadcrumbItem>
+            <a href="#" onClick={this._onBlogClick}>
+              <span class="material-icons">subtitles</span>
+              <div>Blogs</div>
+            </a>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <a href="#" onClick={this._onVideoClick}>
+              <span class="material-icons">video_library</span>
+              <div>Videos</div>
+            </a>
+          </BreadcrumbItem>
+        </Breadcrumb>
+        </div>
         <Container className="container">{container}</Container>
       </div>
     );

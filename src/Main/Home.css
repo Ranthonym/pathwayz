@@ -71,8 +71,9 @@ div:hover .mentors{
 
 .home-button {
   font-weight: bold;
-  margin-right: -820px;
-  margin-bottom: -50px;
+  margin-right: -840px;
+  margin-bottom: -140px;
+  font-weight: 700;
 }
 
 .testimonial {

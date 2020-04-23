@@ -50,7 +50,10 @@ export default function Home() {
 
           <div className="home-button">
           <Button theme="light" size="lg">
-            <div><strong>Take our Career Assessment Today!</strong></div>
+            <div ><strong>confused, nervous, or unsure 
+              <div>about life after high-school?</div>
+              <div>speak to one of our career counsellors today</div>
+              <div>or take our career assessment!</div></strong></div>
           </Button>
           </div>
 
