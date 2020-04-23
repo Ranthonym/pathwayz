@@ -29,6 +29,33 @@
   padding: 0px 10px;
 }
 
+.logo {
+display: inline-block;
+width: 55px;
+height: 55px;
+margin-right: 4px;
+margin-top: -10px;
+}
+
+.logo-name {
+display: inline-block;
+font-size: 22px;
+font-weight: 600;
+margin-top: 29px;
+}
+
+.dash-nav {
+  display: inline-block;
+  margin-bottom: 10px
+}
+
+.dash-navabr {
+  padding: 8px;
+  height: 50px;
+  line-height: 20px;
+}
+
+
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}

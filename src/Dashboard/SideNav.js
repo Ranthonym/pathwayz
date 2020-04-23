@@ -17,6 +17,7 @@ import {
   Tooltip,
 } from "shards-react";
 import Sidebar from "./Sidebar";
+
 export default class DashNav extends React.Component {
   constructor(props) {
     super(props);
@@ -118,11 +119,17 @@ export default class DashNav extends React.Component {
     return (
       <div>
         <div>
-          <Navbar type="dark" theme="info" expand="md">
-            <NavbarBrand href="/">PathWayz</NavbarBrand>
+          <Navbar className="dash-navbar"type="dark" theme="info" expand="md">
+            <NavbarBrand href="/">
+              <div className="dash-nav">
+            <img className="logo" src="pathwayz-logo.png"></img>
+            <div className="logo-name">PathWayz</div>
+            </div>
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} />
             <Collapse open={this.state.collapseOpen} navbar>
               <Nav type="dark" navbar className="ml-auto" expand="md">
+        
                 <NavItem>
                   <Button id="TooltipExample" theme="light">
                     Chat with a mentor

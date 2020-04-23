@@ -205,7 +205,7 @@ export default class Mood extends React.Component {
               </p>
             </label>{" "}
             <input id="diary" name="diary" type="text" />
-            <button id="diary-button"> Feel Better Now </button>
+            <Button theme="light" id="diary-button"> Feel Better Now </Button>
           </form>
           <div>{results}</div>
         </Card>

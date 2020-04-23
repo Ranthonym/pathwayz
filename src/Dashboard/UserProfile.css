@@ -24,8 +24,8 @@
 
 .userImg {
   padding: 10px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   margin-left: 95px;
   margin-top: 50px;
 }
@@ -38,6 +38,10 @@
 
 #userprofile-button {
   margin: 10px;
+}
+
+#userprofile {
+padding:1px;
 }
 
 #profile-button {

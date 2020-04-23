@@ -19,8 +19,12 @@ export default function Home() {
   return (
     <div>
       <Navbar type="dark" theme="info" expand="md">
-        <NavbarBrand href="/">PathWayz</NavbarBrand>
-
+        <NavbarBrand className="dash-navbar" href="/">
+        <div className="dash-nav">
+        <img className="logo" src="pathwayz-logo.png"></img>
+        <div className="logo-name">PathWayz</div>
+        </div>
+        </NavbarBrand>
         <Nav type="dark" navbar className="ml-auto" expand="md">
           <NavItem>
             <NavLink>Signup</NavLink>
@@ -36,7 +40,7 @@ export default function Home() {
       <div className="Home1" style={{ backgroundImage: `url(${imageUrl})` }}>
         <div className="Home-content1">
           <p className="slogan">
-            finding the right program and career just got easier than ever.
+            finding the right program and career just got easier.
           </p>
         </div>
       </div>

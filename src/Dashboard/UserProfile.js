@@ -17,7 +17,7 @@ export default function UserProfile() {
     <div id="profile-container">
       <Card id="userprofile" style={{ maxWidth: "600px" }}>
         <CardHeader>
-          <CardTitle></CardTitle>
+          <div align="center"><CardTitle>User Profile</CardTitle></div>
         </CardHeader>
         <CardImg
           id="profile-pic"

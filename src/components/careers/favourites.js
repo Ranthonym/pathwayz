@@ -92,7 +92,7 @@ export default function FavouriteButton(props) {
   }
   return (
     <Button
-      theme="info"
+      theme="danger"
       className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
     >
       <span onClick={addFavourite}>Add Career to Dashboard &hearts;</span>

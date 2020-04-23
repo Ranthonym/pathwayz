@@ -406,12 +406,10 @@ h4 {
   font-size: 20px;
 }
 #diary-button {
-  background-color: rgb(124, 118, 118);
-  border: 1px solid rgb(124, 118, 118);
-  border-radius: 4px;
   height: 70px;
   width: 100px;
-  color: white;
+  color: black;
+  font-weight: 500;
 }
 
 #mood-resource {
@@ -430,3 +428,4 @@ h4 {
   width: 900px;
   height: 1500px;
 }
+

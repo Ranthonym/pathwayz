@@ -60,7 +60,7 @@ export default function Profile() {
     <div>
       <Card id="profile">
         <CardHeader>
-          <CardTitle> My Top Career Paths </CardTitle>
+          <CardTitle> My Top Career Paths &hearts;</CardTitle>
           {/* <CardImg
           id="profileIMG"
           src="https://png.pngtree.com/png-vector/20190105/ourlarge/pngtree-successpersonaldevelopmentleadercareer-line-icon-png-image_311546.jpg"

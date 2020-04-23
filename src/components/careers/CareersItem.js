@@ -9,6 +9,7 @@ import {
   PopoverBody,
   PopoverHeader,
 } from "shards-react";
+
 import FavouriteButton from "./favourites";
 import ProgramsList from "./ProgramsList";
 export default class CareersItem extends React.Component {
@@ -102,7 +103,7 @@ export default class CareersItem extends React.Component {
                   theme="info"
                   className="d-flex ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0"
                 >
-                  Go Back To Career Options
+                Go Back To Career Options
                 </Button>
               </div>
             </div>
@@ -112,9 +113,6 @@ export default class CareersItem extends React.Component {
                 Legend: The job opportunities can be: ☆ ☆ ☆ Undetermined ★ ☆ ☆
                 Limited ★ ★ ☆ Fair ★ ★ ★ Good
               </div>
-
-              <span class="material-icons">favorite_border</span>
-
             </CardFooter>
           </PopoverBody>
         </Popup>
