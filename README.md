@@ -2,6 +2,10 @@
 
 A full stack React app that evaluates user personalities and provides career guidance in terms of job options, post-secondary programs, mood monitor using ParallelDots API and mentor support via live chat. Built using React on the front-end, and Node, Express and PostgreSQL on the back-end. Live chat was built using Socket.io
 
+## API Server
+
+[PathWayz-API](https://github.com/Ranthonym/pathwayz-api
+
 ## Dependencies
 
     - react v16.13.1
