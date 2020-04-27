@@ -20,7 +20,7 @@ A full stack React app that evaluates user personalities and provides career gui
 ## Screenshots
 
 !["Screenshot of user dashboard"](https://github.com/Ranthonym/pathwayz/blob/readme/public/images/Screenshot%20of%20user%20dashboard.png)
-!["Screenshot of career assessment start screen](https://github.com/Ranthonym/scheduler/blob/master/docs/Screenshot%20of%20form%20for%20creating%20new%20interview.png)
+!["Screenshot of career assessment start screen](https://github.com/Ranthonym/pathwayz/blob/readme/public/images/Screenshot%20of%20career%20assessment%20start%20screen.png)
 !["Screenshot of career assessment result showing careers"](https://github.com/Ranthonym/pathwayz/blob/readme/public/images/Screenshot%20of%20career%20assessment%20result%20showing%20careers.png)
 !["Screenshot of career assessment result showing a program for a specific career"](https://github.com/Ranthonym/pathwayz/blob/readme/public/images/Screenshot%20of%20programs%20offered%20for%20a%20specific%20job.png)
 !["Screenshot of live chat feature"](https://github.com/Ranthonym/pathwayz/blob/readme/public/images/Screenshot%20of%20live%20chat%20with%20career%20advisor.png)
