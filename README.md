@@ -4,7 +4,7 @@ A full stack React app that evaluates user personalities and provides career gui
 
 ## API Server
 
-[PathWayz-API](https://github.com/Ranthonym/pathwayz-api
+[PathWayz-API](https://github.com/Ranthonym/pathwayz-api)
 
 ## Dependencies
 
