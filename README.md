@@ -24,7 +24,7 @@ A full stack React app that evaluates user personalities and provides career gui
 
 ## LIVE DEMO
 
-!["Live Demo of PathWayz"](https://github.com/asmxali/pathwayz/blob/master/gif/PathWayz.gif)
+![](https://github.com/asmxali/pathwayz/blob/master/gif/PathWayz.gif)
 
 ## Setup
 
