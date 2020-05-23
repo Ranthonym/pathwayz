@@ -45,7 +45,9 @@
   height: 60px;
   margin: 10px;
 }
-
+.bg-info {
+  height: 90px;
+}
 .programItem {
   width: 300px;
   margin: 10px;
@@ -430,11 +432,10 @@ h4 {
   height: 1500px;
 }
 
-.breadcrumbs{
+.breadcrumbs {
   height: 50px;
   width: 935px;
-  text-align:center;
+  text-align: center;
   margin: 20px;
   margin-left: 10px;
 }
-

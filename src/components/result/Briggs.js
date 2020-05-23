@@ -256,7 +256,7 @@ class Briggs extends Component {
   renderENTJ() {
     return (
       <BriggsDef
-        title={"Extravert | iNtuitive | Thinking | Judging"}
+        title={"Extravert | Intuitive | Thinking | Judging"}
         content={`You are a type ENTJ, aka The Field Marshall.
                   You tend to be organized and logical above all else.
                   You should consider a job in law or engineering.`}
