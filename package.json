@@ -34,7 +34,7 @@
     "yarn": "^1.22.4"
   },
   "devDependencies": {
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "watch": {
     "build": {
