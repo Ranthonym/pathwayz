@@ -7,7 +7,7 @@
     "@material-ui/styles": "^4.9.10",
     "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-4.10.3.tgz",
     "animejs": "^2.2.0",
-    "apexcharts": "^3.18.1",
+    "apexcharts": "^3.24.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "material-design-icons": "^3.0.1",
